@@ -362,6 +362,10 @@ $xamlInput = @'
     $buttonSubmit = $buttonSubmitMain
     $progressbar = $progressbarMain
     $textbox = $textboxMain
+    $sync = [hashtable]::Synchronized(@{
+        isBusy = $false
+        lastPowerShell = $null
+    })
 
     $officeProductButtons = @(
         $radioButton365Home, $radioButton365Business, $radioButton365Enterprise,
@@ -389,9 +393,15 @@ $xamlInput = @'
     function UpdateSelectionMode {
         $hasProductSelection = $officeProductButtons | Where-Object { $_.IsChecked -eq $true } | Select-Object -First 1
         $removeAllEnabled = -not [bool]$hasProductSelection
+        $isBusy = [bool]$sync.isBusy
 
-        $radioButtonRemoveAllApp.IsEnabled = $removeAllEnabled
-        $buttonRemoveAll.IsHitTestVisible = $removeAllEnabled -and ($radioButtonRemoveAllApp.IsChecked -eq $true)
+        $buttonSubmit.IsHitTestVisible = -not $isBusy
+        $buttonSubmit.Opacity = if ($isBusy) { 0.75 } else { 1 }
+        $buttonClearSelection.IsHitTestVisible = -not $isBusy
+        $buttonClearSelection.Opacity = if ($isBusy) { 0.65 } else { 1 }
+
+        $radioButtonRemoveAllApp.IsEnabled = $removeAllEnabled -and -not $isBusy
+        $buttonRemoveAll.IsHitTestVisible = $removeAllEnabled -and ($radioButtonRemoveAllApp.IsChecked -eq $true) -and -not $isBusy
         $buttonRemoveAll.Cursor = if ($buttonRemoveAll.IsHitTestVisible) { 'Hand' } else { 'Arrow' }
 
         if (-not $removeAllEnabled) {
@@ -400,7 +410,7 @@ $xamlInput = @'
 
         $removeAllActive = $radioButtonRemoveAllApp.IsChecked -eq $true
         foreach ($button in $officeProductButtons) {
-            $button.IsEnabled = -not $removeAllActive
+            $button.IsEnabled = (-not $removeAllActive) -and (-not $isBusy)
         }
 
         if ($hasProductSelection -or $removeAllActive) {
@@ -429,6 +439,57 @@ $xamlInput = @'
         $radioButtonRemoveAllApp.IsChecked = $false
         UpdateSelectionMode
     })
+
+    function Start-BackgroundOperation {
+        param(
+            [Parameter(Mandatory)]
+            [scriptblock]$Operation
+        )
+
+        if ($sync.isBusy) {
+            return
+        }
+
+        if ($sync.lastPowerShell) {
+            try { $sync.lastPowerShell.Dispose() } catch {}
+            $sync.lastPowerShell = $null
+        }
+
+        $sync.isBusy = $true
+        UpdateSelectionMode
+
+        $powerShellInstance = [powershell]::Create().AddScript($Operation)
+        $powerShellInstance.Runspace = $runspace
+        $sync.lastPowerShell = $powerShellInstance
+        $null = $powerShellInstance.BeginInvoke()
+    }
+
+    $sync.RestoreUiAction = [action]{
+        $hasProductSelection = $sync.officeProductButtons | Where-Object { $_.IsChecked -eq $true } | Select-Object -First 1
+        $removeAllEnabled = -not [bool]$hasProductSelection
+        $sync.buttonSubmit.IsHitTestVisible = $true
+        $sync.buttonSubmit.Opacity = 1
+        $sync.buttonClearSelection.IsHitTestVisible = $true
+        $sync.buttonClearSelection.Opacity = 1
+        $sync.radioButtonRemoveAllApp.IsEnabled = $removeAllEnabled
+        $sync.buttonRemoveAll.IsHitTestVisible = $removeAllEnabled -and ($sync.radioButtonRemoveAllApp.IsChecked -eq $true)
+        $sync.buttonRemoveAll.Cursor = if ($sync.buttonRemoveAll.IsHitTestVisible) { 'Hand' } else { 'Arrow' }
+        $removeAllActive = $sync.radioButtonRemoveAllApp.IsChecked -eq $true
+        foreach ($button in $sync.officeProductButtons) {
+            $button.IsEnabled = -not $removeAllActive
+        }
+    }
+
+    $sync.ShowErrorAction = [action]{
+        $sync.progressbar.Visibility = "Collapsed"
+        $sync.textbox.Parent.Visibility = "Visible"
+        $sync.textbox.Foreground = "#FFC62828"
+        $sync.textbox.FontWeight = "Bold"
+        $sync.textbox.Text = $sync.errorMessage
+        $sync.buttonSubmit.Visibility = "Visible"
+        $sync.buttonSubmit.Content = "Submit"
+        & $sync.RestoreUiAction
+    }
 
 # Download links
     $uri            = "https://github.com/msgang822/microsoft/raw/refs/heads/main/files/office/setup.exe"
@@ -473,6 +534,12 @@ $xamlInput = @'
     
 # Creating script block for download and install
     $DownloadInstallOffice = {
+        trap {
+            $sync.isBusy = $false
+            $sync.errorMessage = $_.Exception.Message
+            $sync.Form.Dispatcher.Invoke($sync.ShowErrorAction)
+            continue
+        }
 <#         function Write-HostDebug {
             #Helper function to write back to the host debug output
             param([Parameter(Mandatory)]
@@ -515,18 +582,22 @@ $xamlInput = @'
             $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = 'Completed' })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $false })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.Value = '100' })
+            $sync.isBusy = $false
+            $sync.Form.Dispatcher.Invoke($sync.RestoreUiAction)
 
             # Write-VerboseDebug "Done. You can close this window now."
     }
 
 # Share info between runspaces
-    $sync = [hashtable]::Synchronized(@{})
-    $sync.runspace = $runspace
     $sync.host = $host
     $sync.Form = $Form
     $sync.ProgressBar = $ProgressBar
     $sync.textbox = $textbox
     $sync.buttonSubmit = $buttonSubmit
+    $sync.buttonClearSelection = $buttonClearSelection
+    $sync.radioButtonRemoveAllApp = $radioButtonRemoveAllApp
+    $sync.buttonRemoveAll = $buttonRemoveAll
+    $sync.officeProductButtons = $officeProductButtons
     $sync.DebugPreference = $DebugPreference
     $sync.VerbosePreference = $VerbosePreference
 
@@ -537,14 +608,15 @@ $xamlInput = @'
     $runspace.Open()
 
 # Add shared data to the runspace
+    $sync.runspace = $runspace
     $runspace.SessionStateProxy.SetVariable("sync", $sync)
-
-# Create a Powershell instance
-    $PSIinstance = [powershell]::Create().AddScript($scriptBlock)
-    $PSIinstance.Runspace = $runspace
 
 
     $buttonSubmit.Add_Click( {
+        if ($sync.isBusy) {
+            return
+        }
+
         $i = 0
             if ($radioButtonArch32.IsChecked) {$arch = '32'}
             if ($radioButtonArch64.IsChecked) {$arch = '64'}
@@ -657,9 +729,7 @@ $xamlInput = @'
 
             if ($i -eq '1') {
                 PreparingOffice
-                $PSIinstance = [powershell]::Create().AddScript($DownloadInstallOffice)
-                $PSIinstance.Runspace = $runspace
-                $PSIinstance.BeginInvoke()
+                Start-BackgroundOperation -Operation $DownloadInstallOffice
             } else {
                 $progressbar.Visibility = "Collapsed"
                 $textbox.Parent.Visibility = "Visible"
@@ -671,6 +741,12 @@ $xamlInput = @'
 
 # Uninstall all installed Microsoft Office apps.
     $UninstallOffice = {
+        trap {
+            $sync.isBusy = $false
+            $sync.errorMessage = $_.Exception.Message
+            $sync.Form.Dispatcher.Invoke($sync.ShowErrorAction)
+            continue
+        }
 
         $sync.Form.Dispatcher.Invoke([action] { $sync.progressbar.Visibility = "Visible" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Parent.Visibility = "Visible" })
@@ -714,6 +790,8 @@ $xamlInput = @'
         $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = 'Completed' })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $false })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.Value = '100' })
+        $sync.isBusy = $false
+        $sync.Form.Dispatcher.Invoke($sync.RestoreUiAction)
 
         # Cleanup
         Set-Location ..
@@ -721,6 +799,9 @@ $xamlInput = @'
     }
 
     $buttonRemoveAll.Add_Click({
+        if ($sync.isBusy) {
+            return
+        }
 
         if ($radioButtonRemoveAllApp.IsChecked) {
             $workingDir = New-Item -Path $env:temp\ClickToRunU -ItemType Directory -Force
@@ -729,9 +810,18 @@ $xamlInput = @'
             $sync.uri = $uri
             $sync.removeAllXML = $removeAllXML
 
-            $PSIinstance = [powershell]::Create().AddScript($UninstallOffice)
-            $PSIinstance.Runspace = $runspace
-            $PSIinstance.BeginInvoke()
+            Start-BackgroundOperation -Operation $UninstallOffice
+        }
+    })
+
+    $Form.Add_Closing({
+        if ($sync.lastPowerShell) {
+            try { $sync.lastPowerShell.Dispose() } catch {}
+            $sync.lastPowerShell = $null
+        }
+        if ($runspace) {
+            try { $runspace.Close() } catch {}
+            try { $runspace.Dispose() } catch {}
         }
     })
 
