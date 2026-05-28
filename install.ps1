@@ -31,7 +31,7 @@ $xamlInput = @'
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="18"/>
+                    <RowDefinition Height="30"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="8"/>
                     <RowDefinition Height="Auto"/>
@@ -52,7 +52,7 @@ $xamlInput = @'
                     <Image Width="165" Height="44" Stretch="Uniform" HorizontalAlignment="Left" Source="https://softvn.vn/wp-content/uploads/2019/06/softvn-logo.png"/>
                 </Border>
 
-                <StackPanel Grid.Row="2">
+                <StackPanel Grid.Row="2" Margin="12,0,0,0">
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="16"/>
@@ -61,14 +61,14 @@ $xamlInput = @'
                         <TextBlock Grid.Column="0" FontFamily="Segoe MDL2 Assets" Text="&#xE770;" Foreground="#FF17324D" VerticalAlignment="Center"/>
                         <TextBlock Grid.Column="1" Text="Architecture" FontWeight="SemiBold" Foreground="#FF17324D" VerticalAlignment="Center"/>
                     </Grid>
-                    <StackPanel Margin="16,0,0,0">
+                    <StackPanel Margin="20,0,0,0">
                         <RadioButton x:Name="radioButtonArch64" Content="64-bit (Recommended)" IsChecked="True" Margin="0,0,0,6"/>
                         <RadioButton x:Name="radioButtonArch32" Content="32-bit"/>
                     </StackPanel>
                     <Border Height="1" Background="#FFE6EDF5" Margin="0,12,0,0"/>
                 </StackPanel>
 
-                <StackPanel Grid.Row="4">
+                <StackPanel Grid.Row="4" Margin="12,0,0,0">
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="16"/>
@@ -77,14 +77,14 @@ $xamlInput = @'
                         <TextBlock Grid.Column="0" FontFamily="Segoe MDL2 Assets" Text="&#xE192;" Foreground="#FF17324D" VerticalAlignment="Center"/>
                         <TextBlock Grid.Column="1" Text="License Type" FontWeight="SemiBold" Foreground="#FF17324D" VerticalAlignment="Center"/>
                     </Grid>
-                    <StackPanel Margin="16,0,0,0">
+                    <StackPanel Margin="20,0,0,0">
                         <RadioButton x:Name="radioButtonVolume" Content="Volume" IsChecked="True" Margin="0,0,0,6"/>
                         <RadioButton x:Name="radioButtonRetail" Content="Retail"/>
                     </StackPanel>
                     <Border Height="1" Background="#FFE6EDF5" Margin="0,12,0,0"/>
                 </StackPanel>
 
-                <StackPanel Grid.Row="6">
+                <StackPanel Grid.Row="6" Margin="12,0,0,0">
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="16"/>
@@ -93,14 +93,14 @@ $xamlInput = @'
                         <TextBlock Grid.Column="0" FontFamily="Segoe MDL2 Assets" Text="&#xE713;" Foreground="#FF17324D" VerticalAlignment="Center"/>
                         <TextBlock Grid.Column="1" Text="Mode" FontWeight="SemiBold" Foreground="#FF17324D" VerticalAlignment="Center"/>
                     </Grid>
-                    <StackPanel Margin="16,0,0,0">
+                    <StackPanel Margin="20,0,0,0">
                         <RadioButton x:Name="radioButtonInstall" Content="Install now" IsChecked="True" Margin="0,0,0,6"/>
                         <RadioButton x:Name="radioButtonDownload" Content="Download only"/>
                     </StackPanel>
                     <Border Height="1" Background="#FFE6EDF5" Margin="0,12,0,0"/>
                 </StackPanel>
 
-                <StackPanel Grid.Row="8">
+                <StackPanel Grid.Row="8" Margin="12,0,0,0">
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="16"/>
@@ -109,7 +109,7 @@ $xamlInput = @'
                         <TextBlock Grid.Column="0" FontFamily="Segoe MDL2 Assets" Text="&#xE774;" Foreground="#FF17324D" VerticalAlignment="Center"/>
                         <TextBlock Grid.Column="1" Text="Language" FontWeight="SemiBold" Foreground="#FF17324D" VerticalAlignment="Center"/>
                     </Grid>
-                    <StackPanel Margin="16,0,0,0">
+                    <StackPanel Margin="20,0,0,0">
                         <StackPanel>
                             <RadioButton x:Name="radioButtonEnglish" Content="English" IsChecked="True" Margin="0,0,0,6"/>
                             <RadioButton x:Name="radioButtonJapanese" Content="Japanese" Margin="0,0,0,6"/>
@@ -122,7 +122,6 @@ $xamlInput = @'
                             <RadioButton x:Name="radioButtonItalian" Content="Italian" Margin="0,0,0,6"/>
                             <RadioButton x:Name="radioButtonPortuguese" Content="Portuguese" Margin="0,0,0,6"/>
                             <RadioButton x:Name="radioButtonRussian" Content="Russian" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonThai" Content="Thai" Margin="0,0,0,6"/>
                             <RadioButton x:Name="radioButtonVietnamese" Content="Vietnamese"/>
                         </StackPanel>
                     </StackPanel>
@@ -133,7 +132,6 @@ $xamlInput = @'
                 <Border Grid.Row="14" Background="#FFF7FAFD" BorderBrush="#FFD6E0EA" BorderThickness="1" CornerRadius="12" Padding="10" Visibility="Collapsed">
                     <TextBox x:Name="textbox" TextWrapping="Wrap" MinHeight="40" FontFamily="Consolas" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False" IsUndoEnabled="False"/>
                 </Border>
-                <Image Grid.Row="15" x:Name="image" Height="68" Width="68" Source="https://raw.githubusercontent.com/msgang822/microsoft/refs/heads/main/files/office/donate.png" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="Collapsed"/>
             </Grid>
         </Border>
 
@@ -143,15 +141,20 @@ $xamlInput = @'
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="16"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="18"/>
+                    <RowDefinition Height="30"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0">
-                    <StackPanel>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
                         <TextBlock Text="Select a product to install" FontSize="22" FontWeight="Bold" Foreground="#FF17324D"/>
                         <TextBlock Text="Choose one product below, then submit to download or install." FontSize="12" Foreground="#FF68839E" Margin="0,4,0,0"/>
                     </StackPanel>
+                    <Button Grid.Column="1" x:Name="buttonClearSelection" Content="Clear" Width="82" Height="32" Background="#FFF4F7FB" Foreground="#FF3B566F" FontWeight="SemiBold" FontSize="12" BorderBrush="#FFD5E0EA" BorderThickness="1" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Top"/>
                 </Grid>
 
                 <UniformGrid Grid.Row="2" Columns="6" Rows="1" Margin="0,0,0,0">
@@ -240,7 +243,7 @@ $xamlInput = @'
                         </StackPanel>
                     </Border>
 
-                    <Border BorderBrush="#FFD0A437" BorderThickness="1" CornerRadius="16" Background="#FFFFFDF7" Margin="0,0,10,0" Padding="14" VerticalAlignment="Top" Height="350">
+                    <Border BorderBrush="#FFD0A437" BorderThickness="1" CornerRadius="16" Background="#FFFFFDF7" Margin="0,0,10,0" Padding="14" VerticalAlignment="Top" Height="372">
                         <StackPanel>
                             <Border Background="#FFA28210" CornerRadius="10" Padding="12,5" HorizontalAlignment="Left">
                                 <TextBlock x:Name="Label2016" Text="Office 2016" Foreground="White" FontWeight="Bold"/>
@@ -263,7 +266,7 @@ $xamlInput = @'
                         </StackPanel>
                     </Border>
 
-                    <Border BorderBrush="#FF342222" BorderThickness="1" CornerRadius="16" Background="#FFFCFAFA" Padding="14" VerticalAlignment="Top" Height="350">
+                    <Border BorderBrush="#FF342222" BorderThickness="1" CornerRadius="16" Background="#FFFCFAFA" Padding="14" VerticalAlignment="Top" Height="372">
                         <StackPanel>
                             <Border Background="#FF1B0F0F" CornerRadius="10" Padding="12,5" HorizontalAlignment="Left">
                                 <TextBlock x:Name="Label2013" Text="Office 2013" Foreground="White" FontWeight="Bold"/>
@@ -290,28 +293,53 @@ $xamlInput = @'
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="28"/>
-                        <ColumnDefinition Width="340"/>
+                        <ColumnDefinition Width="360"/>
                     </Grid.ColumnDefinitions>
 
-                    <Border Grid.Column="0" Background="{x:Null}" BorderBrush="#FFE3EBF3" BorderThickness="1" CornerRadius="12" Padding="16">
-                        <StackPanel>
-                            <Button x:Name="buttonSubmitMain" Content="Submit" Width="180" Height="42" Background="#FF10893E" Foreground="White" FontWeight="Bold" FontSize="14" BorderBrush="{x:Null}" Cursor="Hand" HorizontalAlignment="Left"/>
-                            <ProgressBar x:Name="progressbarMain" Margin="0,12,0,0" Height="8" IsEnabled="False" Background="#FFE7EEF5" BorderBrush="{x:Null}" Foreground="#FF10893E"/>
-                            <Border Margin="0,12,0,0" Background="#FFFCFEFF" BorderBrush="#FFE8EEF5" BorderThickness="1" CornerRadius="10" Padding="10">
-                                <TextBox x:Name="textboxMain" TextWrapping="Wrap" MinHeight="28" FontFamily="Consolas" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False" IsUndoEnabled="False"/>
-                            </Border>
+                    <StackPanel Grid.Column="0" Margin="16,52,16,8" Width="320" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="buttonSubmitMain" Content="Submit" Width="240" Height="56" Background="#FF10893E" Foreground="White" FontWeight="Bold" FontSize="18" BorderBrush="{x:Null}" BorderThickness="0" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" CornerRadius="14" Padding="14,8">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
                         </StackPanel>
-                    </Border>
+                        <ProgressBar x:Name="progressbarMain" Margin="0,16,0,0" Height="8" IsEnabled="False" Background="#FFE7EEF5" BorderBrush="{x:Null}" Foreground="#FF10893E" Visibility="Collapsed"/>
+                        <Border Margin="0,12,0,0" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" CornerRadius="0" Padding="0" Visibility="Collapsed">
+                            <TextBox x:Name="textboxMain" TextWrapping="Wrap" MinHeight="28" FontFamily="Consolas" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False" IsUndoEnabled="False"/>
+                        </Border>
+                    </StackPanel>
 
-                    <Border Grid.Column="2" x:Name="RemoveAll" Background="#FFFFFAF8" BorderBrush="#FFFF8A79" BorderThickness="1" CornerRadius="12" Padding="16">
+                    <Border Grid.Column="2" x:Name="RemoveAll" Background="#FFFFFAF8" BorderBrush="#FFFF8A79" BorderThickness="1" CornerRadius="12" Padding="14" Margin="0,18,0,18" VerticalAlignment="Top">
                         <StackPanel>
                             <TextBlock x:Name="LabelRemoveAll" Text="Remove All Apps" FontWeight="Bold" Foreground="#FF9C2511"/>
-                            <TextBlock Text="Use only when you want to remove every installed Office app." TextWrapping="Wrap" Foreground="#FFB04A34" FontSize="11" Margin="0,6,0,0"/>
-                            <DockPanel Margin="0,14,0,10" LastChildFill="False">
+                            <TextBlock Text="Use only when you want to remove every installed Office app." TextWrapping="Wrap" Foreground="#FFB04A34" FontSize="11" Margin="0,4,0,0"/>
+                            <DockPanel Margin="0,10,0,8" LastChildFill="False">
                                 <RadioButton x:Name="radioButtonRemoveAllApp" Content="I Agree (Caution!)" VerticalContentAlignment="Center" Margin="0,3,16,0"/>
-                                <Button x:Name="buttonRemoveAll" Content="Remove All" Background="#FFE23B15" FontFamily="Consolas" FontSize="10" Foreground="White" Height="32" Width="98" BorderBrush="{x:Null}" Cursor="Hand"/>
+                                <Button x:Name="buttonRemoveAll" Content="Remove All" Background="#FFE23B15" FontFamily="Consolas" FontSize="10" Foreground="White" Height="32" Width="98" BorderBrush="{x:Null}" Cursor="Hand">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Foreground" Value="White"/>
+                                            <Setter Property="Background" Value="#FFE23B15"/>
+                                            <Setter Property="BorderBrush" Value="{x:Null}"/>
+                                            <Setter Property="BorderThickness" Value="0"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsHitTestVisible" Value="False">
+                                                    <Setter Property="Foreground" Value="#FF6F7B87"/>
+                                                    <Setter Property="Background" Value="#FFF0F3F6"/>
+                                                    <Setter Property="BorderBrush" Value="#FFD5DEE8"/>
+                                                    <Setter Property="BorderThickness" Value="1"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
                             </DockPanel>
-                            <TextBlock x:Name="textBoxRemoveAll" Text="This option removes all installed Office apps." TextWrapping="Wrap" FontSize="11" Foreground="#FFE23B15" FontWeight="SemiBold"/>
+                            <TextBlock x:Name="textBoxRemoveAll" Text="This option removes all installed Office apps." TextWrapping="Wrap" FontSize="11" Foreground="#FFE23B15" FontWeight="SemiBold" Margin="0,0,0,2"/>
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -363,7 +391,8 @@ $xamlInput = @'
         $removeAllEnabled = -not [bool]$hasProductSelection
 
         $radioButtonRemoveAllApp.IsEnabled = $removeAllEnabled
-        $buttonRemoveAll.IsEnabled = $removeAllEnabled -and ($radioButtonRemoveAllApp.IsChecked -eq $true)
+        $buttonRemoveAll.IsHitTestVisible = $removeAllEnabled -and ($radioButtonRemoveAllApp.IsChecked -eq $true)
+        $buttonRemoveAll.Cursor = if ($buttonRemoveAll.IsHitTestVisible) { 'Hand' } else { 'Arrow' }
 
         if (-not $removeAllEnabled) {
             $radioButtonRemoveAllApp.IsChecked = $false
@@ -372,6 +401,11 @@ $xamlInput = @'
         $removeAllActive = $radioButtonRemoveAllApp.IsChecked -eq $true
         foreach ($button in $officeProductButtons) {
             $button.IsEnabled = -not $removeAllActive
+        }
+
+        if ($hasProductSelection -or $removeAllActive) {
+            $textbox.Text = ""
+            $textbox.Parent.Visibility = "Collapsed"
         }
     }
 
@@ -387,6 +421,14 @@ $xamlInput = @'
     })
     $radioButtonRemoveAllApp.Add_Unchecked({ UpdateSelectionMode })
     UpdateSelectionMode
+
+    $buttonClearSelection.Add_Click({
+        foreach ($button in $officeProductButtons) {
+            $button.IsChecked = $false
+        }
+        $radioButtonRemoveAllApp.IsChecked = $false
+        UpdateSelectionMode
+    })
 
 # Download links
     $uri            = "https://github.com/msgang822/microsoft/raw/refs/heads/main/files/office/setup.exe"
@@ -456,11 +498,11 @@ $xamlInput = @'
 
         # To referece our elements we use the $sync variable from hashtable.
             $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Hidden" })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.progressbar.Visibility = "Visible" })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Parent.Visibility = "Visible" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = "$($sync.UIstatus) $($sync.productName) $($sync.arch)-bit ($($sync.language))" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.BorderBrush = "#FF707070" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $true })
-            $sync.Form.Dispatcher.Invoke([action] { $sync.image.Visibility = "Visible" })
-
         Set-Location -Path $($sync.workingDir)
         # Write-VerboseDebug "Working (download) path: $pwd"
         # Write-VerboseDebug "Command to run: .\Configuration\ClickToRun.exe $($sync.mode) .\Configuration\$($sync.configurationFile)"
@@ -468,7 +510,6 @@ $xamlInput = @'
         Start-Process -FilePath .\Configuration\ClickToRun.exe -ArgumentList "$($sync.mode) .\Configuration\$($sync.configurationFile)" -NoNewWindow -Wait
                 
         # Bring back our Button, set the Label and ProgressBar, we're done..
-            $sync.Form.Dispatcher.Invoke([action] { $sync.image.Visibility = "Hidden" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = 'Visible' })
             $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Content = 'Submit' })
             $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = 'Completed' })
@@ -485,7 +526,6 @@ $xamlInput = @'
     $sync.Form = $Form
     $sync.ProgressBar = $ProgressBar
     $sync.textbox = $textbox
-    $sync.image = $image
     $sync.buttonSubmit = $buttonSubmit
     $sync.DebugPreference = $DebugPreference
     $sync.VerbosePreference = $VerbosePreference
@@ -523,7 +563,6 @@ $xamlInput = @'
             if ($radioButtonItalian.IsChecked) {$languageId="it-IT"; $language = 'Italian'}
             if ($radioButtonPortuguese.IsChecked) {$languageId="pt-BR"; $language = 'Portuguese'}
             if ($radioButtonRussian.IsChecked) {$languageId="ru-RU"; $language = 'Russian'}
-            if ($radioButtonThai.IsChecked) {$languageId="th-TH"; $language = 'Thai'}
             if ($radioButtonVietnamese.IsChecked) {$languageId="vi-VN"; $language = 'Vietnamese'}
 
             if ($radioButtonDownload.IsChecked) {$mode = '/download'; $UIstatus = 'Downlading'}
@@ -622,20 +661,23 @@ $xamlInput = @'
                 $PSIinstance.Runspace = $runspace
                 $PSIinstance.BeginInvoke()
             } else {
-                $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Foreground = "Red" })
-                $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.FontWeight = "Bold" })
-                $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = "Please select an Office version." })
+                $progressbar.Visibility = "Collapsed"
+                $textbox.Parent.Visibility = "Visible"
+                $textbox.Foreground = "#FFC62828"
+                $textbox.FontWeight = "Bold"
+                $textbox.Text = "Please select an Office app before submitting."
             } 
     })
 
 # Uninstall all installed Microsoft Office apps.
     $UninstallOffice = {
 
+        $sync.Form.Dispatcher.Invoke([action] { $sync.progressbar.Visibility = "Visible" })
+        $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Parent.Visibility = "Visible" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = "Uninstalling Microsoft Office..." })
         $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Hidden" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.BorderBrush = "#FF707070" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $true })
-        $sync.Form.Dispatcher.Invoke([action] { $sync.image.Visibility = "Visible" })
         
         Set-Location -Path $($sync.workingDir)
         Invoke-Item Path $($sync.workingDir)
@@ -643,11 +685,12 @@ $xamlInput = @'
         (New-Object Net.WebClient).DownloadFile($($sync.removeAllXML), "$($sync.workingDir)\configuration.xml")
         (New-Object Net.WebClient).DownloadFile($($sync.uri), "$($sync.workingDir)\ClickToRun.exe")
 
+        $sync.Form.Dispatcher.Invoke([action] { $sync.progressbar.Visibility = "Visible" })
+        $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Parent.Visibility = "Visible" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = "Uninstalling Using Office Deployment Tool..." })
         $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Hidden" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.BorderBrush = "#FF707070" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $true })
-        $sync.Form.Dispatcher.Invoke([action] { $sync.image.Visibility = "Visible" })
 
         # Start-Process -FilePath .\04.Uninstall.bat -Wait
         Start-Process -FilePath .\ClickToRun.exe -ArgumentList "/configure .\configuration.xml" -NoNewWindow -Wait
@@ -656,16 +699,16 @@ $xamlInput = @'
             (New-Object Net.WebClient).DownloadFile('https://aka.ms/SaRA_EnterpriseVersionFiles', "$($sync.workingDir)\SaRA.zip")
             Expand-Archive -Path .\SaRA.zip -DestinationPath .\SaRA
 
+            $sync.Form.Dispatcher.Invoke([action] { $sync.progressbar.Visibility = "Visible" })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Parent.Visibility = "Visible" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = "Running Scenario OfficeScrubScenario..." })
             $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Hidden" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.BorderBrush = "#FF707070" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $true })
-            $sync.Form.Dispatcher.Invoke([action] { $sync.image.Visibility = "Visible" })
 
             Start-Process -FilePath ".\SaRA\SaRACmd.exe" -ArgumentList "-S OfficeScrubScenario -AcceptEula -OfficeVersion All" -NoNewWindow -Wait
         }
 
-        $sync.Form.Dispatcher.Invoke([action] { $sync.image.Visibility = "Hidden" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = 'Visible' })
         $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Content = 'Submit' })
         $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = 'Completed' })
