@@ -1,7 +1,7 @@
 # You need to have Administrator rights to run this script!
     if (-not([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
         Write-Warning "You need to have Administrator rights to run this script!`nPlease re-run this script as an Administrator in an elevated powershell prompt!"
-        Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "irm install.msgang.com | iex"
+        Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -File `"$PSCommandPath`""
         break
     }
 
@@ -16,335 +16,348 @@ $xamlInput = @'
 <Window x:Class="install.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:install"
-        mc:Ignorable="d"
-        Title="Microsoft Installation Tool - softvn.vn" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="https://msgang.com/wp-content/uploads/2025/07/images.png" Width="1320" Height="750" Background="#FFF4F7FB">
-    <Grid Margin="16">
+        Title="Microsoft Installation Tool - softvn.vn" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="https://msgang.com/wp-content/uploads/2025/07/images.png" Width="1240" SizeToContent="Height" Background="#FFF1F5F9"
+        FontFamily="Segoe UI, Inter, Outfit, sans-serif">
+    <Window.Resources>
+        <!-- Dark Sidebar Radio Button Style -->
+        <Style TargetType="RadioButton" x:Key="SidebarRadio">
+            <Setter Property="Margin" Value="0,4,0,4"></Setter>
+            <Setter Property="Foreground" Value="#FFA0AEC0"></Setter>
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <BulletDecorator Background="Transparent" Cursor="Hand">
+                            <BulletDecorator.Bullet>
+                                <Grid Width="14" Height="14">
+                                    <Ellipse Name="SidebarBorder" Stroke="#FF4A5568" StrokeThickness="1.5" Fill="#FF1E1B29"></Ellipse>
+                                    <Ellipse Name="SidebarDot" Width="6" Height="6" Fill="#FF4F46E5" Visibility="Collapsed"></Ellipse>
+                                </Grid>
+                            </BulletDecorator.Bullet>
+                            <ContentPresenter Margin="8,0,0,0" VerticalAlignment="Center" RecognizesAccessKey="True"></ContentPresenter>
+                        </BulletDecorator>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="SidebarBorder" Property="Stroke" Value="#FF4F46E5"></Setter>
+                                <Setter TargetName="SidebarDot" Property="Visibility" Value="Visible"></Setter>
+                                <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="SidebarBorder" Property="Stroke" Value="#FF718096"></Setter>
+                                <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Standard Card Radio Button Style -->
+        <Style TargetType="RadioButton">
+            <Setter Property="Margin" Value="0,3,0,3"></Setter>
+            <Setter Property="Foreground" Value="#FF475569"></Setter>
+            <Setter Property="FontSize" Value="11"></Setter>
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <BulletDecorator Background="Transparent" Cursor="Hand">
+                            <BulletDecorator.Bullet>
+                                <Grid Width="14" Height="14">
+                                    <Ellipse Name="CardBorder" Stroke="#FFCBD5E1" StrokeThickness="1.5" Fill="White"></Ellipse>
+                                    <Ellipse Name="CardDot" Width="6" Height="6" Fill="#FF4F46E5" Visibility="Collapsed"></Ellipse>
+                                </Grid>
+                            </BulletDecorator.Bullet>
+                            <ContentPresenter Margin="6,0,0,0" VerticalAlignment="Center" RecognizesAccessKey="True"></ContentPresenter>
+                        </BulletDecorator>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="CardBorder" Property="Stroke" Value="#FF4F46E5"></Setter>
+                                <Setter TargetName="CardDot" Property="Visibility" Value="Visible"></Setter>
+                                <Setter Property="Foreground" Value="#FF0F172A"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="CardBorder" Property="Stroke" Value="#FF94A3B8"></Setter>
+                                <Setter Property="Foreground" Value="#FF0F172A"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="12"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="240"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" CornerRadius="18" Background="#FFFBFDFF" BorderBrush="#FFDCE6F0" BorderThickness="1" Padding="16">
-            <Grid>
+        
+        <!-- Sidebar container -->
+        <Border Grid.Column="0" Background="#FF13111C">
+            <Grid Margin="20">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="8"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="8"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="8"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="8"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="8"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
-
-                <Border Grid.Row="0" Background="#FFFFFFFF" CornerRadius="14" Padding="12,8" BorderBrush="#FFE4EBF3" BorderThickness="1" Margin="0,4,0,0">
-                    <Image Width="165" Height="44" Stretch="Uniform" HorizontalAlignment="Left" Source="https://softvn.vn/wp-content/uploads/2019/06/softvn-logo.png"/>
-                </Border>
-
-                <StackPanel Grid.Row="2" Margin="12,0,0,0">
-                    <Grid Margin="0,0,0,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="16"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" FontFamily="Segoe MDL2 Assets" Text="&#xE770;" Foreground="#FF17324D" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Column="1" Text="Architecture" FontWeight="SemiBold" Foreground="#FF17324D" VerticalAlignment="Center"/>
-                    </Grid>
-                    <StackPanel Margin="20,0,0,0">
-                        <RadioButton x:Name="radioButtonArch64" Content="64-bit (Recommended)" IsChecked="True" Margin="0,0,0,6"/>
-                        <RadioButton x:Name="radioButtonArch32" Content="32-bit"/>
-                    </StackPanel>
-                    <Border Height="1" Background="#FFE6EDF5" Margin="0,12,0,0"/>
+                
+                <!-- Logo brand section -->
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,4,0,24">
+                    <Border Width="6" Height="20" CornerRadius="3" Background="#FF4F46E5" Margin="0,0,10,0"></Border>
+                    <TextBlock Text="SOFTVN" Foreground="White" FontSize="16" FontWeight="Black" VerticalAlignment="Center"></TextBlock>
                 </StackPanel>
-
-                <StackPanel Grid.Row="4" Margin="12,0,0,0">
-                    <Grid Margin="0,0,0,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="16"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" FontFamily="Segoe MDL2 Assets" Text="&#xE192;" Foreground="#FF17324D" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Column="1" Text="License Type" FontWeight="SemiBold" Foreground="#FF17324D" VerticalAlignment="Center"/>
-                    </Grid>
-                    <StackPanel Margin="20,0,0,0">
-                        <RadioButton x:Name="radioButtonVolume" Content="Volume" IsChecked="True" Margin="0,0,0,6"/>
-                        <RadioButton x:Name="radioButtonRetail" Content="Retail"/>
-                    </StackPanel>
-                    <Border Height="1" Background="#FFE6EDF5" Margin="0,12,0,0"/>
+                
+                <StackPanel Grid.Row="1" Margin="0,0,0,18">
+                    <TextBlock Text="ARCHITECTURE" FontWeight="Bold" FontSize="9" Foreground="#FF5B5570" Margin="0,0,0,8"></TextBlock>
+                    <RadioButton x:Name="radioButtonArch64" Content="64-bit (Recommended)" IsChecked="True" Style="{StaticResource SidebarRadio}"></RadioButton>
+                    <RadioButton x:Name="radioButtonArch32" Content="32-bit" Style="{StaticResource SidebarRadio}"></RadioButton>
                 </StackPanel>
-
-                <StackPanel Grid.Row="6" Margin="12,0,0,0">
-                    <Grid Margin="0,0,0,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="16"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" FontFamily="Segoe MDL2 Assets" Text="&#xE713;" Foreground="#FF17324D" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Column="1" Text="Mode" FontWeight="SemiBold" Foreground="#FF17324D" VerticalAlignment="Center"/>
-                    </Grid>
-                    <StackPanel Margin="20,0,0,0">
-                        <RadioButton x:Name="radioButtonInstall" Content="Install now" IsChecked="True" Margin="0,0,0,6"/>
-                        <RadioButton x:Name="radioButtonDownload" Content="Download only"/>
-                    </StackPanel>
-                    <Border Height="1" Background="#FFE6EDF5" Margin="0,12,0,0"/>
+                
+                <StackPanel Grid.Row="2" Margin="0,0,0,18">
+                    <TextBlock Text="LICENSE TYPE" FontWeight="Bold" FontSize="9" Foreground="#FF5B5570" Margin="0,0,0,8"></TextBlock>
+                    <RadioButton x:Name="radioButtonVolume" Content="Volume" IsChecked="True" Style="{StaticResource SidebarRadio}"></RadioButton>
+                    <RadioButton x:Name="radioButtonRetail" Content="Retail" Style="{StaticResource SidebarRadio}"></RadioButton>
                 </StackPanel>
-
-                <StackPanel Grid.Row="8" Margin="12,0,0,0">
-                    <Grid Margin="0,0,0,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="16"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" FontFamily="Segoe MDL2 Assets" Text="&#xE774;" Foreground="#FF17324D" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Column="1" Text="Language" FontWeight="SemiBold" Foreground="#FF17324D" VerticalAlignment="Center"/>
-                    </Grid>
-                    <StackPanel Margin="20,0,0,0">
-                        <StackPanel>
-                            <RadioButton x:Name="radioButtonEnglish" Content="English" IsChecked="True" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonJapanese" Content="Japanese" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonKorean" Content="Korean" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonChinese" Content="Chinese" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonFrench" Content="French" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonSpanish" Content="Spanish" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonHindi" Content="Hindi" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonGerman" Content="German" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonItalian" Content="Italian" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonPortuguese" Content="Portuguese" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonRussian" Content="Russian" Margin="0,0,0,6"/>
-                            <RadioButton x:Name="radioButtonVietnamese" Content="Vietnamese"/>
-                        </StackPanel>
-                    </StackPanel>
+                
+                <StackPanel Grid.Row="3" Margin="0,0,0,18">
+                    <TextBlock Text="MODE" FontWeight="Bold" FontSize="9" Foreground="#FF5B5570" Margin="0,0,0,8"></TextBlock>
+                    <RadioButton x:Name="radioButtonInstall" Content="Install now" IsChecked="True" Style="{StaticResource SidebarRadio}"></RadioButton>
+                    <RadioButton x:Name="radioButtonDownload" Content="Download only" Style="{StaticResource SidebarRadio}"></RadioButton>
                 </StackPanel>
-
-                <Button Grid.Row="10" x:Name="buttonSubmit" Content="Submit" Height="42" Background="#FF10893E" Foreground="White" FontWeight="Bold" FontSize="14" BorderBrush="{x:Null}" Cursor="Hand" Visibility="Collapsed"/>
-                <ProgressBar Grid.Row="12" x:Name="progressbar" Height="8" IsEnabled="False" Background="#FFE7EEF5" BorderBrush="{x:Null}" Foreground="#FF10893E" Visibility="Collapsed"/>
-                <Border Grid.Row="14" Background="#FFF7FAFD" BorderBrush="#FFD6E0EA" BorderThickness="1" CornerRadius="12" Padding="10" Visibility="Collapsed">
-                    <TextBox x:Name="textbox" TextWrapping="Wrap" MinHeight="40" FontFamily="Consolas" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False" IsUndoEnabled="False"/>
-                </Border>
+                
+                <StackPanel Grid.Row="4" Margin="0,0,0,0">
+                    <TextBlock Text="LANGUAGE" FontWeight="Bold" FontSize="9" Foreground="#FF5B5570" Margin="0,0,0,8"></TextBlock>
+                    <UniformGrid Columns="2" Rows="6">
+                        <RadioButton x:Name="radioButtonEnglish" Content="English" IsChecked="True" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonVietnamese" Content="Vietnamese" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonJapanese" Content="Japanese" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonKorean" Content="Korean" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonChinese" Content="Chinese" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonFrench" Content="French" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonSpanish" Content="Spanish" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonHindi" Content="Hindi" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonGerman" Content="German" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonItalian" Content="Italian" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonPortuguese" Content="Portuguese" Style="{StaticResource SidebarRadio}"></RadioButton>
+                        <RadioButton x:Name="radioButtonRussian" Content="Russian" Style="{StaticResource SidebarRadio}"></RadioButton>
+                    </UniformGrid>
+                </StackPanel>
             </Grid>
         </Border>
-
-        <Border Grid.Column="2" CornerRadius="18" Background="White" BorderBrush="#FFDCE6F0" BorderThickness="1" Padding="16">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="16"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-
-                <Grid Grid.Row="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <TextBlock Text="Select a product to install" FontSize="22" FontWeight="Bold" Foreground="#FF17324D"/>
-                        <TextBlock Text="Choose one product below, then submit to download or install." FontSize="12" Foreground="#FF68839E" Margin="0,4,0,0"/>
+        
+        <Grid Grid.Column="1" Margin="32,0,32,24">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0" Margin="0,0,0,12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Text="Select Product" FontSize="20" FontWeight="Bold" Foreground="#FF0F172A"></TextBlock>
+                    <TextBlock Text="Choose the Microsoft Office product you want to install or download." FontSize="11" Foreground="#FF64748B" Margin="0,2,0,0"></TextBlock>
+                </StackPanel>
+                <Button Grid.Column="1" x:Name="buttonClearSelection" Content="Clear Selection" Width="120" Height="32" Background="#FFFFFFFF" Foreground="#FF334155" FontWeight="SemiBold" FontSize="11" BorderBrush="#FFCBD5E1" BorderThickness="1" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+            
+            <!-- Products Grid without scrollbar -->
+            <UniformGrid Grid.Row="1" Columns="6" Rows="1" Margin="-4">
+                <Border Background="#FFFFFFFF" BorderBrush="#FFE2E8F0" BorderThickness="1" CornerRadius="8" Margin="4" Padding="8,12,4,12">
+                    <StackPanel>
+                        <TextBlock Text="Microsoft 365" FontSize="15" FontWeight="Bold" Foreground="#FF4F46E5" Margin="0,0,0,10"></TextBlock>
+                        <RadioButton x:Name="radioButton365Home" GroupName="OfficeProducts" Content="Home"></RadioButton>
+                        <RadioButton x:Name="radioButton365Business" GroupName="OfficeProducts" Content="Business"></RadioButton>
+                        <RadioButton x:Name="radioButton365Enterprise" GroupName="OfficeProducts" Content="Enterprise"></RadioButton>
                     </StackPanel>
-                    <Button Grid.Column="1" x:Name="buttonClearSelection" Content="Clear" Width="82" Height="32" Background="#FFF4F7FB" Foreground="#FF3B566F" FontWeight="SemiBold" FontSize="12" BorderBrush="#FFD5E0EA" BorderThickness="1" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                </Grid>
-
-                <UniformGrid Grid.Row="2" Columns="6" Rows="1" Margin="0,0,0,0">
-                    <Border BorderBrush="#FFFF6B57" BorderThickness="1" CornerRadius="16" Background="#FFFFFBFA" Margin="0,0,10,0" Padding="14" VerticalAlignment="Top">
-                        <StackPanel>
-                            <Border Background="#FFDA2323" CornerRadius="10" Padding="12,5" HorizontalAlignment="Left">
-                                <TextBlock x:Name="Label365" Text="Microsoft 365" Foreground="White" FontWeight="Bold"/>
-                            </Border>
-                            <StackPanel Margin="0,16,0,0">
-                                <RadioButton x:Name="radioButton365Home" GroupName="OfficeProducts" Content="Home" Margin="0,0,0,10"/>
-                                <RadioButton x:Name="radioButton365Business" GroupName="OfficeProducts" Content="Business" Margin="0,0,0,10"/>
-                                <RadioButton x:Name="radioButton365Enterprise" GroupName="OfficeProducts" Content="Enterprise"/>
-                            </StackPanel>
+                </Border>
+                
+                <Border Background="#FFFFFFFF" BorderBrush="#FFE2E8F0" BorderThickness="1" CornerRadius="8" Margin="4" Padding="8,12,4,12">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Office 2024" FontSize="15" FontWeight="Bold" Foreground="#FFD97706" Margin="0,0,0,10"></TextBlock>
+                        <StackPanel Grid.Row="1" Margin="0,0,0,0">
+                            <RadioButton x:Name="radioButton2024Pro" GroupName="OfficeProducts" Content="Professional"></RadioButton>
+                            <RadioButton x:Name="radioButton2024Std" GroupName="OfficeProducts" Content="Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2024ProjectPro" GroupName="OfficeProducts" Content="Project Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2024ProjectStd" GroupName="OfficeProducts" Content="Project Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2024VisioPro" GroupName="OfficeProducts" Content="Visio Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2024VisioStd" GroupName="OfficeProducts" Content="Visio Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2024Word" GroupName="OfficeProducts" Content="Word"></RadioButton>
+                            <RadioButton x:Name="radioButton2024Excel" GroupName="OfficeProducts" Content="Excel"></RadioButton>
+                            <RadioButton x:Name="radioButton2024PowerPoint" GroupName="OfficeProducts" Content="PowerPoint"></RadioButton>
+                            <RadioButton x:Name="radioButton2024Outlook" GroupName="OfficeProducts" Content="Outlook"></RadioButton>
+                            <RadioButton x:Name="radioButton2024Access" GroupName="OfficeProducts" Content="Access"></RadioButton>
+                            <RadioButton x:Name="radioButton2024Publisher" GroupName="OfficeProducts" Content="Publisher"></RadioButton>
+                            <RadioButton x:Name="radioButton2024HomeStudent" GroupName="OfficeProducts" Content="Home Student"></RadioButton>
+                            <RadioButton x:Name="radioButton2024HomeBusiness" GroupName="OfficeProducts" Content="Home Business"></RadioButton>
                         </StackPanel>
-                    </Border>
-
-                    <Border BorderBrush="#FFFFA43A" BorderThickness="1" CornerRadius="16" Background="#FFFFFCF7" Margin="0,0,10,0" Padding="14" VerticalAlignment="Top">
-                        <StackPanel>
-                            <Border Background="#FFE2820E" CornerRadius="10" Padding="12,5" HorizontalAlignment="Left">
-                                <TextBlock x:Name="Label2024" Text="Office 2024" Foreground="White" FontWeight="Bold"/>
-                            </Border>
-                            <StackPanel Margin="0,16,0,0">
-                                <RadioButton x:Name="radioButton2024Pro" GroupName="OfficeProducts" Content="Professional" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024Std" GroupName="OfficeProducts" Content="Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024ProjectPro" GroupName="OfficeProducts" Content="Project Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024ProjectStd" GroupName="OfficeProducts" Content="Project Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024VisioPro" GroupName="OfficeProducts" Content="Visio Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024VisioStd" GroupName="OfficeProducts" Content="Visio Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024Word" GroupName="OfficeProducts" Content="Word" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024Excel" GroupName="OfficeProducts" Content="Excel" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024PowerPoint" GroupName="OfficeProducts" Content="PowerPoint" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024Outlook" GroupName="OfficeProducts" Content="Outlook" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024Access" GroupName="OfficeProducts" Content="Access" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024Publisher" GroupName="OfficeProducts" Content="Publisher" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024HomeStudent" GroupName="OfficeProducts" Content="HomeStudent" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2024HomeBusiness" GroupName="OfficeProducts" Content="HomeBusiness"/>
-                            </StackPanel>
+                    </Grid>
+                </Border>
+                
+                <Border Background="#FFFFFFFF" BorderBrush="#FFE2E8F0" BorderThickness="1" CornerRadius="8" Margin="4" Padding="8,12,4,12">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Office 2021" FontSize="15" FontWeight="Bold" Foreground="#FF059669" Margin="0,0,0,10"></TextBlock>
+                        <StackPanel Grid.Row="1" Margin="0,0,0,0">
+                            <RadioButton x:Name="radioButton2021Pro" GroupName="OfficeProducts" Content="Professional"></RadioButton>
+                            <RadioButton x:Name="radioButton2021Std" GroupName="OfficeProducts" Content="Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2021ProjectPro" GroupName="OfficeProducts" Content="Project Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2021ProjectStd" GroupName="OfficeProducts" Content="Project Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2021VisioPro" GroupName="OfficeProducts" Content="Visio Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2021VisioStd" GroupName="OfficeProducts" Content="Visio Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2021Word" GroupName="OfficeProducts" Content="Word"></RadioButton>
+                            <RadioButton x:Name="radioButton2021Excel" GroupName="OfficeProducts" Content="Excel"></RadioButton>
+                            <RadioButton x:Name="radioButton2021PowerPoint" GroupName="OfficeProducts" Content="PowerPoint"></RadioButton>
+                            <RadioButton x:Name="radioButton2021Outlook" GroupName="OfficeProducts" Content="Outlook"></RadioButton>
+                            <RadioButton x:Name="radioButton2021Access" GroupName="OfficeProducts" Content="Access"></RadioButton>
+                            <RadioButton x:Name="radioButton2021Publisher" GroupName="OfficeProducts" Content="Publisher"></RadioButton>
+                            <RadioButton x:Name="radioButton2021HomeStudent" GroupName="OfficeProducts" Content="Home Student"></RadioButton>
+                            <RadioButton x:Name="radioButton2021HomeBusiness" GroupName="OfficeProducts" Content="Home Business"></RadioButton>
                         </StackPanel>
-                    </Border>
-
-                    <Border BorderBrush="#FF5B45FF" BorderThickness="1" CornerRadius="16" Background="#FFFAF9FF" Margin="0,0,10,0" Padding="14" VerticalAlignment="Top">
-                        <StackPanel>
-                            <Border Background="#FF3C10DE" CornerRadius="10" Padding="12,5" HorizontalAlignment="Left">
-                                <TextBlock x:Name="Label2021" Text="Office 2021" Foreground="White" FontWeight="Bold"/>
-                            </Border>
-                            <StackPanel Margin="0,16,0,0">
-                                <RadioButton x:Name="radioButton2021Pro" GroupName="OfficeProducts" Content="Professional" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021Std" GroupName="OfficeProducts" Content="Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021ProjectPro" GroupName="OfficeProducts" Content="Project Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021ProjectStd" GroupName="OfficeProducts" Content="Project Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021VisioPro" GroupName="OfficeProducts" Content="Visio Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021VisioStd" GroupName="OfficeProducts" Content="Visio Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021Word" GroupName="OfficeProducts" Content="Word" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021Excel" GroupName="OfficeProducts" Content="Excel" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021PowerPoint" GroupName="OfficeProducts" Content="PowerPoint" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021Outlook" GroupName="OfficeProducts" Content="Outlook" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021Access" GroupName="OfficeProducts" Content="Access" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021Publisher" GroupName="OfficeProducts" Content="Publisher" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021HomeStudent" GroupName="OfficeProducts" Content="HomeStudent" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2021HomeBusiness" GroupName="OfficeProducts" Content="HomeBusiness"/>
-                            </StackPanel>
+                    </Grid>
+                </Border>
+                
+                <Border Background="#FFFFFFFF" BorderBrush="#FFE2E8F0" BorderThickness="1" CornerRadius="8" Margin="4" Padding="8,12,4,12">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Office 2019" FontSize="15" FontWeight="Bold" Foreground="#FF2563EB" Margin="0,0,0,10"></TextBlock>
+                        <StackPanel Grid.Row="1" Margin="0,0,0,0">
+                            <RadioButton x:Name="radioButton2019Pro" GroupName="OfficeProducts" Content="Professional"></RadioButton>
+                            <RadioButton x:Name="radioButton2019Std" GroupName="OfficeProducts" Content="Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2019ProjectPro" GroupName="OfficeProducts" Content="Project Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2019ProjectStd" GroupName="OfficeProducts" Content="Project Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2019VisioPro" GroupName="OfficeProducts" Content="Visio Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2019VisioStd" GroupName="OfficeProducts" Content="Visio Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2019Word" GroupName="OfficeProducts" Content="Word"></RadioButton>
+                            <RadioButton x:Name="radioButton2019Excel" GroupName="OfficeProducts" Content="Excel"></RadioButton>
+                            <RadioButton x:Name="radioButton2019PowerPoint" GroupName="OfficeProducts" Content="PowerPoint"></RadioButton>
+                            <RadioButton x:Name="radioButton2019Outlook" GroupName="OfficeProducts" Content="Outlook"></RadioButton>
+                            <RadioButton x:Name="radioButton2019Access" GroupName="OfficeProducts" Content="Access"></RadioButton>
+                            <RadioButton x:Name="radioButton2019Publisher" GroupName="OfficeProducts" Content="Publisher"></RadioButton>
+                            <RadioButton x:Name="radioButton2019HomeStudent" GroupName="OfficeProducts" Content="Home Student"></RadioButton>
+                            <RadioButton x:Name="radioButton2019HomeBusiness" GroupName="OfficeProducts" Content="Home Business"></RadioButton>
                         </StackPanel>
-                    </Border>
-
-                    <Border BorderBrush="#FF28A85A" BorderThickness="1" CornerRadius="16" Background="#FFF7FDF9" Margin="0,0,10,0" Padding="14" VerticalAlignment="Top">
-                        <StackPanel>
-                            <Border Background="#FF0F8E40" CornerRadius="10" Padding="12,5" HorizontalAlignment="Left">
-                                <TextBlock x:Name="Label2019" Text="Office 2019" Foreground="White" FontWeight="Bold"/>
-                            </Border>
-                            <StackPanel Margin="0,16,0,0">
-                                <RadioButton x:Name="radioButton2019Pro" GroupName="OfficeProducts" Content="Professional" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019Std" GroupName="OfficeProducts" Content="Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019ProjectPro" GroupName="OfficeProducts" Content="Project Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019ProjectStd" GroupName="OfficeProducts" Content="Project Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019VisioPro" GroupName="OfficeProducts" Content="Visio Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019VisioStd" GroupName="OfficeProducts" Content="Visio Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019Word" GroupName="OfficeProducts" Content="Word" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019Excel" GroupName="OfficeProducts" Content="Excel" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019PowerPoint" GroupName="OfficeProducts" Content="PowerPoint" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019Outlook" GroupName="OfficeProducts" Content="Outlook" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019Access" GroupName="OfficeProducts" Content="Access" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019Publisher" GroupName="OfficeProducts" Content="Publisher" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019HomeStudent" GroupName="OfficeProducts" Content="HomeStudent" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2019HomeBusiness" GroupName="OfficeProducts" Content="HomeBusiness"/>
-                            </StackPanel>
+                    </Grid>
+                </Border>
+                
+                <Border Background="#FFFFFFFF" BorderBrush="#FFE2E8F0" BorderThickness="1" CornerRadius="8" Margin="4" Padding="8,12,4,12">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Office 2016" FontSize="15" FontWeight="Bold" Foreground="#FF9333EA" Margin="0,0,0,10"></TextBlock>
+                        <StackPanel Grid.Row="1" Margin="0,0,0,0">
+                            <RadioButton x:Name="radioButton2016Pro" GroupName="OfficeProducts" Content="Professional"></RadioButton>
+                            <RadioButton x:Name="radioButton2016Std" GroupName="OfficeProducts" Content="Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2016ProjectPro" GroupName="OfficeProducts" Content="Project Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2016ProjectStd" GroupName="OfficeProducts" Content="Project Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2016VisioPro" GroupName="OfficeProducts" Content="Visio Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2016VisioStd" GroupName="OfficeProducts" Content="Visio Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2016Word" GroupName="OfficeProducts" Content="Word"></RadioButton>
+                            <RadioButton x:Name="radioButton2016Excel" GroupName="OfficeProducts" Content="Excel"></RadioButton>
+                            <RadioButton x:Name="radioButton2016PowerPoint" GroupName="OfficeProducts" Content="PowerPoint"></RadioButton>
+                            <RadioButton x:Name="radioButton2016Outlook" GroupName="OfficeProducts" Content="Outlook"></RadioButton>
+                            <RadioButton x:Name="radioButton2016Access" GroupName="OfficeProducts" Content="Access"></RadioButton>
+                            <RadioButton x:Name="radioButton2016Publisher" GroupName="OfficeProducts" Content="Publisher"></RadioButton>
+                            <RadioButton x:Name="radioButton2016OneNote" GroupName="OfficeProducts" Content="OneNote"></RadioButton>
                         </StackPanel>
-                    </Border>
-
-                    <Border BorderBrush="#FFD0A437" BorderThickness="1" CornerRadius="16" Background="#FFFFFDF7" Margin="0,0,10,0" Padding="14" VerticalAlignment="Top" Height="372">
-                        <StackPanel>
-                            <Border Background="#FFA28210" CornerRadius="10" Padding="12,5" HorizontalAlignment="Left">
-                                <TextBlock x:Name="Label2016" Text="Office 2016" Foreground="White" FontWeight="Bold"/>
-                            </Border>
-                            <StackPanel Margin="0,16,0,0">
-                                <RadioButton x:Name="radioButton2016Pro" GroupName="OfficeProducts" Content="Professional" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016Std" GroupName="OfficeProducts" Content="Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016ProjectPro" GroupName="OfficeProducts" Content="Project Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016ProjectStd" GroupName="OfficeProducts" Content="Project Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016VisioPro" GroupName="OfficeProducts" Content="Visio Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016VisioStd" GroupName="OfficeProducts" Content="Visio Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016Word" GroupName="OfficeProducts" Content="Word" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016Excel" GroupName="OfficeProducts" Content="Excel" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016PowerPoint" GroupName="OfficeProducts" Content="PowerPoint" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016Outlook" GroupName="OfficeProducts" Content="Outlook" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016Access" GroupName="OfficeProducts" Content="Access" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016Publisher" GroupName="OfficeProducts" Content="Publisher" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2016OneNote" GroupName="OfficeProducts" Content="OneNote"/>
-                            </StackPanel>
+                    </Grid>
+                </Border>
+                
+                <Border Background="#FFFFFFFF" BorderBrush="#FFE2E8F0" BorderThickness="1" CornerRadius="8" Margin="4" Padding="8,12,4,12">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Office 2013" FontSize="15" FontWeight="Bold" Foreground="#FFBE123C" Margin="0,0,0,10"></TextBlock>
+                        <StackPanel Grid.Row="1" Margin="0,0,0,0">
+                            <RadioButton x:Name="radioButton2013Pro" GroupName="OfficeProducts" Content="Professional"></RadioButton>
+                            <RadioButton x:Name="radioButton2013Std" GroupName="OfficeProducts" Content="Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2013ProjectPro" GroupName="OfficeProducts" Content="Project Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2013ProjectStd" GroupName="OfficeProducts" Content="Project Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2013VisioPro" GroupName="OfficeProducts" Content="Visio Pro"></RadioButton>
+                            <RadioButton x:Name="radioButton2013VisioStd" GroupName="OfficeProducts" Content="Visio Standard"></RadioButton>
+                            <RadioButton x:Name="radioButton2013Word" GroupName="OfficeProducts" Content="Word"></RadioButton>
+                            <RadioButton x:Name="radioButton2013Excel" GroupName="OfficeProducts" Content="Excel"></RadioButton>
+                            <RadioButton x:Name="radioButton2013PowerPoint" GroupName="OfficeProducts" Content="PowerPoint"></RadioButton>
+                            <RadioButton x:Name="radioButton2013Outlook" GroupName="OfficeProducts" Content="Outlook"></RadioButton>
+                            <RadioButton x:Name="radioButton2013Access" GroupName="OfficeProducts" Content="Access"></RadioButton>
+                            <RadioButton x:Name="radioButton2013Publisher" GroupName="OfficeProducts" Content="Publisher"></RadioButton>
                         </StackPanel>
-                    </Border>
-
-                    <Border BorderBrush="#FF342222" BorderThickness="1" CornerRadius="16" Background="#FFFCFAFA" Padding="14" VerticalAlignment="Top" Height="372">
-                        <StackPanel>
-                            <Border Background="#FF1B0F0F" CornerRadius="10" Padding="12,5" HorizontalAlignment="Left">
-                                <TextBlock x:Name="Label2013" Text="Office 2013" Foreground="White" FontWeight="Bold"/>
-                            </Border>
-                            <StackPanel Margin="0,16,0,0">
-                                <RadioButton x:Name="radioButton2013Pro" GroupName="OfficeProducts" Content="Professional" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013Std" GroupName="OfficeProducts" Content="Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013ProjectPro" GroupName="OfficeProducts" Content="Project Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013ProjectStd" GroupName="OfficeProducts" Content="Project Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013VisioPro" GroupName="OfficeProducts" Content="Visio Pro" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013VisioStd" GroupName="OfficeProducts" Content="Visio Standard" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013Word" GroupName="OfficeProducts" Content="Word" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013Excel" GroupName="OfficeProducts" Content="Excel" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013PowerPoint" GroupName="OfficeProducts" Content="PowerPoint" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013Outlook" GroupName="OfficeProducts" Content="Outlook" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013Access" GroupName="OfficeProducts" Content="Access" Margin="0,0,0,7"/>
-                                <RadioButton x:Name="radioButton2013Publisher" GroupName="OfficeProducts" Content="Publisher"/>
-                            </StackPanel>
+                    </Grid>
+                </Border>
+            </UniformGrid>
+            
+            <Grid Grid.Row="2" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Border Grid.Column="2" HorizontalAlignment="Right" Background="#FFFFF1F2" BorderBrush="#FFE11D48" BorderThickness="1" CornerRadius="10" Padding="16,12">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <StackPanel VerticalAlignment="Center" Margin="0,0,18,0">
+                            <TextBlock Text="Remove All Apps" FontWeight="Bold" Foreground="#FFE11D48" FontSize="13"></TextBlock>
+                            <TextBlock Text="Caution: Uninstall all Office apps" Foreground="#FFBE123C" FontSize="10" Margin="0,2,0,0"></TextBlock>
                         </StackPanel>
-                    </Border>
-                </UniformGrid>
-
-                <Grid Grid.Row="4">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="28"/>
-                        <ColumnDefinition Width="360"/>
-                    </Grid.ColumnDefinitions>
-
-                    <StackPanel Grid.Column="0" Margin="16,52,16,8" Width="320" HorizontalAlignment="Center">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button x:Name="buttonSubmitMain" Content="Submit" Width="240" Height="56" Background="#FF10893E" Foreground="White" FontWeight="Bold" FontSize="18" BorderBrush="{x:Null}" BorderThickness="0" Cursor="Hand">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <RadioButton x:Name="radioButtonRemoveAllApp" Content="I Agree" Foreground="#FFE11D48" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,12,0"></RadioButton>
+                            <Button x:Name="buttonRemoveAll" Content="Uninstall" Width="80" Height="32" Background="#FFE11D48" Foreground="White" FontWeight="SemiBold" BorderThickness="0" Cursor="Hand">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
-                                        <Border Background="{TemplateBinding Background}" CornerRadius="14" Padding="14,8">
-                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>
                         </StackPanel>
-                        <ProgressBar x:Name="progressbarMain" Margin="0,16,0,0" Height="8" IsEnabled="False" Background="#FFE7EEF5" BorderBrush="{x:Null}" Foreground="#FF10893E" Visibility="Collapsed"/>
-                        <Border Margin="0,12,0,0" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" CornerRadius="0" Padding="0" Visibility="Collapsed">
-                            <TextBox x:Name="textboxMain" TextWrapping="Wrap" MinHeight="28" FontFamily="Consolas" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False" IsUndoEnabled="False"/>
-                        </Border>
                     </StackPanel>
-
-                    <Border Grid.Column="2" x:Name="RemoveAll" Background="#FFFFFAF8" BorderBrush="#FFFF8A79" BorderThickness="1" CornerRadius="12" Padding="14" Margin="0,18,0,18" VerticalAlignment="Top">
-                        <StackPanel>
-                            <TextBlock x:Name="LabelRemoveAll" Text="Remove All Apps" FontWeight="Bold" Foreground="#FF9C2511"/>
-                            <TextBlock Text="Use only when you want to remove every installed Office app." TextWrapping="Wrap" Foreground="#FFB04A34" FontSize="11" Margin="0,4,0,0"/>
-                            <DockPanel Margin="0,10,0,8" LastChildFill="False">
-                                <RadioButton x:Name="radioButtonRemoveAllApp" Content="I Agree (Caution!)" VerticalContentAlignment="Center" Margin="0,3,16,0"/>
-                                <Button x:Name="buttonRemoveAll" Content="Remove All" Background="#FFE23B15" FontFamily="Consolas" FontSize="10" Foreground="White" Height="32" Width="98" BorderBrush="{x:Null}" Cursor="Hand">
-                                    <Button.Style>
-                                        <Style TargetType="Button">
-                                            <Setter Property="Foreground" Value="White"/>
-                                            <Setter Property="Background" Value="#FFE23B15"/>
-                                            <Setter Property="BorderBrush" Value="{x:Null}"/>
-                                            <Setter Property="BorderThickness" Value="0"/>
-                                            <Style.Triggers>
-                                                <Trigger Property="IsHitTestVisible" Value="False">
-                                                    <Setter Property="Foreground" Value="#FF6F7B87"/>
-                                                    <Setter Property="Background" Value="#FFF0F3F6"/>
-                                                    <Setter Property="BorderBrush" Value="#FFD5DEE8"/>
-                                                    <Setter Property="BorderThickness" Value="1"/>
-                                                </Trigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Button.Style>
-                                </Button>
-                            </DockPanel>
-                            <TextBlock x:Name="textBoxRemoveAll" Text="This option removes all installed Office apps." TextWrapping="Wrap" FontSize="11" Foreground="#FFE23B15" FontWeight="SemiBold" Margin="0,0,0,2"/>
-                        </StackPanel>
-                    </Border>
-                </Grid>
+                </Border>
+                
+                <StackPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="280">
+                    <Button x:Name="buttonSubmitMain" Content="Submit Action" Height="44" Background="#FF4F46E5" Foreground="White" FontWeight="Bold" FontSize="14" BorderThickness="0" Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <ProgressBar x:Name="progressbarMain" Margin="0,0,0,0" Height="6" IsEnabled="False" Background="#FFE2E8F0" BorderThickness="0" Foreground="#FF4F46E5" Visibility="Collapsed"></ProgressBar>
+                    <TextBox x:Name="textboxMain" Margin="0,6,0,0" TextWrapping="Wrap" MinHeight="20" FontSize="11" Foreground="#FF475569" HorizontalContentAlignment="Center" Background="Transparent" BorderThickness="0" Focusable="False" IsHitTestVisible="False" Visibility="Collapsed"></TextBox>
+                </StackPanel>
             </Grid>
-        </Border>
+        </Grid>
     </Grid>
 </Window>
 '@
@@ -415,7 +428,7 @@ $xamlInput = @'
 
         if ($hasProductSelection -or $removeAllActive) {
             $textbox.Text = ""
-            $textbox.Parent.Visibility = "Collapsed"
+            $textbox.Visibility = "Collapsed"
         }
     }
 
@@ -482,7 +495,7 @@ $xamlInput = @'
 
     $sync.ShowErrorAction = [action]{
         $sync.progressbar.Visibility = "Collapsed"
-        $sync.textbox.Parent.Visibility = "Visible"
+        $sync.textbox.Visibility = "Visible"
         $sync.textbox.Foreground = "#FFC62828"
         $sync.textbox.FontWeight = "Bold"
         $sync.textbox.Text = $sync.errorMessage
@@ -526,7 +539,32 @@ $xamlInput = @'
         New-Item $batchFile -ItemType File -Force
         Add-content $batchFile -Value "%~dp0Configuration\ClickToRun.exe /configure %~dp0Configuration\$configurationFile"
 
-        (New-Object Net.WebClient).DownloadFile($uri, "$workingDir\Configuration\ClickToRun.exe")
+        # Dynamically fetch the official Microsoft Office Deployment Tool (ODT) download page
+        try {
+            $odtPage = Invoke-WebRequest -Uri "https://www.microsoft.com/en-us/download/details.aspx?id=49117" -UseBasicParsing -TimeoutSec 15
+            if ($odtPage.Content -match 'https://download\.microsoft\.com/download/[^\s"<>]+/officedeploymenttool[^\s"<>]*\.exe') {
+                $odtUrl = $Matches[0]
+            } else {
+                $odtUrl = "https://download.microsoft.com/download/6/c/1/6c1eeb25-cf8b-41d9-8d0d-cc1dbc032140/officedeploymenttool_20228-20124.exe" # Fallback link
+            }
+        } catch {
+            $odtUrl = "https://download.microsoft.com/download/6/c/1/6c1eeb25-cf8b-41d9-8d0d-cc1dbc032140/officedeploymenttool_20228-20124.exe" # Fallback link
+        }
+
+        # Download self-extracting ODT installer
+        $odtFile = "$workingDir\Configuration\odt.exe"
+        (New-Object Net.WebClient).DownloadFile($odtUrl, $odtFile)
+
+        # Extract setup.exe (ClickToRun.exe) quietly from the ODT installer
+        Start-Process -FilePath $odtFile -ArgumentList "/quiet /extract:`"$workingDir\Configuration`"" -Wait -NoNewWindow
+        
+        # Rename setup.exe to ClickToRun.exe as expected by the script
+        if (Test-Path "$workingDir\Configuration\setup.exe") {
+            Rename-Item -Path "$workingDir\Configuration\setup.exe" -NewName "ClickToRun.exe" -Force
+        }
+        if (Test-Path $odtFile) {
+            Remove-Item $odtFile -Force
+        }
 
         $sync.configurationFile = $configurationFile
         $sync.workingDir = $workingDir
@@ -564,9 +602,9 @@ $xamlInput = @'
         # Write-VerboseDebug "Configuration file: $($sync.configurationFile)"
 
         # To referece our elements we use the $sync variable from hashtable.
-            $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Hidden" })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Collapsed" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.progressbar.Visibility = "Visible" })
-            $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Parent.Visibility = "Visible" })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Visibility = "Visible" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = "$($sync.UIstatus) $($sync.productName) $($sync.arch)-bit ($($sync.language))" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.BorderBrush = "#FF707070" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $true })
@@ -579,9 +617,9 @@ $xamlInput = @'
         # Bring back our Button, set the Label and ProgressBar, we're done..
             $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = 'Visible' })
             $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Content = 'Submit' })
-            $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = 'Completed' })
-            $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $false })
-            $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.Value = '100' })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Visibility = 'Collapsed' })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.Visibility = 'Collapsed' })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.Value = '0' })
             $sync.isBusy = $false
             $sync.Form.Dispatcher.Invoke($sync.RestoreUiAction)
 
@@ -685,14 +723,14 @@ $xamlInput = @'
             if ($radioButton2019VisioStd.IsChecked -eq $true) {$productId = "VisioStd2019$licType"; $productName = 'Visio Standard 2019'; $i++}
             if ($radioButton2019Word.IsChecked -eq $true) {$productId = "Word2019$licType"; $productName = 'Microsoft Word 2019'; $i++}
             if ($radioButton2019Excel.IsChecked -eq $true) {$productId = "Excel2019$licType"; $productName = 'Microsoft Excel 2019'; $i++}
-            if ($radioButton2019PowerPoint.IsChecked -eq $true) {$productId = "PowerPoint2019$licType"; $productName = 'Microsoft PowerPoint 201p'; $i++}
+            if ($radioButton2019PowerPoint.IsChecked -eq $true) {$productId = "PowerPoint2019$licType"; $productName = 'Microsoft PowerPoint 2019'; $i++}
             if ($radioButton2019Outlook.IsChecked -eq $true) {$productId = "Outlook2019$licType"; $productName = 'Microsoft Outlook 2019'; $i++}
             if ($radioButton2019Publisher.IsChecked -eq $true) {$productId = "Publisher2019$licType"; $productName = 'Microsoft Publisher 2019'; $i++}
             if ($radioButton2019Access.IsChecked -eq $true) {$productId = "Access2019$licType"; $productName = 'Microsoft Access 2019'; $i++}
             if ($radioButton2019HomeBusiness.IsChecked -eq $true) {$productId = "HomeBusiness2019Retail"; $productName = 'Office HomeBusiness 2019'; $i++}
             if ($radioButton2019HomeStudent.IsChecked -eq $true) {$productId = "HomeStudent2019Retail"; $productName = 'Office HomeStudent 2019'; $i++}
-
-        # For Office 2016
+ 
+         # For Office 2016
             if ($radioButton2016Pro.IsChecked -eq $true) {$productId = "ProfessionalRetail"; $uri = $uri2016; $productName = 'Office 2016 Professional Plus'; $i++}
             if ($radioButton2016Std.IsChecked -eq $true) {$productId = "StandardRetail"; $uri = $uri2016; $productName = 'Office 2016 Standard'; $i++}
             if ($radioButton2016ProjectPro.IsChecked -eq $true) {$productId = "ProjectProRetail"; $uri = $uri2016; $productName = 'Microsoft Project Pro 2016'; $i++}
@@ -706,8 +744,8 @@ $xamlInput = @'
             if ($radioButton2016Publisher.IsChecked -eq $true) {$productId = "PublisherRetail"; $uri = $uri2016; $productName = 'Microsoft Publisher 2016'; $i++}
             if ($radioButton2016Access.IsChecked -eq $true) {$productId = "AccessRetail"; $uri = $uri2016; $productName = 'Microsoft Access 2016'; $i++}
             if ($radioButton2016OneNote.IsChecked -eq $true) {$productId = "OneNoteRetail"; $uri = $uri2016; $productName = 'Microsoft Onenote 2016'; $i++}
-
-        # For Office 2013
+ 
+         # For Office 2013
             if ($radioButton2013Pro.IsChecked -eq $true) {$productId = "ProfessionalRetail"; $uri = $uri2013; $productName = 'Office 2013 Professional Plus'; $i++}
             if ($radioButton2013Std.IsChecked -eq $true) {$productId = "StandardRetail"; $uri = $uri2013; $productName = 'Office 2013 Standard'; $i++}
             if ($radioButton2013ProjectPro.IsChecked -eq $true) {$productId = "ProjectProRetail"; $uri = $uri2013; $productName = 'Microsoft Project Pro 2013'; $i++}
@@ -720,19 +758,19 @@ $xamlInput = @'
             if ($radioButton2013Outlook.IsChecked -eq $true) {$productId = "OutlookRetail"; $uri = $uri2013; $productName = 'Microsoft Outlook 2013'; $i++}
             if ($radioButton2013Publisher.IsChecked -eq $true) {$productId = "PublisherRetail"; $uri = $uri2013; $productName = 'Microsoft Publisher 2013'; $i++}
             if ($radioButton2013Access.IsChecked -eq $true) {$productId = "AccessRetail"; $uri = $uri2013; $productName = 'Microsoft Access 2013'; $i++}
-        # Update the shared hashtable
+         # Update the shared hashtable
             $sync.arch = $arch
             $sync.mode = $mode
             $sync.language = $language
             $sync.UIstatus = $UIstatus
             $sync.productName = $productName
-
-            if ($i -eq '1') {
+ 
+            if ($i -eq 1) {
                 PreparingOffice
                 Start-BackgroundOperation -Operation $DownloadInstallOffice
             } else {
                 $progressbar.Visibility = "Collapsed"
-                $textbox.Parent.Visibility = "Visible"
+                $textbox.Visibility = "Visible"
                 $textbox.Foreground = "#FFC62828"
                 $textbox.FontWeight = "Bold"
                 $textbox.Text = "Please select an Office app before submitting."
@@ -749,22 +787,48 @@ $xamlInput = @'
         }
 
         $sync.Form.Dispatcher.Invoke([action] { $sync.progressbar.Visibility = "Visible" })
-        $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Parent.Visibility = "Visible" })
+        $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Visibility = "Visible" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = "Uninstalling Microsoft Office..." })
-        $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Hidden" })
+        $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Collapsed" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.BorderBrush = "#FF707070" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $true })
         
         Set-Location -Path $($sync.workingDir)
-        Invoke-Item Path $($sync.workingDir)
+        Invoke-Item -Path $($sync.workingDir)
         # (New-Object Net.WebClient).DownloadFile($($sync.uninstall), "$($sync.workingDir)\04.Uninstall.bat")
         (New-Object Net.WebClient).DownloadFile($($sync.removeAllXML), "$($sync.workingDir)\configuration.xml")
-        (New-Object Net.WebClient).DownloadFile($($sync.uri), "$($sync.workingDir)\ClickToRun.exe")
+
+        # Dynamically fetch the official Microsoft Office Deployment Tool (ODT) download page
+        try {
+            $odtPage = Invoke-WebRequest -Uri "https://www.microsoft.com/en-us/download/details.aspx?id=49117" -UseBasicParsing -TimeoutSec 15
+            if ($odtPage.Content -match 'https://download\.microsoft\.com/download/[^\s"<>]+/officedeploymenttool[^\s"<>]*\.exe') {
+                $odtUrl = $Matches[0]
+            } else {
+                $odtUrl = "https://download.microsoft.com/download/6/c/1/6c1eeb25-cf8b-41d9-8d0d-cc1dbc032140/officedeploymenttool_20228-20124.exe" # Fallback link
+            }
+        } catch {
+            $odtUrl = "https://download.microsoft.com/download/6/c/1/6c1eeb25-cf8b-41d9-8d0d-cc1dbc032140/officedeploymenttool_20228-20124.exe" # Fallback link
+        }
+
+        # Download self-extracting ODT installer
+        $odtFile = "$($sync.workingDir)\odt.exe"
+        (New-Object Net.WebClient).DownloadFile($odtUrl, $odtFile)
+
+        # Extract setup.exe (ClickToRun.exe) quietly from the ODT installer
+        Start-Process -FilePath $odtFile -ArgumentList "/quiet /extract:`"$($sync.workingDir)`"" -Wait -NoNewWindow
+        
+        # Rename setup.exe to ClickToRun.exe as expected by the script
+        if (Test-Path "$($sync.workingDir)\setup.exe") {
+            Rename-Item -Path "$($sync.workingDir)\setup.exe" -NewName "ClickToRun.exe" -Force
+        }
+        if (Test-Path $odtFile) {
+            Remove-Item $odtFile -Force
+        }
 
         $sync.Form.Dispatcher.Invoke([action] { $sync.progressbar.Visibility = "Visible" })
-        $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Parent.Visibility = "Visible" })
+        $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Visibility = "Visible" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = "Uninstalling Using Office Deployment Tool..." })
-        $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Hidden" })
+        $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Collapsed" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.BorderBrush = "#FF707070" })
         $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $true })
 
@@ -776,9 +840,9 @@ $xamlInput = @'
             Expand-Archive -Path .\SaRA.zip -DestinationPath .\SaRA
 
             $sync.Form.Dispatcher.Invoke([action] { $sync.progressbar.Visibility = "Visible" })
-            $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Parent.Visibility = "Visible" })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Visibility = "Visible" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = "Running Scenario OfficeScrubScenario..." })
-            $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Hidden" })
+            $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = "Collapsed" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.BorderBrush = "#FF707070" })
             $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $true })
 
@@ -787,9 +851,9 @@ $xamlInput = @'
 
         $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Visibility = 'Visible' })
         $sync.Form.Dispatcher.Invoke([action] { $sync.buttonSubmit.Content = 'Submit' })
-        $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Text = 'Completed' })
-        $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.IsIndeterminate = $false })
-        $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.Value = '100' })
+        $sync.Form.Dispatcher.Invoke([action] { $sync.textbox.Visibility = 'Collapsed' })
+        $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.Visibility = 'Collapsed' })
+        $sync.Form.Dispatcher.Invoke([action] { $sync.ProgressBar.Value = '0' })
         $sync.isBusy = $false
         $sync.Form.Dispatcher.Invoke($sync.RestoreUiAction)
 
@@ -826,3 +890,9 @@ $xamlInput = @'
     })
 
 $null = $Form.ShowDialog()
+
+
+
+
+
+
