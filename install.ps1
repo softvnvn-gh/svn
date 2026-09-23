@@ -91,52 +91,59 @@ $xamlInput = @'
         FontFamily="Segoe UI Variable, Segoe UI, sans-serif">
     
     <Window.Resources>
-        <!-- Fluent Theme System Brushes (Dark Mode Defaults) -->
-        <SolidColorBrush x:Key="BrushWindowBg" Color="#FF0D0F17"/>
-        <SolidColorBrush x:Key="BrushRailBg" Color="#FF10121A"/>
-        <SolidColorBrush x:Key="BrushRailBorder" Color="#FF1C2030"/>
-        <SolidColorBrush x:Key="BrushRailBtnHover" Color="#FF1A1D2B"/>
-        <SolidColorBrush x:Key="BrushRailBtnSelected" Color="#FF1E2234"/>
-        <SolidColorBrush x:Key="BrushNavBtnHoverText" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="BrushNavBtnActiveText" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="BrushCardBg" Color="#FF151824"/>
-        <SolidColorBrush x:Key="BrushCardBorder" Color="#FF23283B"/>
-        <SolidColorBrush x:Key="BrushSubCardBg" Color="#FF161823"/>
-        <SolidColorBrush x:Key="BrushSubCardBorder" Color="#FF25293A"/>
-        <SolidColorBrush x:Key="BrushTileBg" Color="#FF181B28"/>
-        <SolidColorBrush x:Key="BrushTileBorder" Color="#FF252B3D"/>
-        <SolidColorBrush x:Key="BrushTileHoverBg" Color="#FF202538"/>
-        <SolidColorBrush x:Key="BrushTileHoverBorder" Color="#FF4A5578"/>
-        <SolidColorBrush x:Key="BrushTileActiveBg" Color="#FF25244C"/>
+        <!-- Fluent Theme System Brushes (Light Mode Defaults) -->
+        <SolidColorBrush x:Key="BrushWindowBg" Color="#FFF1F5F9"/>
+        <SolidColorBrush x:Key="BrushRailBg" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="BrushRailBorder" Color="#FFE2E8F0"/>
+        <SolidColorBrush x:Key="BrushRailBtnHover" Color="#FFF8FAFC"/>
+        <SolidColorBrush x:Key="BrushRailBtnSelected" Color="#EEF2FF"/>
+        <SolidColorBrush x:Key="BrushNavBtnHoverText" Color="#FF0F172A"/>
+        <SolidColorBrush x:Key="BrushNavBtnActiveText" Color="#FF4F46E5"/>
+        <SolidColorBrush x:Key="BrushCardBg" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="BrushCardBorder" Color="#FFE2E8F0"/>
+        <SolidColorBrush x:Key="BrushSubCardBg" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="BrushSubCardBorder" Color="#FFE2E8F0"/>
+        <SolidColorBrush x:Key="BrushTileBg" Color="#FFF8FAFC"/>
+        <SolidColorBrush x:Key="BrushTileBorder" Color="#FFE2E8F0"/>
+        <SolidColorBrush x:Key="BrushTileHoverBg" Color="#FFF1F5F9"/>
+        <SolidColorBrush x:Key="BrushTileHoverBorder" Color="#FFCBD5E1"/>
+        <SolidColorBrush x:Key="BrushTileActiveBg" Color="#EEF2FF"/>
         <SolidColorBrush x:Key="BrushTileActiveBorder" Color="#FF6366F1"/>
-        <SolidColorBrush x:Key="BrushTileActiveText" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="BrushCapsuleBg" Color="#FF141724"/>
-        <SolidColorBrush x:Key="BrushCapsuleBorder" Color="#FF24293E"/>
-        <SolidColorBrush x:Key="BrushPillHoverBg" Color="#FF252B3E"/>
-        <SolidColorBrush x:Key="BrushPillActiveBg" Color="#1A6366F1"/>
-        <SolidColorBrush x:Key="BrushPillActiveText" Color="#FF818CF8"/>
-        <SolidColorBrush x:Key="BrushComboHoverBg" Color="#FF1B2032"/>
-        <SolidColorBrush x:Key="BrushComboItemHover" Color="#FF252B3E"/>
-        <SolidColorBrush x:Key="BrushComboItemSelected" Color="#FF222042"/>
-        <SolidColorBrush x:Key="BrushTextPrimary" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="BrushTextSecondary" Color="#FF94A3B8"/>
-        <SolidColorBrush x:Key="BrushTextMuted" Color="#FF64748B"/>
-        <SolidColorBrush x:Key="BrushSecBtnBg" Color="#FF1E2232"/>
-        <SolidColorBrush x:Key="BrushSecBtnBorder" Color="#FF2D3449"/>
-        <SolidColorBrush x:Key="BrushSecBtnHover" Color="#FF282E44"/>
-        <SolidColorBrush x:Key="BrushSecBtnText" Color="#FFE2E8F0"/>
-        <SolidColorBrush x:Key="BrushFlagBtnBg" Color="#FF1F2436"/>
-        <SolidColorBrush x:Key="BrushFlagBtnBorder" Color="#FF323A50"/>
-        <SolidColorBrush x:Key="BrushFlagBtnHoverBg" Color="#FF2C3550"/>
-        <SolidColorBrush x:Key="BrushConsoleBg" Color="#FF090B10"/>
-        <SolidColorBrush x:Key="BrushConsoleBorder" Color="#FF222738"/>
+        <SolidColorBrush x:Key="BrushTileActiveText" Color="#FF4F46E5"/>
+        <SolidColorBrush x:Key="BrushCapsuleBg" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="BrushCapsuleBorder" Color="#FFE2E8F0"/>
+        <SolidColorBrush x:Key="BrushPillHoverBg" Color="#FFF1F5F9"/>
+        <SolidColorBrush x:Key="BrushPillActiveBg" Color="#EEF2FF"/>
+        <SolidColorBrush x:Key="BrushPillActiveText" Color="#FF4F46E5"/>
+        <SolidColorBrush x:Key="BrushComboHoverBg" Color="#FFF1F5F9"/>
+        <SolidColorBrush x:Key="BrushComboItemHover" Color="#FFF1F5F9"/>
+        <SolidColorBrush x:Key="BrushComboItemSelected" Color="#EEF2FF"/>
+        <SolidColorBrush x:Key="BrushTextPrimary" Color="#FF0F172A"/>
+        <SolidColorBrush x:Key="BrushTextSecondary" Color="#FF64748B"/>
+        <SolidColorBrush x:Key="BrushTextMuted" Color="#FF94A3B8"/>
+        <SolidColorBrush x:Key="BrushSecBtnBg" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="BrushSecBtnBorder" Color="#FFE2E8F0"/>
+        <SolidColorBrush x:Key="BrushSecBtnHover" Color="#FFF8FAFC"/>
+        <SolidColorBrush x:Key="BrushSecBtnText" Color="#FF1E293B"/>
+        <SolidColorBrush x:Key="BrushFlagBtnBg" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="BrushFlagBtnBorder" Color="#FFE2E8F0"/>
+        <SolidColorBrush x:Key="BrushFlagBtnHoverBg" Color="#FFF8FAFC"/>
+        <SolidColorBrush x:Key="BrushConsoleBg" Color="#FF0B0F19"/>
+        <SolidColorBrush x:Key="BrushConsoleBorder" Color="#FF1E293B"/>
+        <SolidColorBrush x:Key="BrushConsoleHeader" Color="#FF111827"/>
+        <SolidColorBrush x:Key="BrushConsoleHeaderText" Color="#FF94A3B8"/>
         <SolidColorBrush x:Key="BrushConsoleText" Color="#FF38BDF8"/>
-        <SolidColorBrush x:Key="BrushScrollThumb" Color="#FF33394F"/>
-        <SolidColorBrush x:Key="BrushAccent365" Color="#FF818CF8"/>
-        <SolidColorBrush x:Key="BrushAccent2024" Color="#FFF59E0B"/>
-        <SolidColorBrush x:Key="BrushAccent2021" Color="#FF10B981"/>
-        <SolidColorBrush x:Key="BrushAccent2019" Color="#FF38BDF8"/>
-        <SolidColorBrush x:Key="BrushAccentLegacy" Color="#FFA855F7"/>
+        <SolidColorBrush x:Key="BrushScrollThumb" Color="#FFE2E8F0"/>
+        <SolidColorBrush x:Key="BrushConsoleScrollThumb" Color="#FF334155"/>
+        <SolidColorBrush x:Key="BrushAccent365" Color="#FF4F46E5"/>
+        <SolidColorBrush x:Key="BrushAccent2024" Color="#D97706"/>
+        <SolidColorBrush x:Key="BrushAccent2021" Color="#059669"/>
+        <SolidColorBrush x:Key="BrushAccent2019" Color="#0284C7"/>
+        <SolidColorBrush x:Key="BrushAccentLegacy" Color="#7C3AED"/>
+        <SolidColorBrush x:Key="BrushAccentProject" Color="#0284C7"/>
+        <SolidColorBrush x:Key="BrushAccentVisio" Color="#4F46E5"/>
+        <SolidColorBrush x:Key="BrushAccentMac" Color="#FF0F172A"/>
+        <SolidColorBrush x:Key="BrushAccentTools" Color="#E11D48"/>
 
         <!-- Fluent Left Rail Navigation Item Style -->
         <Style TargetType="RadioButton" x:Key="FluentNavRailBtn">
@@ -388,19 +395,19 @@ $xamlInput = @'
             <Setter Property="BorderBrush" Value="{DynamicResource BrushFlagBtnBorder}"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Height" Value="24"/>
-            <Setter Property="Padding" Value="5,2"/>
+            <Setter Property="Padding" Value="6,2"/>
             <Setter Property="Margin" Value="2,0"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Name="FDBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="4" Padding="{TemplateBinding Padding}">
+                        <Border Name="FDBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5" Padding="{TemplateBinding Padding}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="FDBorder" Property="Background" Value="{DynamicResource BrushFlagBtnHoverBg}"/>
-                                <Setter TargetName="FDBorder" Property="BorderBrush" Value="#FF38BDF8"/>
+                                <Setter TargetName="FDBorder" Property="BorderBrush" Value="#FF6366F1"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -427,7 +434,7 @@ $xamlInput = @'
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="MDBorder" Property="Background" Value="{DynamicResource BrushFlagBtnHoverBg}"/>
-                                <Setter TargetName="MDBorder" Property="BorderBrush" Value="#FF38BDF8"/>
+                                <Setter TargetName="MDBorder" Property="BorderBrush" Value="#FF6366F1"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -459,10 +466,10 @@ $xamlInput = @'
             </Setter>
         </Style>
 
-        <!-- Sleek Dark Scrollbar Style -->
+        <!-- Sleek Fluent Scrollbar Style (4px Modern Slim) -->
         <Style TargetType="{x:Type ScrollBar}">
             <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Width" Value="6"/>
+            <Setter Property="Width" Value="4"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ScrollBar}">
@@ -472,7 +479,7 @@ $xamlInput = @'
                                     <Thumb>
                                         <Thumb.Template>
                                             <ControlTemplate TargetType="{x:Type Thumb}">
-                                                <Border Background="{DynamicResource BrushScrollThumb}" CornerRadius="3"/>
+                                                <Border Background="{DynamicResource BrushScrollThumb}" CornerRadius="2"/>
                                             </ControlTemplate>
                                         </Thumb.Template>
                                     </Thumb>
@@ -534,12 +541,12 @@ $xamlInput = @'
                         </StackPanel>
                     </RadioButton>
 
-                    <!-- Cloud / Kho SoftVN (OneDrive 5TB) Tab -->
-                    <RadioButton x:Name="tabNavCloud" GroupName="MainNav" Style="{StaticResource FluentNavRailBtn}" ToolTip="Kho Bộ Cài SoftVN (OneDrive 5TB)">
+                    <!-- Cloud Storage Tab -->
+                    <RadioButton x:Name="tabNavCloud" GroupName="MainNav" Style="{StaticResource FluentNavRailBtn}" ToolTip="Kho Bộ Cài Đặt (Cloud Storage)">
                         <StackPanel HorizontalAlignment="Center">
                             <Path Data="M 19.35,10.04 C 18.67,6.59 15.64,4 12,4 C 9.11,4 6.6,5.64 5.35,8.04 C 2.34,8.36 0,10.91 0,14 C 0,17.31 2.69,20 6,20 H 19 C 21.76,20 24,17.76 24,15 C 24,12.36 21.95,10.22 19.35,10.04 Z M 19,18 H 6 C 3.79,18 2,16.21 2,14 C 2,11.95 3.53,10.24 5.56,10.03 L 6.63,9.92 L 7.13,8.97 C 8.08,7.14 9.94,6 12,6 C 14.62,6 16.88,7.86 17.39,10.43 L 17.69,11.93 L 19.22,12.04 C 20.78,12.14 22,13.45 22,15 C 22,16.65 20.65,18 19,18 Z" 
                                   Width="18" Height="18" Stretch="Uniform" Fill="#FF0284C7"/>
-                            <TextBlock Text="Kho SoftVN" FontSize="9" Margin="0,3,0,0" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Kho Bộ Cài" FontSize="9" Margin="0,3,0,0" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </RadioButton>
 
@@ -715,19 +722,10 @@ $xamlInput = @'
                         </ComboBoxItem>
                     </ComboBox>
 
-                    <!-- Theme Mode Toggle Button -->
-                    <Button x:Name="buttonThemeToggle" Height="30" Width="32" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center" Margin="0,0,8,0" ToolTip="Switch to Light Mode">
-                        <Path x:Name="iconThemeToggle" Data="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1S11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 s-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0 s-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M7.05,18.36 c0.39,0.39,0.39,1.03,0,1.41c-0.39,0.39-1.03,0.39-1.41,0l-1.06-1.06c-0.39-0.39-0.39-1.03,0-1.41s1.03-0.39,1.41,0L7.05,18.36z M16.95,5.99l1.06-1.06c0.39-0.39,0.39-1.03,0-1.41s-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 C15.92,6.38,16.56,6.38,16.95,5.99z" 
+                    <!-- Theme Mode Toggle Button (Defaults to Light Mode) -->
+                    <Button x:Name="buttonThemeToggle" Height="30" Width="32" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center" Margin="0,0,2,0" ToolTip="Switch to Dark Mode">
+                        <Path x:Name="iconThemeToggle" Data="M 21 12.79 A 9 9 0 1 1 11.21 3 A 7 7 0 0 0 21 12.79 Z" 
                               Width="13" Height="13" Stretch="Uniform" Fill="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </Button>
-
-                    <!-- Clear Selection Button -->
-                    <Button x:Name="buttonClearSelection" Height="30" Padding="10,2" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                            <Path Data="M 19,6.41 L 17.59,5 L 12,10.59 L 6.41,5 L 5,6.41 L 10.59,12 L 5,17.59 L 6.41,19 L 12,13.41 L 17.59,19 L 19,17.59 L 13.41,12 Z" 
-                                  Width="9" Height="9" Stretch="Uniform" Fill="{DynamicResource BrushTextSecondary}" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                            <TextBlock Text="Clear" FontSize="11" VerticalAlignment="Center"/>
-                        </StackPanel>
                     </Button>
                 </StackPanel>
             </Grid>
@@ -763,6 +761,37 @@ $xamlInput = @'
                                         <TextBlock Text="Enterprise" VerticalAlignment="Center" FontSize="11.5"/>
                                     </StackPanel>
                                 </RadioButton>
+
+                                <!-- SaaS Cloud Info & Feature Badges Card -->
+                                <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="10,10" Margin="0,10,0,0">
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="0,0,0,6" VerticalAlignment="Center">
+                                            <Border Background="#1A4F46E5" CornerRadius="4" Padding="5,2" Margin="0,0,6,0">
+                                                <TextBlock Text="CLOUD CTR" FontSize="9" FontWeight="Bold" Foreground="{DynamicResource BrushAccent365}"/>
+                                            </Border>
+                                            <TextBlock Text="Continuous Updates" FontSize="10" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                        
+                                        <TextBlock Text="Always latest version with Microsoft Copilot AI, 1TB OneDrive &amp; modern Teams cloud sync." FontSize="10" Foreground="{DynamicResource BrushTextMuted}" TextWrapping="Wrap" LineHeight="14"/>
+
+                                        <Border Height="1" Background="{DynamicResource BrushTileBorder}" Margin="0,8,0,8"/>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="Channel" FontSize="9" Foreground="{DynamicResource BrushTextMuted}"/>
+                                                <TextBlock Text="Current (CC)" FontSize="10.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <TextBlock Text="License" FontSize="9" Foreground="{DynamicResource BrushTextMuted}"/>
+                                                <TextBlock Text="Subscription" FontSize="10.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </StackPanel>
+                                </Border>
                             </StackPanel>
                         </Border>
 
@@ -1208,29 +1237,32 @@ $xamlInput = @'
                     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                         <UniformGrid Columns="3" Margin="0,0,8,0">
                             <!-- Card 1: Microsoft 365 -->
-                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="8" Margin="4" Padding="14,11">
+                            <Border Style="{StaticResource FluentCard}" Margin="4" Padding="14,12">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Path Data="M 12,2 C 6.48,2 2,6.48 2,12 C 2,17.52 6.48,22 12,22 C 17.52,22 22,17.52 22,12 C 22,6.48 17.52,2 12,2 Z M 12,15 C 10.34,15 9,13.66 9,12 C 9,10.34 10.34,9 12,9 C 13.66,9 15,10.34 15,12 C 15,13.66 13.66,15 12,15 Z" 
-                                              Width="13" Height="13" Stretch="Uniform" Fill="#FF818CF8" Margin="0,0,7,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Microsoft 365" FontSize="13.5" FontWeight="Bold" Foreground="#FF818CF8"/>
+                                        <Image Source="__FLAG_DIR__/m365.png" Width="18" Height="18" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Microsoft 365" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushAccent365}" VerticalAlignment="Center"/>
                                     </StackPanel>
-                                    <TextBlock Text="Home, Business &amp; Enterprise (Offline .IMG)" FontSize="10.5" Foreground="#FF94A3B8" Margin="20,2,0,12"/>
+                                    <TextBlock Text="Home, Business &amp; Enterprise (Offline .IMG)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,2,0,10"/>
                                     
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,8">
+                                    <!-- AIO Download Tile -->
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,7" Margin="0,0,0,8">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
-                                            <TextBlock Text="Microsoft 365 (All-in-One)" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <StackPanel VerticalAlignment="Center">
+                                                <TextBlock Text="Microsoft 365 (All-in-One)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                                                <TextBlock Text="Retail &amp; Volume • Multi-arch x64/x86" FontSize="9.5" Foreground="{DynamicResource BrushTextMuted}" Margin="0,1,0,0"/>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                                 <Button x:Name="btnDlM365En" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download English (5.15 GB)">
                                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10.5" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDlM365Vi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (4.74 GB)">
@@ -1238,9 +1270,27 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10.5" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+
+                                    <!-- SaaS Metadata Strip to Balance Height -->
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,8">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="Source CDN" FontSize="9" Foreground="{DynamicResource BrushTextMuted}"/>
+                                                <TextBlock Text="Official MS CDN" FontSize="10.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <TextBlock Text="Package Type" FontSize="9" Foreground="{DynamicResource BrushTextMuted}"/>
+                                                <TextBlock Text="Click-to-Run (CTR)" FontSize="10.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}"/>
                                             </StackPanel>
                                         </Grid>
                                     </Border>
@@ -1248,17 +1298,16 @@ $xamlInput = @'
                             </Border>
 
                             <!-- Card 2: Office 2024 -->
-                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="8" Margin="4" Padding="14,11">
+                            <Border Style="{StaticResource FluentCard}" Margin="4" Padding="14,12">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Path Data="M 12,2 C 6.48,2 2,6.48 2,12 C 2,17.52 6.48,22 12,22 C 17.52,22 22,17.52 22,12 C 22,6.48 17.52,2 12,2 Z M 12,15 C 10.34,15 9,13.66 9,12 C 9,10.34 10.34,9 12,9 C 13.66,9 15,10.34 15,12 C 15,13.66 13.66,15 12,15 Z" 
-                                              Width="13" Height="13" Stretch="Uniform" Fill="#FFF59E0B" Margin="0,0,7,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Office 2024 LTSC" FontSize="13.5" FontWeight="Bold" Foreground="#FFF59E0B"/>
+                                        <Image Source="__FLAG_DIR__/office.png" Width="18" Height="18" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Office 2024 LTSC" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushAccent2024}" VerticalAlignment="Center"/>
                                     </StackPanel>
-                                    <TextBlock Text="Pro Plus, Home &amp; Business, Home (Offline .IMG)" FontSize="10.5" Foreground="#FF94A3B8" Margin="20,2,0,8"/>
+                                    <TextBlock Text="Pro Plus, Home &amp; Business, Home (Offline .IMG)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,2,0,10"/>
                                     
                                     <!-- 2024 Pro Plus -->
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6.5" Margin="0,0,0,5">
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -1271,7 +1320,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDl2024Vi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (4.74 GB)">
@@ -1279,7 +1328,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                             </StackPanel>
@@ -1287,7 +1336,7 @@ $xamlInput = @'
                                     </Border>
 
                                     <!-- 2024 Home & Business -->
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6.5" Margin="0,0,0,5">
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -1300,7 +1349,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDl2024HBVi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (4.74 GB)">
@@ -1308,7 +1357,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                             </StackPanel>
@@ -1316,7 +1365,7 @@ $xamlInput = @'
                                     </Border>
 
                                     <!-- 2024 Home (Student) -->
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6.5">
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -1329,7 +1378,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDl2024HomeVi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (4.74 GB)">
@@ -1337,7 +1386,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                             </StackPanel>
@@ -1347,17 +1396,16 @@ $xamlInput = @'
                             </Border>
 
                             <!-- Card 3: Office 2021 -->
-                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="8" Margin="4" Padding="14,11">
+                            <Border Style="{StaticResource FluentCard}" Margin="4" Padding="14,12">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Path Data="M 12,2 C 6.48,2 2,6.48 2,12 C 2,17.52 6.48,22 12,22 C 17.52,22 22,17.52 22,12 C 22,6.48 17.52,2 12,2 Z M 12,15 C 10.34,15 9,13.66 9,12 C 9,10.34 10.34,9 12,9 C 13.66,9 15,10.34 15,12 C 15,13.66 13.66,15 12,15 Z" 
-                                              Width="13" Height="13" Stretch="Uniform" Fill="#FF10B981" Margin="0,0,7,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Office 2021 LTSC" FontSize="13.5" FontWeight="Bold" Foreground="#FF10B981"/>
+                                        <Image Source="__FLAG_DIR__/office.png" Width="18" Height="18" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Office 2021 LTSC" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushAccent2021}" VerticalAlignment="Center"/>
                                     </StackPanel>
-                                    <TextBlock Text="Pro Plus, Home &amp; Business, Student (.IMG)" FontSize="10.5" Foreground="#FF94A3B8" Margin="20,2,0,8"/>
+                                    <TextBlock Text="Pro Plus, Home &amp; Business, Student (.IMG)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,2,0,10"/>
                                     
                                     <!-- 2021 Pro Plus -->
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6.5" Margin="0,0,0,5">
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -1370,7 +1418,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDl2021Vi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (4.34 GB)">
@@ -1378,7 +1426,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                             </StackPanel>
@@ -1386,7 +1434,7 @@ $xamlInput = @'
                                     </Border>
 
                                     <!-- 2021 Home & Business -->
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6.5" Margin="0,0,0,5">
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -1399,7 +1447,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDl2021HBVi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (4.34 GB)">
@@ -1407,7 +1455,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                             </StackPanel>
@@ -1415,7 +1463,7 @@ $xamlInput = @'
                                     </Border>
 
                                     <!-- 2021 Home & Student -->
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6.5">
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -1428,7 +1476,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDl2021HSVi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (4.34 GB)">
@@ -1436,7 +1484,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                             </StackPanel>
@@ -1446,29 +1494,32 @@ $xamlInput = @'
                             </Border>
 
                             <!-- Card 4: Office 2019 -->
-                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="8" Margin="4" Padding="14,11">
+                            <Border Style="{StaticResource FluentCard}" Margin="4" Padding="14,12">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Path Data="M 12,2 C 6.48,2 2,6.48 2,12 C 2,17.52 6.48,22 12,22 C 17.52,22 22,17.52 22,12 C 22,6.48 17.52,2 12,2 Z M 12,15 C 10.34,15 9,13.66 9,12 C 9,10.34 10.34,9 12,9 C 13.66,9 15,10.34 15,12 C 15,13.66 13.66,15 12,15 Z" 
-                                              Width="13" Height="13" Stretch="Uniform" Fill="#FF38BDF8" Margin="0,0,7,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Office 2019" FontSize="13.5" FontWeight="Bold" Foreground="#FF38BDF8"/>
+                                        <Image Source="__FLAG_DIR__/office.png" Width="18" Height="18" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Office 2019" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushAccent2019}" VerticalAlignment="Center"/>
                                     </StackPanel>
-                                    <TextBlock Text="Professional Plus (Full Offline .IMG)" FontSize="10.5" Foreground="#FF94A3B8" Margin="20,2,0,12"/>
+                                    <TextBlock Text="Professional Plus (Full Offline .IMG)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,2,0,10"/>
                                     
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,8">
+                                    <!-- 2019 Pro Plus -->
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,7" Margin="0,0,0,8">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
-                                            <TextBlock Text="Office 2019 Pro Plus" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <StackPanel VerticalAlignment="Center">
+                                                <TextBlock Text="Office 2019 Pro Plus" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                                                <TextBlock Text="Volume KMS &amp; Retail • x64/x86" FontSize="9.5" Foreground="{DynamicResource BrushTextMuted}" Margin="0,1,0,0"/>
+                                            </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                                 <Button x:Name="btnDl2019En" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download English (4.00 GB)">
                                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10.5" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDl2019Vi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (3.65 GB)">
@@ -1476,9 +1527,27 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10.5" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+
+                                    <!-- SaaS Metadata Strip to Balance Height -->
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,8">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="OS Support" FontSize="9" Foreground="{DynamicResource BrushTextMuted}"/>
+                                                <TextBlock Text="Windows 10 / 11" FontSize="10.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <TextBlock Text="Lifecycle" FontSize="9" Foreground="{DynamicResource BrushTextMuted}"/>
+                                                <TextBlock Text="Fixed Support" FontSize="10.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}"/>
                                             </StackPanel>
                                         </Grid>
                                     </Border>
@@ -1486,17 +1555,16 @@ $xamlInput = @'
                             </Border>
 
                             <!-- Card 5: Office 2016 & 2013 -->
-                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="8" Margin="4" Padding="14,11">
+                            <Border Style="{StaticResource FluentCard}" Margin="4" Padding="14,12">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Path Data="M 12,2 C 6.48,2 2,6.48 2,12 C 2,17.52 6.48,22 12,22 C 17.52,22 22,17.52 22,12 C 22,6.48 17.52,2 12,2 Z M 12,15 C 10.34,15 9,13.66 9,12 C 9,10.34 10.34,9 12,9 C 13.66,9 15,10.34 15,12 C 15,13.66 13.66,15 12,15 Z" 
-                                              Width="13" Height="13" Stretch="Uniform" Fill="#FFA855F7" Margin="0,0,7,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Office 2016 &amp; 2013" FontSize="13.5" FontWeight="Bold" Foreground="#FFA855F7"/>
+                                        <Image Source="__FLAG_DIR__/office.png" Width="18" Height="18" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Office 2016 &amp; 2013" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushAccentLegacy}" VerticalAlignment="Center"/>
                                     </StackPanel>
-                                    <TextBlock Text="Professional (Full Offline .IMG)" FontSize="10.5" Foreground="#FF94A3B8" Margin="20,2,0,8"/>
+                                    <TextBlock Text="Professional (Full Offline .IMG)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,2,0,10"/>
                                     
                                     <!-- 2016 Row -->
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6.5" Margin="0,0,0,5">
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -1509,7 +1577,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDl2016Vi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (3.80 GB)">
@@ -1517,7 +1585,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                             </StackPanel>
@@ -1525,7 +1593,7 @@ $xamlInput = @'
                                     </Border>
 
                                     <!-- 2013 Row -->
-                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6.5">
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -1538,7 +1606,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/us.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="EN" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                                 <Button x:Name="btnDl2013Vi" Style="{StaticResource FlagDownloadBtn}" ToolTip="Download Vietnamese (1.85 GB)">
@@ -1546,7 +1614,7 @@ $xamlInput = @'
                                                         <Border Width="16" Height="11" CornerRadius="2" ClipToBounds="True" Margin="0,0,5,0">
                                                             <Image Source="__FLAG_DIR__/vn.png" Stretch="UniformToFill"/>
                                                         </Border>
-                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="VI" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource BrushTextSecondary}" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Button>
                                             </StackPanel>
@@ -1556,150 +1624,176 @@ $xamlInput = @'
                             </Border>
 
                             <!-- Card 6: Project Professional -->
-                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="8" Margin="4" Padding="14,11">
+                            <Border Style="{StaticResource FluentCard}" Margin="4" Padding="14,12">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Path Data="M 3,5 H 11 V 9 H 3 Z M 3,11 H 21 V 15 H 3 Z M 3,17 H 16 V 21 H 3 Z" 
-                                              Width="13" Height="13" Stretch="Uniform" Fill="#FF0EA5E9" Margin="0,0,7,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Project Professional" FontSize="13.5" FontWeight="Bold" Foreground="#FF0EA5E9"/>
+                                        <Image Source="__FLAG_DIR__/project.png" Width="18" Height="18" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Project Professional" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushAccentProject}" VerticalAlignment="Center"/>
                                     </StackPanel>
-                                    <TextBlock Text="Standalone Deployment (.IMG)" FontSize="10.5" Foreground="#FF94A3B8" Margin="20,2,0,8"/>
+                                    <TextBlock Text="Standalone Deployment (.IMG)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,2,0,10"/>
                                     
-                                    <Grid Margin="0,0,0,5">
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <TextBlock Text="Project 2024 Pro (4.8 GB)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        <Button Grid.Column="1" x:Name="btnDlProj2024" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
-                                    <Grid Margin="0,0,0,5">
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <TextBlock Text="Project 2021 Pro (4.5 GB)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        <Button Grid.Column="1" x:Name="btnDlProj2021" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <TextBlock Text="Project 2019 Pro (3.8 GB)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        <Button Grid.Column="1" x:Name="btnDlProj2019" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <TextBlock Text="Project 2024 Pro (4.8 GB)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <Button Grid.Column="1" x:Name="btnDlProj2024" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <TextBlock Text="Project 2021 Pro (4.5 GB)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <Button Grid.Column="1" x:Name="btnDlProj2021" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <TextBlock Text="Project 2019 Pro (3.8 GB)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <Button Grid.Column="1" x:Name="btnDlProj2019" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
                                 </StackPanel>
                             </Border>
 
                             <!-- Card 7: Visio Professional -->
-                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="8" Margin="4" Padding="14,11">
+                            <Border Style="{StaticResource FluentCard}" Margin="4" Padding="14,12">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Path Data="M 19,3 H 5 C 3.9,3 3,3.9 3,5 V 19 C 3,20.1 3.9,21 5,21 H 19 C 20.1,21 21,20.1 21,19 V 5 C 21,3.9 20.1,3 19,3 Z M 19,19 H 5 V 5 H 19 V 19 Z" 
-                                              Width="13" Height="13" Stretch="Uniform" Fill="#FF6366F1" Margin="0,0,7,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Visio Professional" FontSize="13.5" FontWeight="Bold" Foreground="#FF6366F1"/>
+                                        <Image Source="__FLAG_DIR__/visio.png" Width="18" Height="18" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Visio Professional" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushAccentVisio}" VerticalAlignment="Center"/>
                                     </StackPanel>
-                                    <TextBlock Text="Diagrams &amp; Vector Graphics (.IMG)" FontSize="10.5" Foreground="#FF94A3B8" Margin="20,2,0,8"/>
+                                    <TextBlock Text="Diagrams &amp; Vector Graphics (.IMG)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,2,0,10"/>
                                     
-                                    <Grid Margin="0,0,0,5">
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <TextBlock Text="Visio 2024 Pro (4.8 GB)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        <Button Grid.Column="1" x:Name="btnDlVisio2024" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
-                                    <Grid Margin="0,0,0,5">
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <TextBlock Text="Visio 2021 Pro (4.5 GB)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        <Button Grid.Column="1" x:Name="btnDlVisio2021" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <TextBlock Text="Visio 2019 Pro (3.8 GB)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        <Button Grid.Column="1" x:Name="btnDlVisio2019" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <TextBlock Text="Visio 2024 Pro (4.8 GB)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <Button Grid.Column="1" x:Name="btnDlVisio2024" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <TextBlock Text="Visio 2021 Pro (4.5 GB)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <Button Grid.Column="1" x:Name="btnDlVisio2021" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <TextBlock Text="Visio 2019 Pro (3.8 GB)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <Button Grid.Column="1" x:Name="btnDlVisio2019" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
                                 </StackPanel>
                             </Border>
 
                             <!-- Card 8: Office for Mac -->
-                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="8" Margin="4" Padding="14,11">
+                            <Border Style="{StaticResource FluentCard}" Margin="4" Padding="14,12">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Path Data="M 18.7,19.5 C 17.8,20.8 16.8,22 15.3,22 C 13.9,22 13.4,21.1 11.8,21.1 C 10.2,21.1 9.7,22 8.3,22 C 6.9,22 5.8,20.7 4.9,19.4 C 3,16.7 1.6,12 3.3,9 C 4.2,7.5 5.7,6.6 7.3,6.6 C 8.7,6.6 9.6,7.5 10.7,7.5 C 11.7,7.5 12.5,6.6 14.1,6.6 C 15.5,6.6 16.9,7.3 17.8,8.5 C 14.5,10.4 15.1,15.1 18.2,16.3 C 17.6,17.5 16.9,18.6 18.7,19.5 Z M 13.1,4.7 C 13.7,3.9 14.1,2.8 14,1.7 C 13,1.7 11.8,2.3 11.2,3.1 C 10.6,3.8 10.2,4.9 10.3,6 C 11.4,6 12.5,5.4 13.1,4.7 Z" 
-                                              Width="12" Height="13" Stretch="Uniform" Fill="#FFE2E8F0" Margin="0,0,7,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Office for Mac" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                                        <Border Width="20" Height="20" CornerRadius="4" Background="{DynamicResource BrushTileHoverBg}" Margin="0,0,8,0" VerticalAlignment="Center">
+                                            <Path Data="M 18.7,19.5 C 17.8,20.8 16.8,22 15.3,22 C 13.9,22 13.4,21.1 11.8,21.1 C 10.2,21.1 9.7,22 8.3,22 C 6.9,22 5.8,20.7 4.9,19.4 C 3,16.7 1.6,12 3.3,9 C 4.2,7.5 5.7,6.6 7.3,6.6 C 8.7,6.6 9.6,7.5 10.7,7.5 C 11.7,7.5 12.5,6.6 14.1,6.6 C 15.5,6.6 16.9,7.3 17.8,8.5 C 14.5,10.4 15.1,15.1 18.2,16.3 C 17.6,17.5 16.9,18.6 18.7,19.5 Z M 13.1,4.7 C 13.7,3.9 14.1,2.8 14,1.7 C 13,1.7 11.8,2.3 11.2,3.1 C 10.6,3.8 10.2,4.9 10.3,6 C 11.4,6 12.5,5.4 13.1,4.7 Z" 
+                                                  Width="12" Height="13" Stretch="Uniform" Fill="{DynamicResource BrushAccentMac}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <TextBlock Text="Office for Mac" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
                                     </StackPanel>
-                                    <TextBlock Text="macOS Universal Installer (.PKG)" FontSize="10.5" Foreground="#FF94A3B8" Margin="19,2,0,8"/>
+                                    <TextBlock Text="macOS Universal Installer (.PKG)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="28,2,0,10"/>
                                     
-                                    <Grid Margin="0,0,0,5">
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <TextBlock Text="M365 / 2024 Mac (2.1 GB)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        <Button Grid.Column="1" x:Name="btnDlMacM365" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
-                                    <Grid Margin="0,0,0,5">
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <TextBlock Text="Office 2021 Mac (2.0 GB)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        <Button Grid.Column="1" x:Name="btnDlMac2021" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <TextBlock Text="Office 2019 Mac (1.8 GB)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        <Button Grid.Column="1" x:Name="btnDlMac2019" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <TextBlock Text="M365 / 2024 Mac (2.1 GB)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <Button Grid.Column="1" x:Name="btnDlMacM365" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <TextBlock Text="Office 2021 Mac (2.0 GB)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <Button Grid.Column="1" x:Name="btnDlMac2021" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <TextBlock Text="Office 2019 Mac (1.8 GB)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            <Button Grid.Column="1" x:Name="btnDlMac2019" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
                                 </StackPanel>
                             </Border>
 
                             <!-- Card 9: Utilities & Runtimes -->
-                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="8" Margin="4" Padding="14,11">
+                            <Border Style="{StaticResource FluentCard}" Margin="4" Padding="14,12">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Path Data="M 22.7,19.3 L 14.5,11.1 C 15.5,9.6 15.3,7.5 14,6.2 C 12.5,4.7 10.3,4.5 8.6,5.5 L 11.5,8.4 L 8.4,11.5 L 5.5,8.6 C 4.5,10.3 4.7,12.5 6.2,14 C 7.5,15.3 9.6,15.5 11.1,14.5 L 19.3,22.7 C 19.7,23.1 20.3,23.1 20.7,22.7 L 22.7,20.7 C 23.1,20.3 23.1,19.7 22.7,19.3 Z" 
-                                              Width="13" Height="13" Stretch="Uniform" Fill="#FFF43F5E" Margin="0,0,7,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="Utilities &amp; Runtimes" FontSize="13.5" FontWeight="Bold" Foreground="#FFF43F5E"/>
-                                    </StackPanel>
-                                    <TextBlock Text="Deployment, Scrubbers &amp; VC++" FontSize="10.5" Foreground="#FF94A3B8" Margin="20,2,0,8"/>
-                                    
-                                    <Grid Margin="0,0,0,5">
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <Path Data="M 20,4 H 4 C 2.9,4 2,4.9 2,6 V 18 C 2,19.1 2.9,20 4,20 H 20 C 21.1,20 22,19.1 22,18 V 6 C 22,4.9 21.1,4 20,4 Z M 7.5,13.5 L 5.5,11.5 L 7.5,9.5 L 8.9,10.9 L 7.8,12 L 8.9,13.1 L 7.5,13.5 Z M 13,14 H 10 V 12.5 H 13 V 14 Z" 
-                                                  Width="12" Height="12" Stretch="Uniform" Fill="#FF818CF8" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                                            <TextBlock Text="Modern ODT (2016-2024)" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                        <Button Grid.Column="1" x:Name="btnDlOdtModern" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
-                                    <Grid Margin="0,0,0,5">
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <Border Width="20" Height="20" CornerRadius="4" Background="#1AE11D48" Margin="0,0,8,0" VerticalAlignment="Center">
                                             <Path Data="M 22.7,19.3 L 14.5,11.1 C 15.5,9.6 15.3,7.5 14,6.2 C 12.5,4.7 10.3,4.5 8.6,5.5 L 11.5,8.4 L 8.4,11.5 L 5.5,8.6 C 4.5,10.3 4.7,12.5 6.2,14 C 7.5,15.3 9.6,15.5 11.1,14.5 L 19.3,22.7 C 19.7,23.1 20.3,23.1 20.7,22.7 L 22.7,20.7 C 23.1,20.3 23.1,19.7 22.7,19.3 Z" 
-                                                  Width="12" Height="12" Stretch="Uniform" Fill="#FFF43F5E" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                                            <TextBlock Text="SaRA Deep Scrubber" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                        <Button Grid.Column="1" x:Name="btnDlSaRAScrub" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
-                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <Path Data="M 9.4,16.6 L 4.8,12 L 9.4,7.4 L 8,6 L 2,12 L 8,18 L 9.4,16.6 Z M 14.6,16.6 L 19.2,12 L 14.6,7.4 L 16,6 L 22,12 L 16,18 L 14.6,16.6 Z" 
-                                                  Width="12" Height="12" Stretch="Uniform" Fill="#FFF59E0B" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                                            <TextBlock Text="Visual C++ All-in-One" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                        <Button Grid.Column="1" x:Name="btnDlVcRedist" Style="{StaticResource MiniDownloadBtn}">
-                                            <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Button>
-                                    </Grid>
+                                                  Width="12" Height="12" Stretch="Uniform" Fill="{DynamicResource BrushAccentTools}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <TextBlock Text="Utilities &amp; Runtimes" FontSize="13.5" FontWeight="Bold" Foreground="{DynamicResource BrushAccentTools}" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <TextBlock Text="Deployment, Scrubbers &amp; VC++" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="28,2,0,10"/>
+                                    
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <Path Data="M 20,4 H 4 C 2.9,4 2,4.9 2,6 V 18 C 2,19.1 2.9,20 4,20 H 20 C 21.1,20 22,19.1 22,18 V 6 C 22,4.9 21.1,4 20,4 Z M 7.5,13.5 L 5.5,11.5 L 7.5,9.5 L 8.9,10.9 L 7.8,12 L 8.9,13.1 L 7.5,13.5 Z M 13,14 H 10 V 12.5 H 13 V 14 Z" 
+                                                      Width="12" Height="12" Stretch="Uniform" Fill="{DynamicResource BrushAccent365}" Margin="0,0,7,0" VerticalAlignment="Center"/>
+                                                <TextBlock Text="Modern ODT (2016-2024)" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                            <Button Grid.Column="1" x:Name="btnDlOdtModern" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6" Margin="0,0,0,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <Path Data="M 22.7,19.3 L 14.5,11.1 C 15.5,9.6 15.3,7.5 14,6.2 C 12.5,4.7 10.3,4.5 8.6,5.5 L 11.5,8.4 L 8.4,11.5 L 5.5,8.6 C 4.5,10.3 4.7,12.5 6.2,14 C 7.5,15.3 9.6,15.5 11.1,14.5 L 19.3,22.7 C 19.7,23.1 20.3,23.1 20.7,22.7 L 22.7,20.7 C 23.1,20.3 23.1,19.7 22.7,19.3 Z" 
+                                                      Width="12" Height="12" Stretch="Uniform" Fill="{DynamicResource BrushAccentTools}" Margin="0,0,7,0" VerticalAlignment="Center"/>
+                                                <TextBlock Text="SaRA Deep Scrubber" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                            <Button Grid.Column="1" x:Name="btnDlSaRAScrub" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                    <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="6" Padding="10,6">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <Path Data="M 9.4,16.6 L 4.8,12 L 9.4,7.4 L 8,6 L 2,12 L 8,18 L 9.4,16.6 Z M 14.6,16.6 L 19.2,12 L 14.6,7.4 L 16,6 L 22,12 L 16,18 L 14.6,16.6 Z" 
+                                                      Width="12" Height="12" Stretch="Uniform" Fill="{DynamicResource BrushAccent2024}" Margin="0,0,7,0" VerticalAlignment="Center"/>
+                                                <TextBlock Text="Visual C++ All-in-One" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                            <Button Grid.Column="1" x:Name="btnDlVcRedist" Style="{StaticResource MiniDownloadBtn}">
+                                                <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="{DynamicResource BrushTextPrimary}" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
                                 </StackPanel>
                             </Border>
                         </UniformGrid>
@@ -1716,7 +1810,8 @@ $xamlInput = @'
                             </Grid.ColumnDefinitions>
 
                             <!-- CỘT 1: TRỌN BỘ OFFICE SUITES -->
-                            <Border Grid.Column="0" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="0,0,8,0" Padding="20,16">
+                            <StackPanel Grid.Column="0">
+                            <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="0,0,8,12" Padding="20,16">
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                         <Image Source="__FLAG_DIR__/office.png" Width="18" Height="18" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,8,0" VerticalAlignment="Center"/>
@@ -1735,7 +1830,6 @@ $xamlInput = @'
                                                     <TextBlock Text="v2408 Build 17932" FontSize="9.5" FontWeight="Bold" Foreground="#FFF59E0B"/>
                                                 </Border>
                                             </StackPanel>
-                                            <TextBlock Text="Dung lượng: 4.5 GB • Đầy đủ bản quyền Volume &amp; Retail" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                             <Button x:Name="btnDlOdOffice2024Vol" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản ProPlus Volume (KMS / MAK)" Padding="8,4" Margin="0,0,4,0" Height="28">
@@ -1746,9 +1840,6 @@ $xamlInput = @'
                                             </Button>
                                             <Button x:Name="btnDlOdOffice2024Ret" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản ProPlus Retail (Key cá nhân)" Padding="8,4" Margin="0,0,4,0" Height="28">
                                                 <TextBlock Text="Retail" FontSize="10.5" FontWeight="Bold" Foreground="#FFF59E0B"/>
-                                            </Button>
-                                            <Button x:Name="btnCopyOdOffice2024" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải Office 2024" Width="28" Height="28">
-                                                <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             </Button>
                                         </StackPanel>
                                     </Grid>
@@ -1764,7 +1855,6 @@ $xamlInput = @'
                                                     <TextBlock Text="v2108 Build 14332" FontSize="9.5" FontWeight="Bold" Foreground="#FF10B981"/>
                                                 </Border>
                                             </StackPanel>
-                                            <TextBlock Text="Dung lượng: 3.1 GB • Đầy đủ bản quyền Volume &amp; Retail" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                             <Button x:Name="btnDlOdOffice2021Vol" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản ProPlus Volume (KMS / MAK)" Padding="8,4" Margin="0,0,4,0" Height="28">
@@ -1775,9 +1865,6 @@ $xamlInput = @'
                                             </Button>
                                             <Button x:Name="btnDlOdOffice2021Ret" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản ProPlus Retail (Key cá nhân)" Padding="8,4" Margin="0,0,4,0" Height="28">
                                                 <TextBlock Text="Retail" FontSize="10.5" FontWeight="Bold" Foreground="#FFF59E0B"/>
-                                            </Button>
-                                            <Button x:Name="btnCopyOdOffice2021" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải Office 2021" Width="28" Height="28">
-                                                <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             </Button>
                                         </StackPanel>
                                     </Grid>
@@ -1793,7 +1880,6 @@ $xamlInput = @'
                                                     <TextBlock Text="v1808 Build 10417" FontSize="9.5" FontWeight="Bold" Foreground="#FFF59E0B"/>
                                                 </Border>
                                             </StackPanel>
-                                            <TextBlock Text="Dung lượng: 2.5 GB • Đầy đủ bản quyền Volume &amp; Retail" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                             <Button x:Name="btnDlOdOffice2019Vol" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản ProPlus Volume (KMS / MAK)" Padding="8,4" Margin="0,0,4,0" Height="28">
@@ -1804,9 +1890,6 @@ $xamlInput = @'
                                             </Button>
                                             <Button x:Name="btnDlOdOffice2019Ret" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản ProPlus Retail (Key cá nhân)" Padding="8,4" Margin="0,0,4,0" Height="28">
                                                 <TextBlock Text="Retail" FontSize="10.5" FontWeight="Bold" Foreground="#FFF59E0B"/>
-                                            </Button>
-                                            <Button x:Name="btnCopyOdOffice2019" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải Office 2019" Width="28" Height="28">
-                                                <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             </Button>
                                         </StackPanel>
                                     </Grid>
@@ -1822,17 +1905,16 @@ $xamlInput = @'
                                                     <TextBlock Text="Current Channel" FontSize="9.5" FontWeight="Bold" Foreground="#FF38BDF8"/>
                                                 </Border>
                                             </StackPanel>
-                                            <TextBlock Text="Dung lượng: 4.5 GB • Enterprise &amp; Business" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-                                            <Button x:Name="btnDlOdM365Ent" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản Enterprise (Doanh nghiệp lớn)" Padding="9,4" Margin="0,0,4,0" Height="28">
+                                            <Button x:Name="btnDlOdM365Home" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản Home &amp; Family (Cá nhân &amp; Gia đình)" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <TextBlock Text="Home" FontSize="10.5" FontWeight="Bold" Foreground="#FF34D399"/>
+                                            </Button>
+                                            <Button x:Name="btnDlOdM365Ent" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản Enterprise (Doanh nghiệp lớn)" Padding="8,4" Margin="0,0,4,0" Height="28">
                                                 <TextBlock Text="Enterprise" FontSize="10.5" FontWeight="Bold" Foreground="#FF38BDF8"/>
                                             </Button>
-                                            <Button x:Name="btnDlOdM365Bus" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản Business (Doanh nghiệp vừa &amp; nhỏ)" Padding="9,4" Margin="0,0,4,0" Height="28">
+                                            <Button x:Name="btnDlOdM365Bus" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản Business (Doanh nghiệp vừa &amp; nhỏ)" Padding="8,4" Margin="0,0,4,0" Height="28">
                                                 <TextBlock Text="Business" FontSize="10.5" FontWeight="Bold" Foreground="#FFF59E0B"/>
-                                            </Button>
-                                            <Button x:Name="btnCopyOdM365" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải" Width="28" Height="28">
-                                                <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             </Button>
                                         </StackPanel>
                                     </Grid>
@@ -1848,7 +1930,6 @@ $xamlInput = @'
                                                     <TextBlock Text="v16.0 Build 4266" FontSize="9.5" FontWeight="Bold" Foreground="#FFA855F7"/>
                                                 </Border>
                                             </StackPanel>
-                                            <TextBlock Text="Dung lượng: 4.1 GB • Đầy đủ bản Tiếng Anh &amp; Tiếng Việt" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                             <Button x:Name="btnDlOdOffice2016En" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản Pro Plus Tiếng Anh (English)" Padding="9,4" Margin="0,0,4,0" Height="28">
@@ -1856,9 +1937,6 @@ $xamlInput = @'
                                             </Button>
                                             <Button x:Name="btnDlOdOffice2016Vi" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản Pro Plus Tiếng Việt" Padding="9,4" Margin="0,0,4,0" Height="28">
                                                 <TextBlock Text="Tiếng Việt" FontSize="10.5" FontWeight="Bold" Foreground="#FFEF4444"/>
-                                            </Button>
-                                            <Button x:Name="btnCopyOdOffice2016" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải" Width="28" Height="28">
-                                                <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             </Button>
                                         </StackPanel>
                                     </Grid>
@@ -1874,7 +1952,6 @@ $xamlInput = @'
                                                     <TextBlock Text="v15.0 Build 4420" FontSize="9.5" FontWeight="Bold" Foreground="#FFA855F7"/>
                                                 </Border>
                                             </StackPanel>
-                                            <TextBlock Text="Dung lượng: 2.1 GB • Đầy đủ bản Tiếng Anh &amp; Tiếng Việt" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                             <Button x:Name="btnDlOdOffice2013En" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản Professional Tiếng Anh (English)" Padding="9,4" Margin="0,0,4,0" Height="28">
@@ -1883,24 +1960,19 @@ $xamlInput = @'
                                             <Button x:Name="btnDlOdOffice2013Vi" Style="{StaticResource SecondaryButton}" ToolTip="Tải bản Professional Tiếng Việt" Padding="9,4" Margin="0,0,4,0" Height="28">
                                                 <TextBlock Text="Tiếng Việt" FontSize="10.5" FontWeight="Bold" Foreground="#FFEF4444"/>
                                             </Button>
-                                            <Button x:Name="btnCopyOdOffice2013" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải" Width="28" Height="28">
-                                                <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                            </Button>
                                         </StackPanel>
                                     </Grid>
                                 </StackPanel>
                             </Border>
 
-                            <!-- CỘT 2: PROJECT & VISIO + WINDOWS MSDN -->
-                            <StackPanel Grid.Column="1" Margin="8,0,0,0">
-                                <!-- Thẻ 2: Project & Visio (ISO Gốc) -->
+                                <!-- Project & Visio (ISO Goc) -->
                                 <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="0,0,0,12" Padding="20,13">
                                     <StackPanel>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                             <Image Source="__FLAG_DIR__/project.png" Width="18" Height="18" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,8,0" VerticalAlignment="Center"/>
                                             <TextBlock Text="Project &amp; Visio (ISO Gốc - Pro &amp; Standard)" FontSize="13.5" FontWeight="Bold" Foreground="#FF0EA5E9"/>
                                         </StackPanel>
-                                        <TextBlock Text="Bản cài đặt quản lý dự án &amp; sơ đồ kỹ thuật độc lập (Volume KMS)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,2,0,10"/>
+                                        <TextBlock Text="Bản cài đặt quản lý dự án &amp; sơ đồ kỹ thuật độc lập (Volume KMS/MAK)" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,2,0,10"/>
 
                                         <!-- Project Professional -->
                                         <Grid Margin="0,0,0,8">
@@ -1910,10 +1982,9 @@ $xamlInput = @'
                                                     <Image Source="__FLAG_DIR__/project.png" Width="13" Height="13" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,5,0" VerticalAlignment="Center"/>
                                                     <TextBlock Text="Project Professional (ISO)" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
                                                     <Border Background="#260EA5E9" CornerRadius="3" Padding="4,1" Margin="6,0,0,0" VerticalAlignment="Center">
-                                                        <TextBlock Text="Pro KMS" FontSize="9" FontWeight="Bold" Foreground="#FF0EA5E9"/>
+                                                        <TextBlock Text="Pro KMS/MAK" FontSize="9" FontWeight="Bold" Foreground="#FF0EA5E9"/>
                                                     </Border>
                                                 </StackPanel>
-                                                <TextBlock Text="Quản lý dự án nâng cao • Bản Pro 2024, 2021, 2019" FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="18,2,0,0"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                                 <Button x:Name="btnDlOdProject2024" Style="{StaticResource SecondaryButton}" ToolTip="Tải Project Professional 2024 Volume (4.51 GB)" Padding="8,3" Margin="0,0,3,0" Height="26">
@@ -1924,9 +1995,6 @@ $xamlInput = @'
                                                 </Button>
                                                 <Button x:Name="btnDlOdProject2019" Style="{StaticResource SecondaryButton}" ToolTip="Tải Project Professional 2019 Volume (2.51 GB)" Padding="8,3" Margin="0,0,3,0" Height="26">
                                                     <TextBlock Text="2019" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8"/>
-                                                </Button>
-                                                <Button x:Name="btnCopyOdProject" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải Project Pro" Width="26" Height="26">
-                                                    <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                                 </Button>
                                             </StackPanel>
                                         </Grid>
@@ -1939,10 +2007,9 @@ $xamlInput = @'
                                                     <Image Source="__FLAG_DIR__/project.png" Width="13" Height="13" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,5,0" VerticalAlignment="Center"/>
                                                     <TextBlock Text="Project Standard (ISO)" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
                                                     <Border Background="#2610B981" CornerRadius="3" Padding="4,1" Margin="6,0,0,0" VerticalAlignment="Center">
-                                                        <TextBlock Text="Std KMS" FontSize="9" FontWeight="Bold" Foreground="#FF10B981"/>
+                                                        <TextBlock Text="Std KMS/MAK" FontSize="9" FontWeight="Bold" Foreground="#FF10B981"/>
                                                     </Border>
                                                 </StackPanel>
-                                                <TextBlock Text="Quản lý dự án cơ bản • Bản Standard 2024, 2021, 2019" FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="18,2,0,0"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                                 <Button x:Name="btnDlOdProject2024Std" Style="{StaticResource SecondaryButton}" ToolTip="Tải Project Standard 2024 Volume (4.51 GB)" Padding="8,3" Margin="0,0,3,0" Height="26">
@@ -1953,9 +2020,6 @@ $xamlInput = @'
                                                 </Button>
                                                 <Button x:Name="btnDlOdProject2019Std" Style="{StaticResource SecondaryButton}" ToolTip="Tải Project Standard 2019 Volume (2.51 GB)" Padding="8,3" Margin="0,0,3,0" Height="26">
                                                     <TextBlock Text="2019" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8"/>
-                                                </Button>
-                                                <Button x:Name="btnCopyOdProjectStd" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải Project Standard" Width="26" Height="26">
-                                                    <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                                 </Button>
                                             </StackPanel>
                                         </Grid>
@@ -1968,10 +2032,9 @@ $xamlInput = @'
                                                     <Image Source="__FLAG_DIR__/visio.png" Width="13" Height="13" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,5,0" VerticalAlignment="Center"/>
                                                     <TextBlock Text="Visio Professional (ISO)" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
                                                     <Border Background="#266366F1" CornerRadius="3" Padding="4,1" Margin="6,0,0,0" VerticalAlignment="Center">
-                                                        <TextBlock Text="Pro KMS" FontSize="9" FontWeight="Bold" Foreground="#FF6366F1"/>
+                                                        <TextBlock Text="Pro KMS/MAK" FontSize="9" FontWeight="Bold" Foreground="#FF6366F1"/>
                                                     </Border>
                                                 </StackPanel>
-                                                <TextBlock Text="Vẽ sơ đồ kỹ thuật &amp; BPMN • Bản Pro 2024, 2021, 2019" FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="18,2,0,0"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                                 <Button x:Name="btnDlOdVisio2024" Style="{StaticResource SecondaryButton}" ToolTip="Tải Visio Professional 2024 Volume (4.51 GB)" Padding="8,3" Margin="0,0,3,0" Height="26">
@@ -1982,9 +2045,6 @@ $xamlInput = @'
                                                 </Button>
                                                 <Button x:Name="btnDlOdVisio2019" Style="{StaticResource SecondaryButton}" ToolTip="Tải Visio Professional 2019 Volume (2.51 GB)" Padding="8,3" Margin="0,0,3,0" Height="26">
                                                     <TextBlock Text="2019" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8"/>
-                                                </Button>
-                                                <Button x:Name="btnCopyOdVisio" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải Visio Pro" Width="26" Height="26">
-                                                    <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                                 </Button>
                                             </StackPanel>
                                         </Grid>
@@ -1997,10 +2057,9 @@ $xamlInput = @'
                                                     <Image Source="__FLAG_DIR__/visio.png" Width="13" Height="13" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,5,0" VerticalAlignment="Center"/>
                                                     <TextBlock Text="Visio Standard (ISO)" FontSize="11.5" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
                                                     <Border Background="#268B5CF6" CornerRadius="3" Padding="4,1" Margin="6,0,0,0" VerticalAlignment="Center">
-                                                        <TextBlock Text="Std KMS" FontSize="9" FontWeight="Bold" Foreground="#FF8B5CF6"/>
+                                                        <TextBlock Text="Std KMS/MAK" FontSize="9" FontWeight="Bold" Foreground="#FF8B5CF6"/>
                                                     </Border>
                                                 </StackPanel>
-                                                <TextBlock Text="Vẽ sơ đồ lưu đồ &amp; tư duy • Bản Standard 2024, 2021, 2019" FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="18,2,0,0"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                                 <Button x:Name="btnDlOdVisio2024Std" Style="{StaticResource SecondaryButton}" ToolTip="Tải Visio Standard 2024 Volume (4.51 GB)" Padding="8,3" Margin="0,0,3,0" Height="26">
@@ -2012,23 +2071,19 @@ $xamlInput = @'
                                                 <Button x:Name="btnDlOdVisio2019Std" Style="{StaticResource SecondaryButton}" ToolTip="Tải Visio Standard 2019 Volume (2.51 GB)" Padding="8,3" Margin="0,0,3,0" Height="26">
                                                     <TextBlock Text="2019" FontSize="10" FontWeight="Bold" Foreground="#FF94A3B8"/>
                                                 </Button>
-                                                <Button x:Name="btnCopyOdVisioStd" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link Tải Visio Standard" Width="26" Height="26">
-                                                    <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="10" Height="10" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                                </Button>
                                             </StackPanel>
                                         </Grid>
                                     </StackPanel>
                                 </Border>
-
-                                <!-- Thẻ 3: Windows ISO Nguyên Gốc (MSDN) -->
-                                <Border Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="0" Padding="20,15">
-                                    <StackPanel>
-                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" 
-                                                  Width="18" Height="18" Stretch="Uniform" Fill="#FF0284C7" Margin="0,0,8,0" VerticalAlignment="Center"/>
-                                            <TextBlock Text="Windows ISO Nguyên Gốc (MSDN)" FontSize="14" FontWeight="Bold" Foreground="#FF0284C7"/>
-                                        </StackPanel>
-                                        <TextBlock Text="Bản cài đặt Windows sạch không chỉnh sửa từ Microsoft" FontSize="11" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,3,0,13"/>
+                            </StackPanel>
+                            <Border Grid.Column="1" VerticalAlignment="Top" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="8,0,0,0" Padding="20,15">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z"
+                                              Width="18" Height="18" Stretch="Uniform" Fill="#FF0284C7" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Windows ISO Nguyên Gốc (MSDN)" FontSize="14" FontWeight="Bold" Foreground="#FF0284C7"/>
+                                    </StackPanel>
+                                    <TextBlock Text="Bản cài đặt Windows sạch không chỉnh sửa từ Microsoft" FontSize="11" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,3,0,13"/>
 
                                         <!-- Win 11 -->
                                         <Grid Margin="0,0,0,13">
@@ -2036,23 +2091,25 @@ $xamlInput = @'
                                             <StackPanel VerticalAlignment="Center">
                                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                                     <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Width="14" Height="14" Stretch="Uniform" Fill="#FF0284C7" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                                                    <TextBlock Text="Windows 11 24H2 Pro / Enterprise 64-bit" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Windows 11 25H2 Pro / Enterprise 64-bit" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
                                                     <Border Background="#260284C7" CornerRadius="3" Padding="5,1.5" Margin="7,0,0,0" VerticalAlignment="Center">
-                                                        <TextBlock Text="Build 26100" FontSize="9.5" FontWeight="Bold" Foreground="#FF0284C7"/>
+                                                        <TextBlock Text="Build 26200" FontSize="9.5" FontWeight="Bold" Foreground="#FF0284C7"/>
                                                     </Border>
                                                 </StackPanel>
-                                                <TextBlock Text="Bản cài đặt ISO chính thức MSDN (Consumer &amp; Business) • 5.4 GB" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-                                                <Button x:Name="btnDlOdWin11" Style="{StaticResource SecondaryButton}" ToolTip="Tải từ OneDrive" Padding="12,4" Margin="0,0,4,0" Height="28">
-                                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                                        <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,5,0" VerticalAlignment="Center"/>
-                                                        <TextBlock Text="Tải ISO" FontSize="10.5" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
-                                                    </StackPanel>
-                                                </Button>
-                                                <Button x:Name="btnCopyOdWin11" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link" Width="28" Height="28">
-                                                    <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                                </Button>
+                                            <Button x:Name="btnDlOdWin11" Style="{StaticResource SecondaryButton}" ToolTip="Tải Windows 11 25H2 từ Cloud (Tốc độ cao)" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Tải Xuống" FontSize="10" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button x:Name="btnDlMsWin11" Style="{StaticResource SecondaryButton}" ToolTip="Mở trang tải chính thức Microsoft Software Download" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Fill="#FF10B981" Width="9" Height="9" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Microsoft" FontSize="10" FontWeight="Bold" Foreground="#FF10B981" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                             </StackPanel>
                                         </Grid>
 
@@ -2067,18 +2124,20 @@ $xamlInput = @'
                                                         <TextBlock Text="Build 19045" FontSize="9.5" FontWeight="Bold" Foreground="#FF0284C7"/>
                                                     </Border>
                                                 </StackPanel>
-                                                <TextBlock Text="Bản cập nhật 22H2 nguyên gốc MSDN sạch không chỉnh sửa • 5.6 GB" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-                                                <Button x:Name="btnDlOdWin10" Style="{StaticResource SecondaryButton}" ToolTip="Tải từ OneDrive" Padding="12,4" Margin="0,0,4,0" Height="28">
-                                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                                        <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,5,0" VerticalAlignment="Center"/>
-                                                        <TextBlock Text="Tải ISO" FontSize="10.5" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
-                                                    </StackPanel>
-                                                </Button>
-                                                <Button x:Name="btnCopyOdWin10" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link" Width="28" Height="28">
-                                                    <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                                </Button>
+                                            <Button x:Name="btnDlOdWin10" Style="{StaticResource SecondaryButton}" ToolTip="Tải Windows 10 22H2 từ Cloud (Tốc độ cao)" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Tải Xuống" FontSize="10" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button x:Name="btnDlMsWin10" Style="{StaticResource SecondaryButton}" ToolTip="Mở trang tải chính thức Microsoft Software Download" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Fill="#FF10B981" Width="9" Height="9" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Microsoft" FontSize="10" FontWeight="Bold" Foreground="#FF10B981" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                             </StackPanel>
                                         </Grid>
 
@@ -2093,49 +2152,164 @@ $xamlInput = @'
                                                         <TextBlock Text="v21H2 LTSC" FontSize="9.5" FontWeight="Bold" Foreground="#FF10B981"/>
                                                     </Border>
                                                 </StackPanel>
-                                                <TextBlock Text="Bản Enterprise LTSC ổn định dài hạn, tối ưu mượt nhẹ • 4.7 GB" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-                                                <Button x:Name="btnDlOdWinLTSC" Style="{StaticResource SecondaryButton}" ToolTip="Tải từ OneDrive" Padding="12,4" Margin="0,0,4,0" Height="28">
-                                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                                        <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,5,0" VerticalAlignment="Center"/>
-                                                        <TextBlock Text="Tải ISO" FontSize="10.5" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
-                                                    </StackPanel>
-                                                </Button>
-                                                <Button x:Name="btnCopyOdWinLTSC" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link" Width="28" Height="28">
-                                                    <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                                </Button>
+                                            <Button x:Name="btnDlOdWinLTSC" Style="{StaticResource SecondaryButton}" ToolTip="Tải Windows 10 LTSC từ Cloud (Tốc độ cao)" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Tải Xuống" FontSize="10" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button x:Name="btnDlMsWinLTSC" Style="{StaticResource SecondaryButton}" ToolTip="Mở trang tải chính thức Microsoft Evaluation Center" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Fill="#FF10B981" Width="9" Height="9" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Microsoft" FontSize="10" FontWeight="Bold" Foreground="#FF10B981" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                             </StackPanel>
                                         </Grid>
 
-                                        <!-- Windows Server -->
-                                        <Grid Margin="0">
+                                        <!-- Win 11 LTSC -->
+                                        <Grid Margin="0,0,0,13">
                                             <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
                                             <StackPanel VerticalAlignment="Center">
                                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                                     <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Width="14" Height="14" Stretch="Uniform" Fill="#FF0284C7" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                                                    <TextBlock Text="Windows Server 2022 / 2025 Standard" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
-                                                    <Border Background="#260284C7" CornerRadius="3" Padding="5,1.5" Margin="7,0,0,0" VerticalAlignment="Center">
-                                                        <TextBlock Text="Server OS" FontSize="9.5" FontWeight="Bold" Foreground="#FF0284C7"/>
+                                                    <TextBlock Text="Windows 11 Enterprise LTSC 2024" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                                    <Border Background="#2610B981" CornerRadius="3" Padding="5,1.5" Margin="7,0,0,0" VerticalAlignment="Center">
+                                                        <TextBlock Text="v24H2 LTSC" FontSize="9.5" FontWeight="Bold" Foreground="#FF10B981"/>
                                                     </Border>
                                                 </StackPanel>
-                                                <TextBlock Text="Bản cài đặt trung tâm dữ liệu Standard / Datacenter 64-bit • 5.2 GB" FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="20,3,0,0"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-                                                <Button x:Name="btnDlOdWinServer" Style="{StaticResource SecondaryButton}" ToolTip="Tải từ OneDrive" Padding="12,4" Margin="0,0,4,0" Height="28">
-                                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                                        <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,5,0" VerticalAlignment="Center"/>
-                                                        <TextBlock Text="Tải ISO" FontSize="10.5" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
-                                                    </StackPanel>
-                                                </Button>
-                                                <Button x:Name="btnCopyOdWinServer" Style="{StaticResource MiniDownloadBtn}" ToolTip="Copy Link" Width="28" Height="28">
-                                                    <Path Data="M 16,1 H 4 C 2.9,1 2,1.9 2,3 V 17 H 4 V 3 H 16 Z M 19,5 H 8 C 6.9,5 6,5.9 6,7 V 21 C 6,22.1 6.9,23 8,23 H 19 C 20.1,23 21,22.1 21,21 V 7 C 21,5.9 20.1,5 19,5 Z M 19,21 H 8 V 7 H 19 Z" Fill="{DynamicResource BrushTextSecondary}" Width="11" Height="11" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                                </Button>
+                                            <Button x:Name="btnDlOdWin11LTSC" Style="{StaticResource SecondaryButton}" ToolTip="Tải Windows 11 LTSC từ Cloud (Tốc độ cao)" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Tải Xuống" FontSize="10" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button x:Name="btnDlMsWin11LTSC" Style="{StaticResource SecondaryButton}" ToolTip="Mở trang tải chính thức Microsoft Evaluation Center" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Fill="#FF10B981" Width="9" Height="9" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Microsoft" FontSize="10" FontWeight="Bold" Foreground="#FF10B981" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            </StackPanel>
+                                        </Grid>
+
+                                        <!-- Windows Server 2025 -->
+                                        <Grid Margin="0,0,0,13">
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <StackPanel VerticalAlignment="Center">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Width="14" Height="14" Stretch="Uniform" Fill="#FF0284C7" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Windows Server 2025 Standard / Datacenter" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                                    <Border Background="#260284C7" CornerRadius="3" Padding="5,1.5" Margin="7,0,0,0" VerticalAlignment="Center">
+                                                        <TextBlock Text="Server 2025" FontSize="9.5" FontWeight="Bold" Foreground="#FF0284C7"/>
+                                                    </Border>
+                                                </StackPanel>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                            <Button x:Name="btnDlOdWinServer2025" Style="{StaticResource SecondaryButton}" ToolTip="Tải Windows Server 2025 MSDN từ Cloud (Tốc độ cao)" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Tải Xuống" FontSize="10" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button x:Name="btnDlMsWinServer2025" Style="{StaticResource SecondaryButton}" ToolTip="Mở trang tải chính thức Microsoft Evaluation Center Server 2025" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Fill="#FF10B981" Width="9" Height="9" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Microsoft" FontSize="10" FontWeight="Bold" Foreground="#FF10B981" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            </StackPanel>
+                                        </Grid>
+
+                                        <!-- Windows Server 2025 Evaluation -->
+                                        <Grid Margin="0,0,0,13">
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <StackPanel VerticalAlignment="Center">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Width="14" Height="14" Stretch="Uniform" Fill="#FFF59E0B" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Windows Server 2025 Evaluation (180 ngày)" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                                    <Border Background="#26F59E0B" CornerRadius="3" Padding="5,1.5" Margin="7,0,0,0" VerticalAlignment="Center">
+                                                        <TextBlock Text="Eval 180 Days" FontSize="9.5" FontWeight="Bold" Foreground="#FFF59E0B"/>
+                                                    </Border>
+                                                </StackPanel>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                            <Button x:Name="btnDlMsWinServer2025Eval" Style="{StaticResource SecondaryButton}" ToolTip="Tải trực tiếp ISO Evaluation từ Microsoft Static CDN (5.60 GB)" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FFF59E0B" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Eval ISO (MS)" FontSize="10" FontWeight="Bold" Foreground="#FFF59E0B" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button x:Name="btnDlEvalCenter2025" Style="{StaticResource SecondaryButton}" ToolTip="Mở cổng đăng ký dùng thử Microsoft Evaluation Center Server 2025" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Fill="#FF10B981" Width="9" Height="9" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Eval Center" FontSize="10" FontWeight="Bold" Foreground="#FF10B981" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            </StackPanel>
+                                        </Grid>
+
+                                        <!-- Windows Server 2022 -->
+                                        <Grid Margin="0,0,0,13">
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <StackPanel VerticalAlignment="Center">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Width="14" Height="14" Stretch="Uniform" Fill="#FF0284C7" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Windows Server 2022 Standard / Datacenter" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                                    <Border Background="#260284C7" CornerRadius="3" Padding="5,1.5" Margin="7,0,0,0" VerticalAlignment="Center">
+                                                        <TextBlock Text="Server 2022" FontSize="9.5" FontWeight="Bold" Foreground="#FF0284C7"/>
+                                                    </Border>
+                                                </StackPanel>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                            <Button x:Name="btnDlOdWinServer2022" Style="{StaticResource SecondaryButton}" ToolTip="Tải Windows Server 2022 MSDN từ Cloud (Tốc độ cao)" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FF38BDF8" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Tải Xuống" FontSize="10" FontWeight="Bold" Foreground="#FF38BDF8" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button x:Name="btnDlMsWinServer2022" Style="{StaticResource SecondaryButton}" ToolTip="Mở trang tải chính thức Microsoft Evaluation Center Server 2022" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Fill="#FF10B981" Width="9" Height="9" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Microsoft" FontSize="10" FontWeight="Bold" Foreground="#FF10B981" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            </StackPanel>
+                                        </Grid>
+
+                                        <!-- Windows Server 2022 Evaluation -->
+                                        <Grid Margin="0">
+                                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                            <StackPanel VerticalAlignment="Center">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Width="14" Height="14" Stretch="Uniform" Fill="#FFF59E0B" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Windows Server 2022 Evaluation (180 ngày)" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                                                    <Border Background="#26F59E0B" CornerRadius="3" Padding="5,1.5" Margin="7,0,0,0" VerticalAlignment="Center">
+                                                        <TextBlock Text="Eval 180 Days" FontSize="9.5" FontWeight="Bold" Foreground="#FFF59E0B"/>
+                                                    </Border>
+                                                </StackPanel>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                            <Button x:Name="btnDlMsWinServer2022Eval" Style="{StaticResource SecondaryButton}" ToolTip="Tải trực tiếp ISO Evaluation từ Microsoft Static CDN (4.70 GB)" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 12,3 V 13 M 8.5,9.5 L 12,13 L 15.5,9.5 M 5,17 H 19" Stroke="#FFF59E0B" StrokeThickness="1.8" Width="10" Height="10" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Eval ISO (MS)" FontSize="10" FontWeight="Bold" Foreground="#FFF59E0B" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button x:Name="btnDlEvalCenter2022" Style="{StaticResource SecondaryButton}" ToolTip="Mở cổng đăng ký dùng thử Microsoft Evaluation Center Server 2022" Padding="8,4" Margin="0,0,4,0" Height="28">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                    <Path Data="M 3,12 V 6.75 L 9,5.88 V 12 M 3,13 H 9 V 19.12 L 3,18.25 M 10,12 V 5.75 L 21,4.12 V 12 M 10,13 H 21 V 20.88 L 10,19.25 Z" Fill="#FF10B981" Width="9" Height="9" Stretch="Uniform" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Eval Center" FontSize="10" FontWeight="Bold" Foreground="#FF10B981" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                             </StackPanel>
                                         </Grid>
                                     </StackPanel>
                                 </Border>
-                            </StackPanel>
                         </Grid>
                     </ScrollViewer>
                 </Grid>
@@ -2150,68 +2324,70 @@ $xamlInput = @'
                     <!-- Left Card: License & Activation -->
                     <Border Grid.Column="0" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="0,0,10,0" Padding="20">
                         <StackPanel>
-                            <TextBlock Text="Office Activation Suite" FontSize="15" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
-                            <TextBlock Text="Check status, activate licenses or reset licensing tokens." FontSize="11" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,4,0,18"/>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Path Data="M 12.65,10 C 11.83,7.67 9.61,6 7,6 C 3.69,6 1,8.69 1,12 C 1,15.31 3.69,18 7,18 C 9.61,18 11.83,16.33 12.65,14 H 17 V 18 H 21 V 14 H 23 V 10 H 12.65 Z M 7,14 C 5.9,14 5,13.1 5,12 C 5,10.9 5.9,10 7,10 C 8.1,10 9,10.9 9,12 C 9,13.1 8.1,14 7,14 Z" 
+                                      Width="17" Height="17" Stretch="Uniform" Fill="#FFF59E0B" Margin="0,0,9,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Office Activation Suite" FontSize="15" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                            </StackPanel>
+                            <TextBlock Text="Check status, activate licenses or reset licensing tokens." FontSize="11" Foreground="{DynamicResource BrushTextSecondary}" Margin="26,3,0,18"/>
 
-                            <!-- Tool Button 1 -->
+                            <!-- Tool Button 1: Check Activation Status -->
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,12" Margin="0,0,0,10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="36" Height="36" CornerRadius="8" Background="#1A38BDF8" Margin="0,0,13,0" VerticalAlignment="Center">
+                                        <Path Data="M 12,1 L 3,5 V 11 C 3,16.55 6.84,21.74 12,23 C 17.16,21.74 21,16.55 21,11 V 5 L 12,1 Z M 10,17 L 6,13 L 7.41,11.59 L 10,14.17 L 16.59,7.58 L 18,9 L 10,17 Z" 
+                                              Width="18" Height="18" Stretch="Uniform" Fill="#FF38BDF8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Check Activation Status" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12.5"/>
                                         <TextBlock Text="Query ospp.vbs for license keys, remaining days &amp; KMS server info." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonCheckOSPP" Content="Inspect Status" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonCheckOSPP" Content="Inspect Status" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
-
-
 
                             <!-- Tool Button 2: Convert to Volume -->
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,12" Margin="0,0,0,10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="36" Height="36" CornerRadius="8" Background="#1A10B981" Margin="0,0,13,0" VerticalAlignment="Center">
+                                        <Path Data="M 12,4 V 1 L 8,5 L 12,9 V 6 C 15.31,6 18,8.69 18,12 C 18,13.01 17.75,13.97 17.3,14.8 L 18.76,16.26 C 19.54,15.03 20,13.57 20,12 C 20,7.58 16.42,4 12,4 Z M 12,18 C 8.69,18 6,15.31 6,12 C 6,10.99 6.25,10.03 6.7,9.2 L 5.24,7.74 C 4.46,8.97 4,10.43 4,12 C 4,16.42 7.58,20 12,20 V 23 L 16,19 L 12,15 V 18 Z" 
+                                              Width="18" Height="18" Stretch="Uniform" Fill="#FF10B981" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Convert Retail to Volume" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12.5"/>
                                         <TextBlock Text="Install Volume GVLK license licenses to enable KMS activation." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonConvertVolume" Content="Convert to Volume" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonConvertVolume" Content="Convert to Volume" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
 
-                            <!-- Tool Button 3: KMS Activate -->
-                            <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,12" Margin="0,0,0,10">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
-                                        <TextBlock Text="KMS Online Activation" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12.5"/>
-                                        <TextBlock Text="Connect to public/custom KMS server and activate Volume Office." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,0"/>
-                                    </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonKmsActivate" Content="Activate KMS" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
-                                </Grid>
-                            </Border>
-
-                            <!-- Tool Button 4 -->
+                            <!-- Tool Button 3: Grace Rearm -->
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,12">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="36" Height="36" CornerRadius="8" Background="#1A818CF8" Margin="0,0,13,0" VerticalAlignment="Center">
+                                        <Path Data="M 17.65,6.35 C 16.2,4.9 14.21,4 12,4 C 7.58,4 4.01,7.58 4.01,12 C 4.01,16.42 7.58,20 12,20 C 15.73,20 18.84,17.45 19.73,14 H 17.65 C 16.83,16.33 14.61,18 12,18 C 8.69,18 6,15.31 6,12 C 6,8.69 8.69,6 12,6 C 13.66,6 15.14,6.69 16.22,7.78 L 13,11 H 20 V 4 L 17.65,6.35 Z" 
+                                              Width="18" Height="18" Stretch="Uniform" Fill="#FF818CF8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Office Grace Rearm" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12.5"/>
                                         <TextBlock Text="Reset evaluation grace period via ospp.vbs /rearm command." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonRearmOSPP" Content="Execute Rearm" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonRearmOSPP" Content="Execute Rearm" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
                         </StackPanel>
@@ -2220,36 +2396,50 @@ $xamlInput = @'
                     <!-- Right Card: Office Repair & Maintenance -->
                     <Border Grid.Column="1" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="10,0,0,0" Padding="20">
                         <StackPanel>
-                            <TextBlock Text="Repair &amp; Maintenance" FontSize="15" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
-                            <TextBlock Text="Fix common launch crashes and corrupted Office component files." FontSize="11" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,4,0,18"/>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Path Data="M 22.7,19.3 L 14.5,11.1 C 15.5,9.6 15.3,7.5 14,6.2 C 12.5,4.7 10.3,4.5 8.6,5.5 L 11.5,8.4 L 8.4,11.5 L 5.5,8.6 C 4.5,10.3 4.7,12.5 6.2,14 C 7.5,15.3 9.6,15.5 11.1,14.5 L 19.3,22.7 C 19.7,23.1 20.3,23.1 20.7,22.7 L 22.7,20.7 C 23.1,20.3 23.1,19.7 22.7,19.3 Z" 
+                                      Width="16" Height="16" Stretch="Uniform" Fill="#FF0EA5E9" Margin="0,0,9,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Repair &amp; Maintenance" FontSize="15" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                            </StackPanel>
+                            <TextBlock Text="Fix common launch crashes and corrupted Office component files." FontSize="11" Foreground="{DynamicResource BrushTextSecondary}" Margin="25,3,0,18"/>
 
-                            <!-- Repair 1 -->
+                            <!-- Repair 1: Quick Repair -->
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,12" Margin="0,0,0,10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="36" Height="36" CornerRadius="8" Background="#1A0EA5E9" Margin="0,0,13,0" VerticalAlignment="Center">
+                                        <Path Data="M 7,2 V 5 H 10 V 2 H 7 Z M 14,2 V 5 H 17 V 2 H 14 Z M 7,19 V 22 H 10 V 19 H 7 Z M 14,19 V 22 H 17 V 19 H 14 Z M 2,7 H 5 V 10 H 2 V 7 Z M 2,14 H 5 V 17 H 2 V 14 Z M 19,7 H 22 V 10 H 19 V 7 Z M 19,14 H 22 V 17 H 19 V 14 Z M 5,5 V 19 H 19 V 5 H 5 Z M 17,17 H 7 V 7 H 17 V 17 Z" 
+                                              Width="18" Height="18" Stretch="Uniform" Fill="#FF0EA5E9" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Quick Repair" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12.5"/>
                                         <TextBlock Text="Fixes simple errors quickly without requiring an internet connection." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonQuickRepair" Content="Start Quick Repair" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonQuickRepair" Content="Start Quick Repair" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
 
-                            <!-- Repair 2 -->
+                            <!-- Repair 2: Online Full Repair -->
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,12" Margin="0,0,0,10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="36" Height="36" CornerRadius="8" Background="#1A6366F1" Margin="0,0,13,0" VerticalAlignment="Center">
+                                        <Path Data="M 19.35,10.04 C 18.67,6.59 15.64,4 12,4 C 9.11,4 6.6,5.64 5.35,8.04 C 2.34,8.36 0,10.91 0,14 C 0,17.31 2.69,20 6,20 H 19 C 21.76,20 24,17.76 24,15 C 24,12.36 21.95,10.22 19.35,10.04 Z M 12,9 L 16.5,13.5 L 14.4,13.5 L 14.4,17 L 9.6,17 L 9.6,13.5 L 7.5,13.5 L 12,9 Z" 
+                                              Width="18" Height="18" Stretch="Uniform" Fill="#FF6366F1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Online Full Repair" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12.5"/>
                                         <TextBlock Text="Replaces corrupted installation files directly via Microsoft CDN." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonOnlineRepair" Content="Start Online Repair" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonOnlineRepair" Content="Start Online Repair" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
 
@@ -2257,14 +2447,19 @@ $xamlInput = @'
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,12">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="36" Height="36" CornerRadius="8" Background="#1AF43F5E" Margin="0,0,13,0" VerticalAlignment="Center">
+                                        <Path Data="M 15,4 L 14,3 H 10 L 9,4 H 5 V 6 H 19 V 4 Z M 6,19 C 6,20.1 6.9,21 8,21 H 16 C 17.1,21 18,20.1 18,19 V 7 H 6 Z M 9,9 H 10.5 V 18 H 9 Z M 13.5,9 H 15 V 18 H 13.5 Z" 
+                                              Width="18" Height="18" Stretch="Uniform" Fill="#FFF43F5E" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Clean Cache &amp; Fix Crash" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12.5"/>
                                         <TextBlock Text="Wipes corrupted Office document caches &amp; fixes startup freezes." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonCleanCache" Content="Clean Cache" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonCleanCache" Content="Clean Cache" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
                         </StackPanel>
@@ -2285,34 +2480,48 @@ $xamlInput = @'
                     <!-- Card 1: Standard / Fast ClickToRun Removal -->
                     <Border Grid.Row="0" Grid.Column="0" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="0,0,10,12" Padding="16,14">
                         <StackPanel>
-                            <TextBlock Text="Standard Office Removal" FontSize="14" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
-                            <TextBlock Text="Fast uninstallation of Click-to-Run Office suites (365, 2016-2024)." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,12"/>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Path Data="M 15,4 L 14,3 H 10 L 9,4 H 5 V 6 H 19 V 4 Z M 6,19 C 6,20.1 6.9,21 8,21 H 16 C 17.1,21 18,20.1 18,19 V 7 H 6 Z M 9,9 H 10.5 V 18 H 9 Z M 13.5,9 H 15 V 18 H 13.5 Z" 
+                                      Width="16" Height="16" Stretch="Uniform" Fill="#FFF43F5E" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Standard Office Removal" FontSize="14" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                            </StackPanel>
+                            <TextBlock Text="Fast uninstallation of Click-to-Run Office suites (365, 2016-2024)." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="24,3,0,12"/>
 
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,10" Margin="0,0,0,10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="32" Height="32" CornerRadius="7" Background="#1AF59E0B" Margin="0,0,12,0" VerticalAlignment="Center">
+                                        <Path Data="M 13,3 L 4,14 H 11 L 11,21 L 20,10 H 13 L 13,3 Z" 
+                                              Width="16" Height="16" Stretch="Uniform" Fill="#FFF59E0B" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Quick ClickToRun Uninstall" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12"/>
                                         <TextBlock Text="Uses local ClickToRun service without redownloading ODT." FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,2,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonQuickUninstall" Content="Fast Uninstall" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonQuickUninstall" Content="Fast Uninstall" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
 
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="32" Height="32" CornerRadius="7" Background="#1AF43F5E" Margin="0,0,12,0" VerticalAlignment="Center">
+                                        <Path Data="M 12,2 C 6.48,2 2,6.48 2,12 C 2,17.52 6.48,22 12,22 C 17.52,22 22,17.52 22,12 C 22,6.48 17.52,2 12,2 Z M 16.24,14.83 L 14.83,16.24 L 12,13.41 L 9.17,16.24 L 7.76,14.83 L 10.59,12 L 7.76,9.17 L 9.17,7.76 L 12,10.59 L 14.83,7.76 L 16.24,9.17 L 13.41,12 L 16.24,14.83 Z" 
+                                              Width="16" Height="16" Stretch="Uniform" Fill="#FFF43F5E" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="ODT Clean Removal (All Apps)" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12"/>
                                         <TextBlock Text="Removes all products via standard Microsoft XML deployment." FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,2,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonRemoveAll" Content="Uninstall All" Style="{StaticResource DangerButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonRemoveAll" Content="Uninstall All" Style="{StaticResource DangerButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
                         </StackPanel>
@@ -2321,20 +2530,29 @@ $xamlInput = @'
                     <!-- Card 2: Deep Scrub SaRA (Official Microsoft) -->
                     <Border Grid.Row="0" Grid.Column="1" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="10,0,0,12" Padding="16,14">
                         <StackPanel>
-                            <TextBlock Text="Deep Scrub &amp; Scrubber (SaRA)" FontSize="14" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
-                            <TextBlock Text="Official Microsoft SaRA utility to scrub stubborn legacy Office residuals." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,12"/>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Path Data="M 12,1 L 3,5 V 11 C 3,16.55 6.84,21.74 12,23 C 17.16,21.74 21,16.55 21,11 V 5 L 12,1 Z" 
+                                      Width="16" Height="16" Stretch="Uniform" Fill="#FF38BDF8" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Deep Scrub &amp; Scrubber (SaRA)" FontSize="14" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                            </StackPanel>
+                            <TextBlock Text="Official Microsoft SaRA utility to scrub stubborn legacy Office residuals." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="24,3,0,12"/>
 
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="32" Height="32" CornerRadius="7" Background="#1A38BDF8" Margin="0,0,12,0" VerticalAlignment="Center">
+                                        <Path Data="M 19.36,10.04 C 18.67,6.59 15.64,4 12,4 C 9.11,4 6.6,5.64 5.35,8.04 C 2.34,8.36 0,10.91 0,14 C 0,17.31 2.69,20 6,20 H 19 C 21.76,20 24,17.76 24,15 C 24,12.36 21.95,10.22 19.36,10.04 Z" 
+                                              Width="16" Height="16" Stretch="Uniform" Fill="#FF38BDF8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Run SaRA Scrubber Scenario" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12"/>
                                         <TextBlock Text="Deep clean Office 2007-2024 &amp; 365 residual files and registry." FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,2,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonLaunchSaRA" Content="Run Deep Scrub" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonLaunchSaRA" Content="Run Deep Scrub" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
                         </StackPanel>
@@ -2343,20 +2561,29 @@ $xamlInput = @'
                     <!-- Card 3: Microsoft Store / UWP Removal -->
                     <Border Grid.Row="1" Grid.Column="0" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="0,0,10,0" Padding="16,14">
                         <StackPanel>
-                            <TextBlock Text="Microsoft Store Office Removal" FontSize="14" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
-                            <TextBlock Text="Remove pre-installed OEM Windows Store Office apps (AppX)." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,12"/>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Path Data="M 19,6 H 16 C 16,3.79 14.21,2 12,2 C 9.79,2 8,3.79 8,6 H 5 C 3.9,6 3,6.9 3,8 V 19 C 3,20.1 3.9,21 5,21 H 19 C 20.1,21 21,20.1 21,19 V 8 C 21,6.9 20.1,6 19,6 Z M 12,4 C 13.1,4 14,4.9 14,6 H 10 C 10,4.9 10.9,4 12,4 Z" 
+                                      Width="16" Height="16" Stretch="Uniform" Fill="#FF818CF8" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Microsoft Store Office Removal" FontSize="14" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                            </StackPanel>
+                            <TextBlock Text="Remove pre-installed OEM Windows Store Office apps (AppX)." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="24,3,0,12"/>
 
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="32" Height="32" CornerRadius="7" Background="#1A818CF8" Margin="0,0,12,0" VerticalAlignment="Center">
+                                        <Path Data="M 4,4 H 20 V 6 H 4 V 4 Z M 5,7 H 19 L 17.5,19 H 6.5 L 5,7 Z" 
+                                              Width="16" Height="16" Stretch="Uniform" Fill="#FF818CF8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Remove AppX Packages" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12"/>
                                         <TextBlock Text="Removes Microsoft.Office.Desktop and OEM Store remnants." FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,2,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonRemoveAppx" Content="Clean Store Apps" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonRemoveAppx" Content="Clean Store Apps" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
                         </StackPanel>
@@ -2365,20 +2592,29 @@ $xamlInput = @'
                     <!-- Card 4: License & Token Reset -->
                     <Border Grid.Row="1" Grid.Column="1" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="10,0,0,0" Padding="16,14">
                         <StackPanel>
-                            <TextBlock Text="License &amp; Token Cleanup" FontSize="14" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
-                            <TextBlock Text="Clear lingering Office product keys and reset licensing tokens." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,12"/>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Path Data="M 18,8 H 17 V 6 C 17,3.24 14.76,1 12,1 C 9.24,1 7,3.24 7,6 V 8 H 6 C 4.9,8 4,8.9 4,10 V 20 C 4,21.1 4.9,22 6,22 H 18 C 19.1,22 20,21.1 20,20 V 10 C 20,8.9 19.1,8 18,8 Z M 9,6 C 9,4.34 10.34,3 12,3 C 13.66,3 15,4.34 15,6 V 8 H 9 V 6 Z" 
+                                      Width="16" Height="16" Stretch="Uniform" Fill="#FF10B981" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="License &amp; Token Cleanup" FontSize="14" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                            </StackPanel>
+                            <TextBlock Text="Clear lingering Office product keys and reset licensing tokens." FontSize="10.5" Foreground="{DynamicResource BrushTextSecondary}" Margin="24,3,0,12"/>
 
                             <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="14,10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0">
+                                    <Border Grid.Column="0" Width="32" Height="32" CornerRadius="7" Background="#1A10B981" Margin="0,0,12,0" VerticalAlignment="Center">
+                                        <Path Data="M 12.65,10 C 11.83,7.67 9.61,6 7,6 C 3.69,6 1,8.69 1,12 C 1,15.31 3.69,18 7,18 C 9.61,18 11.83,16.33 12.65,14 H 17 V 18 H 21 V 14 H 23 V 10 H 12.65 Z" 
+                                              Width="16" Height="16" Stretch="Uniform" Fill="#FF10B981" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                         <TextBlock Text="Uninstall Product Keys &amp; Cache" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}" FontSize="12"/>
                                         <TextBlock Text="Removes all installed OSPP product keys to prevent license conflict." FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,2,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="1" x:Name="buttonCleanLicenses" Content="Clean Licenses" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="2" x:Name="buttonCleanLicenses" Content="Clean Licenses" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center"/>
                                 </Grid>
                             </Border>
                         </StackPanel>
@@ -2393,7 +2629,7 @@ $xamlInput = @'
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <!-- Action Bar (Submit Button & Status Bar) -->
+                <!-- Action Bar (Submit Button, Live Config Summary Pill Badge & Clear Action) -->
                 <Grid Grid.Row="0" x:Name="gridActionBar" Margin="0,0,0,8">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -2417,21 +2653,101 @@ $xamlInput = @'
                         </Button.Template>
                     </Button>
 
-                    <!-- Progress & Status Info -->
-                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="16,0,16,0">
-                        <ProgressBar x:Name="progressbarMain" Height="4" IsEnabled="False" Background="{DynamicResource BrushCapsuleBg}" BorderThickness="0" Foreground="#FF6366F1" Visibility="Collapsed"/>
-                        <TextBlock x:Name="textboxMain" FontSize="11" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,4,0,0" TextTrimming="CharacterEllipsis" Visibility="Collapsed"/>
-                    </StackPanel>
+                    <!-- Live SaaS Deployment Configuration Badge & Progress Area -->
+                    <Grid Grid.Column="1" VerticalAlignment="Center" Margin="14,0,14,0">
+                        <!-- Idle State: Live Config Pill Badge -->
+                        <Border x:Name="badgeDeployConfig" Background="{DynamicResource BrushCardBg}" BorderBrush="{DynamicResource BrushCardBorder}" BorderThickness="1" CornerRadius="7" Padding="12,7" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Path x:Name="iconConfigStatus" Data="M 12 2 C 6.48 2 2 6.48 2 12 s 4.48 10 10 10 s 10 -4.48 10 -10 S 17.52 2 12 2 z M 13 17 h -2 v -6 h 2 v 6 z M 13 9 h -2 V 7 h 2 v 2 z" 
+                                      Width="13" Height="13" Stretch="Uniform" Fill="{DynamicResource BrushTextMuted}" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Target:" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                                <TextBlock x:Name="textActiveConfigSummary" Text="No product selected — Choose an edition from the cards above" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource BrushTextPrimary}" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                    <!-- Clear Console Log Button -->
-                    <Button Grid.Column="2" x:Name="buttonClearLog" Content="Clear Console" Style="{StaticResource SecondaryButton}" Height="30" Padding="10,4" VerticalAlignment="Center"/>
+                        <!-- Busy State: Progress Bar & Progress Message -->
+                        <StackPanel x:Name="panelDeployProgress" VerticalAlignment="Center" Visibility="Collapsed">
+                            <ProgressBar x:Name="progressbarMain" Height="4" IsEnabled="False" Background="{DynamicResource BrushCapsuleBg}" BorderThickness="0" Foreground="#FF6366F1"/>
+                            <TextBlock x:Name="textboxMain" FontSize="11" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,4,0,0" TextTrimming="CharacterEllipsis"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Clear Selection Secondary Button -->
+                    <Button Grid.Column="2" x:Name="buttonClearSelection" Height="36" Padding="12,0" Style="{StaticResource SecondaryButton}" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Path Data="M 19,6.41 L 17.59,5 L 12,10.59 L 6.41,5 L 5,6.41 L 10.59,12 L 5,17.59 L 6.41,19 L 12,13.41 L 17.59,19 L 19,17.59 L 13.41,12 Z" 
+                                  Width="9" Height="9" Stretch="Uniform" Fill="{DynamicResource BrushTextSecondary}" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Clear Selection" FontSize="11" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
                 </Grid>
 
-                <!-- Live Terminal Console Drawer -->
-                <Border Grid.Row="1" x:Name="borderTerminalDrawer" Background="{DynamicResource BrushConsoleBg}" BorderBrush="{DynamicResource BrushConsoleBorder}" BorderThickness="1" CornerRadius="7" Padding="10,8" Height="135">
-                    <ScrollViewer Name="scrollConsole" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                        <TextBox x:Name="textboxConsole" Background="Transparent" Foreground="{DynamicResource BrushConsoleText}" FontFamily="Consolas, Cascadia Code, Courier New" FontSize="11" BorderThickness="0" TextWrapping="Wrap" IsReadOnly="True" IsHitTestVisible="True" Focusable="False"/>
-                    </ScrollViewer>
+                <!-- Live Terminal Console Drawer with SaaS Header Dock -->
+                <Border Grid.Row="1" x:Name="borderTerminalDrawer" Background="{DynamicResource BrushConsoleBg}" BorderBrush="{DynamicResource BrushConsoleBorder}" BorderThickness="1" CornerRadius="8" Height="230">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="28"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <!-- Console Header Bar -->
+                        <Border Grid.Row="0" Background="{DynamicResource BrushConsoleHeader}" BorderBrush="{DynamicResource BrushConsoleBorder}" BorderThickness="0,0,0,1" CornerRadius="7,7,0,0" Padding="10,0">
+                            <Grid VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <!-- Terminal Window Indicators -->
+                                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Ellipse Width="7" Height="7" Fill="#FFEF4444" Margin="0,0,5,0"/>
+                                    <Ellipse Width="7" Height="7" Fill="#FFF59E0B" Margin="0,0,5,0"/>
+                                    <Ellipse Width="7" Height="7" Fill="#FF10B981" Margin="0,0,8,0"/>
+                                    <TextBlock Text="TERMINAL OUTPUT" FontSize="9.5" FontWeight="Bold" Foreground="{DynamicResource BrushConsoleHeaderText}" VerticalAlignment="Center"/>
+                                </StackPanel>
+
+                                <!-- Clear Log Ghost Button -->
+                                <Button Grid.Column="2" x:Name="buttonClearLog" Background="Transparent" BorderThickness="0" Cursor="Hand" Padding="6,2" VerticalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <Path Data="M 19,6.41 L 17.59,5 L 12,10.59 L 6.41,5 L 5,6.41 L 10.59,12 L 5,17.59 L 6.41,19 L 12,13.41 L 17.59,19 L 19,17.59 L 13.41,12 Z" 
+                                              Width="8" Height="8" Stretch="Uniform" Fill="{DynamicResource BrushConsoleHeaderText}" Margin="0,0,4,0" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Clear Buffer" FontSize="10" Foreground="{DynamicResource BrushConsoleHeaderText}" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                        <!-- Log Text Area -->
+                        <ScrollViewer Grid.Row="1" Name="scrollConsole" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="10,8,8,8">
+                            <ScrollViewer.Resources>
+                                <Style TargetType="{x:Type ScrollBar}">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="Width" Value="4"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type ScrollBar}">
+                                                <Grid Background="Transparent">
+                                                    <Track x:Name="PART_Track" IsDirectionReversed="true">
+                                                        <Track.Thumb>
+                                                            <Thumb>
+                                                                <Thumb.Template>
+                                                                    <ControlTemplate TargetType="{x:Type Thumb}">
+                                                                        <Border Background="{DynamicResource BrushConsoleScrollThumb}" CornerRadius="2"/>
+                                                                    </ControlTemplate>
+                                                                </Thumb.Template>
+                                                            </Thumb>
+                                                        </Track.Thumb>
+                                                    </Track>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </ScrollViewer.Resources>
+                            <TextBox x:Name="textboxConsole" Background="Transparent" Foreground="{DynamicResource BrushConsoleText}" FontFamily="Consolas, Cascadia Code, Courier New" FontSize="11.5" BorderThickness="0" TextWrapping="Wrap" IsReadOnly="True" IsHitTestVisible="True" Focusable="False"/>
+                        </ScrollViewer>
+                    </Grid>
                 </Border>
             </Grid>
         </Grid>
@@ -2467,15 +2783,29 @@ $xamlInput = @'
         lastPowerShell = $null
         Form = $Form
         textboxConsole = $textboxConsole
+        scrollConsole = $scrollConsole
         buttonSubmit = $buttonSubmitMain
         buttonClearSelection = $buttonClearSelection
         tabNavInstall = $tabNavInstall
         progressbar = $progressbarMain
         textbox = $textboxMain
+        badgeDeployConfig = $badgeDeployConfig
+        panelDeployProgress = $panelDeployProgress
     })
 
-    # Theme Palette System (Dark / Light) - Defaults to Dark Mode
-    $global:isDarkMode = $true
+    # Auto-scroll terminal log to bottom on any new text
+    if ($textboxConsole) {
+        $textboxConsole.Add_TextChanged({
+            if ($scrollConsole) {
+                $scrollConsole.ScrollToEnd()
+            } else {
+                $textboxConsole.ScrollToEnd()
+            }
+        })
+    }
+
+    # Theme Palette System (Dark / Light) - Defaults to Light Mode
+    $global:isDarkMode = $false
 
     $themeColors = @{
         Dark = @{
@@ -2517,19 +2847,26 @@ $xamlInput = @'
             BrushFlagBtnHoverBg     = "#FF2C3550"
             BrushConsoleBg          = "#FF090B10"
             BrushConsoleBorder      = "#FF222738"
+            BrushConsoleHeader      = "#FF121624"
+            BrushConsoleHeaderText  = "#FF94A3B8"
             BrushConsoleText        = "#FF38BDF8"
             BrushScrollThumb        = "#FF33394F"
+            BrushConsoleScrollThumb = "#FF33394F"
             BrushAccent365          = "#FF818CF8"
             BrushAccent2024         = "#FFF59E0B"
             BrushAccent2021         = "#FF10B981"
             BrushAccent2019         = "#FF38BDF8"
             BrushAccentLegacy       = "#FFA855F7"
+            BrushAccentProject      = "#FF38BDF8"
+            BrushAccentVisio        = "#FF818CF8"
+            BrushAccentMac          = "#FFFFFFFF"
+            BrushAccentTools        = "#FFF43F5E"
         }
         Light = @{
-            BrushWindowBg           = "#FFF8FAFC"
+            BrushWindowBg           = "#FFF1F5F9"
             BrushRailBg             = "#FFFFFFFF"
             BrushRailBorder         = "#FFE2E8F0"
-            BrushRailBtnHover       = "#FFF1F5F9"
+            BrushRailBtnHover       = "#FFF8FAFC"
             BrushRailBtnSelected    = "#EEF2FF"
             BrushNavBtnHoverText    = "#FF0F172A"
             BrushNavBtnActiveText   = "#FF4F46E5"
@@ -2544,33 +2881,40 @@ $xamlInput = @'
             BrushTileActiveBg       = "#EEF2FF"
             BrushTileActiveBorder   = "#FF6366F1"
             BrushTileActiveText     = "#FF4F46E5"
-            BrushCapsuleBg          = "#FFF1F5F9"
+            BrushCapsuleBg          = "#FFFFFFFF"
             BrushCapsuleBorder      = "#FFE2E8F0"
-            BrushPillHoverBg        = "#FFE2E8F0"
+            BrushPillHoverBg        = "#FFF1F5F9"
             BrushPillActiveBg       = "#EEF2FF"
             BrushPillActiveText     = "#FF4F46E5"
-            BrushComboHoverBg       = "#FFE2E8F0"
+            BrushComboHoverBg       = "#FFF1F5F9"
             BrushComboItemHover     = "#FFF1F5F9"
             BrushComboItemSelected  = "#EEF2FF"
             BrushTextPrimary        = "#FF0F172A"
             BrushTextSecondary      = "#FF64748B"
             BrushTextMuted          = "#FF94A3B8"
-            BrushSecBtnBg           = "#FFF1F5F9"
+            BrushSecBtnBg           = "#FFFFFFFF"
             BrushSecBtnBorder       = "#FFE2E8F0"
-            BrushSecBtnHover        = "#FFE2E8F0"
+            BrushSecBtnHover        = "#FFF8FAFC"
             BrushSecBtnText         = "#FF1E293B"
-            BrushFlagBtnBg          = "#FFF1F5F9"
+            BrushFlagBtnBg          = "#FFFFFFFF"
             BrushFlagBtnBorder      = "#FFE2E8F0"
-            BrushFlagBtnHoverBg     = "#FFE2E8F0"
-            BrushConsoleBg          = "#FFF8FAFC"
-            BrushConsoleBorder      = "#FFE2E8F0"
-            BrushConsoleText        = "#FF0369A1"
-            BrushScrollThumb        = "#FFCBD5E1"
+            BrushFlagBtnHoverBg     = "#FFF8FAFC"
+            BrushConsoleBg          = "#FF0B0F19"
+            BrushConsoleBorder      = "#FF1E293B"
+            BrushConsoleHeader      = "#FF111827"
+            BrushConsoleHeaderText  = "#FF94A3B8"
+            BrushConsoleText        = "#FF38BDF8"
+            BrushScrollThumb        = "#FFE2E8F0"
+            BrushConsoleScrollThumb = "#FF334155"
             BrushAccent365          = "#FF4F46E5"
             BrushAccent2024         = "#D97706"
             BrushAccent2021         = "#059669"
             BrushAccent2019         = "#0284C7"
             BrushAccentLegacy       = "#7C3AED"
+            BrushAccentProject      = "#0284C7"
+            BrushAccentVisio        = "#4F46E5"
+            BrushAccentMac          = "#FF0F172A"
+            BrushAccentTools        = "#E11D48"
         }
     }
 
@@ -2611,8 +2955,8 @@ $xamlInput = @'
         })
     }
 
-    # Initialize theme (Dark Mode default)
-    Apply-AppTheme -IsDark $true
+    # Initialize theme (Light Mode default)
+    Apply-AppTheme -IsDark $false
 
 
     # Helper: Real-time Terminal Logging
@@ -2626,7 +2970,11 @@ $xamlInput = @'
         if ($sync.Form -and $sync.textboxConsole) {
             $sync.Form.Dispatcher.Invoke([action]{
                 $sync.textboxConsole.AppendText("$formatted`r`n")
-                $sync.textboxConsole.ScrollToEnd()
+                if ($sync.scrollConsole) {
+                    $sync.scrollConsole.ScrollToEnd()
+                } else {
+                    $sync.textboxConsole.ScrollToEnd()
+                }
             })
         }
     }
@@ -2666,9 +3014,10 @@ $xamlInput = @'
 
         # Action Bar & Terminal
         $panelBottomRow.Visibility = "Visible"
+        $gridActionBar.Visibility = "Visible"
         $buttonSubmitMain.Visibility = "Visible"
         $buttonClearSelection.Visibility = "Visible"
-        $borderTerminalDrawer.Height = 135
+        $borderTerminalDrawer.Height = 230
     })
 
     $tabNavDownloads.Add_Checked({
@@ -2697,15 +3046,15 @@ $xamlInput = @'
         $gridTabUninstall.Visibility = "Collapsed"
 
         # Update Header
-        $textHeaderTitle.Text = "Kho Bộ Cài SoftVN - OneDrive 5TB VIP Cloud"
-        $textHeaderSubtitle.Text = "Kho lưu trữ đám mây tốc độ cao, tải trực tiếp các bản ISO/IMG và công cụ chuẩn từ SoftVN."
+        $textHeaderTitle.Text = "Kho Bộ Cài Đặt Trực Tuyến - Cloud Storage"
+        $textHeaderSubtitle.Text = "Kho lưu trữ đám mây tốc độ cao, tải trực tiếp các bộ cài đặt ISO / IMG nguyên gốc và công cụ tiện ích."
         $panelHeaderCapsules.Visibility = "Collapsed"
 
         # Action Bar & Terminal (Hidden for clean full-height cloud catalog view)
         $panelBottomRow.Visibility = "Collapsed"
         $buttonSubmitMain.Visibility = "Collapsed"
         $buttonClearSelection.Visibility = "Collapsed"
-        Write-LogConsole "Switched to Kho SoftVN (OneDrive 5TB VIP Cloud Storage)." "CLOUD"
+        Write-LogConsole "Switched to Kho Bộ Cài Đặt Trực Tuyến (Cloud Storage)." "CLOUD"
     })
 
     $tabNavTools.Add_Checked({
@@ -2722,9 +3071,10 @@ $xamlInput = @'
 
         # Action Bar & Terminal
         $panelBottomRow.Visibility = "Visible"
+        $gridActionBar.Visibility = "Collapsed"
         $buttonSubmitMain.Visibility = "Collapsed"
         $buttonClearSelection.Visibility = "Collapsed"
-        $borderTerminalDrawer.Height = 205
+        $borderTerminalDrawer.Height = 290
     })
 
     $tabNavUninstall.Add_Checked({
@@ -2741,9 +3091,10 @@ $xamlInput = @'
 
         # Action Bar & Terminal
         $panelBottomRow.Visibility = "Visible"
+        $gridActionBar.Visibility = "Collapsed"
         $buttonSubmitMain.Visibility = "Collapsed"
         $buttonClearSelection.Visibility = "Collapsed"
-        $borderTerminalDrawer.Height = 205
+        $borderTerminalDrawer.Height = 275
     })
 
     # Clear Console Log Button
@@ -2767,6 +3118,7 @@ $xamlInput = @'
         "Office2019_Retail"   = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDECzj5xzi3Qrp4lrGeNxeQAWw6G1xPy4Ax08UsJkeAcT0?download=1"
         "Office2019"          = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDAKpRnN6D-RreY17kBH6VoAebOIrBW3RsYJ0jmnwQivU4?download=1"
         "M365"              = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQBSjITkoMKkR7q-nCpP97PFAXIqwdWLeo_ZTGrvcsfJtMQ?download=1"
+        "M365_Home"         = "https://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-us/O365HomePremRetail.img"
         "M365_Enterprise"   = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQBSjITkoMKkR7q-nCpP97PFAXIqwdWLeo_ZTGrvcsfJtMQ?download=1"
         "M365_Business" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDch5QTKRFgQ4gpwpAeSkuzASGpHj4bANIsq4GHVycKwpE?download=1"
         "Project2024_Volume"  = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDgNvfv29OqSbfM4NJ6H2afAU_22OxvP5qPvB0dyMICEFs?download=1"
@@ -2777,14 +3129,25 @@ $xamlInput = @'
         "Visio2019_Volume"  = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDjPjF5HdIMSqtpQyacf4_PAVRtCYNc0wh06jRZzQfZLrY?download=1"
         "Project2024_Standard" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQBXnjZUaT9_RZ6Uw1HjCJdEAc9BQSqlTuWrHXm4m2Ub4ME?download=1"
         "Project2021_Standard" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQCk3W1rhxpsQoAj2jle5Xh4AYFAzS7v7t4Ih2b19iAp3e4?download=1"
-        "Project2019_Standard" = ""
+        "Project2019_Standard" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQBISTCnMrneSaCUheg9vCucAZtEGyBA1xP8UTZoTa9CXW0?download=1"
         "Visio2024_Standard" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDdP9zdvpHbTrdStgbvL4V_AYdB6rrRecYVjd_MQsO4bwg?download=1"
-        "Visio2021_Standard"   = ""
-        "Visio2019_Standard"   = ""
-        "Win11"             = "https://softvn.vn/download/win11"
-        "Win10"             = "https://softvn.vn/download/win10"
-        "WinLTSC"           = "https://softvn.vn/download/win-ltsc"
+        "Visio2021_Standard" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQCZiGXFlL9jSbZU2O1TX7CdAVs67dhEm02S1W3cdwz0l2g?download=1"
+        "Visio2019_Standard" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQAo0o8IkVpSR5u-IGHOCBXDAVvR0DtUQIi9kwZoBec85AY?download=1"
+        "Win11" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQC0IDT24UjIQrNUnb64wobrAY96nKnZJeX5GIhhKNN9tLY?download=1"
+        "Win10" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQAZ_zH0ucsBRp4QwfcJTcF0AcH7dYH9s9VknTcj9_2RUyk?download=1"
+        "WinLTSC"           = "https://dn721607.ca.archive.org/0/items/en-us_windows_10_iot_enterprise_ltsc_2021_x64_dvd_257ad90f/en-us_windows_10_iot_enterprise_ltsc_2021_x64_dvd_257ad90f.iso"
+        "Win11_LTSC"        = "https://dn710105.ca.archive.org/0/items/en-us_windows_11_enterprise_ltsc_2024_x64_dvd_965cfb00/en-us_windows_11_enterprise_ltsc_2024_x64_dvd_965cfb00.iso"
+        "WinServer2025"     = "https://dn721900.ca.archive.org/0/items/en-us_windows_server_2025_x64_dvd_ce9eb1a5_202409/en-us_windows_server_2025_x64_dvd_ce9eb1a5.iso"
+        "WinServer2025_Eval"= "https://software-static.download.prss.microsoft.com/dbazure/888969d5-f34g-4e03-ac9d-1f9786c66749/26100.1742.240906-0331.ge_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso"
+        "WinServer2022"     = "https://ia600601.us.archive.org/23/items/en_windows_server_2022x64_dvd_/en_windows_server_2022x64_dvd_.iso"
+        "WinServer2022_Eval"= "https://software-static.download.prss.microsoft.com/sg/download/888969d5-f34g-4e03-ac9d-1f9786c66749/SERVER_EVAL_x64FRE_en-us.iso"
         "WinServer"         = "https://softvn.vn/download/win-server"
+        "Win11_MS"          = "https://www.microsoft.com/software-download/windows11"
+        "Win10_MS"          = "https://www.microsoft.com/software-download/windows10"
+        "WinLTSC_MS"        = "https://www.microsoft.com/evalcenter/download-windows-10-enterprise"
+        "Win11_LTSC_MS"     = "https://www.microsoft.com/evalcenter/download-windows-11-enterprise"
+        "WinServer2025_MS"  = "https://www.microsoft.com/evalcenter/download-windows-server-2025"
+        "WinServer2022_MS"  = "https://www.microsoft.com/evalcenter/download-windows-server-2022"
         "WinPE"             = "https://softvn.vn/download/winpe"
         "VcRedist"  = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDMk5ZLvn9XQ7evT2d4luQ-ATaq8TyLoKt9K4bHhIM2SbU?download=1"
         "DirectX"           = "https://softvn.vn/download/directx"
@@ -2832,15 +3195,15 @@ $xamlInput = @'
         "Proj2019"   = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQAqhGN7GyEJQbGFAuomQ_XKAQo08w7GWjjg3PgyxWclLFg?download=1"
         "Proj2024Std" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQBXnjZUaT9_RZ6Uw1HjCJdEAc9BQSqlTuWrHXm4m2Ub4ME?download=1"
         "Proj2021Std" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQCk3W1rhxpsQoAj2jle5Xh4AYFAzS7v7t4Ih2b19iAp3e4?download=1"
-        "Proj2019Std" = ""
+        "Proj2019Std" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQBISTCnMrneSaCUheg9vCucAZtEGyBA1xP8UTZoTa9CXW0?download=1"
 
         # Visio Professional
         "Visio2024"   = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQAEYFN1rzKnSbxqb0U60L2RAQcem4CS9Vde-Vwld-UYaDo?download=1"
         "Visio2021"   = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDUonk_Rq2qSab_6Egwx9vPAUNE5fXr11DMLztyrduJ1QQ?download=1"
         "Visio2019"   = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDjPjF5HdIMSqtpQyacf4_PAVRtCYNc0wh06jRZzQfZLrY?download=1"
         "Visio2024Std" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQDdP9zdvpHbTrdStgbvL4V_AYdB6rrRecYVjd_MQsO4bwg?download=1"
-        "Visio2021Std" = ""
-        "Visio2019Std" = ""
+        "Visio2021Std" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQCZiGXFlL9jSbZU2O1TX7CdAVs67dhEm02S1W3cdwz0l2g?download=1"
+        "Visio2019Std" = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQAo0o8IkVpSR5u-IGHOCBXDAVvR0DtUQIi9kwZoBec85AY?download=1"
 
         # Office for Mac
         "MacM365"   = "https://cloudassets-my.sharepoint.com/:u:/g/personal/admin_cloudassets_onmicrosoft_com/IQCfDPYIwOP1TKAclnUQc9-MAYViSR6W3yjuauGGjnXoHTw?download=1"
@@ -2865,71 +3228,72 @@ $xamlInput = @'
     $btnDlOdOffice2024Vol.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2024_Volume"] "Office 2024 LTSC Pro Plus - Volume KMS (OneDrive 5TB)" })
     $btnDlOdOffice2024Std.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2024_Standard"] "Office 2024 LTSC Standard - Volume KMS (OneDrive 5TB)" })
     $btnDlOdOffice2024Ret.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2024_Retail"] "Office 2024 Pro Plus - Retail Key (OneDrive 5TB)" })
-    $btnCopyOdOffice2024.Add_Click({ Copy-DownloadUrl $oneDriveStore["Office2024_Volume"] "Office 2024 LTSC (OneDrive 5TB)" })
 
     # Office 2021 LTSC
     $btnDlOdOffice2021Vol.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2021_Volume"] "Office 2021 LTSC Pro Plus - Volume KMS (OneDrive 5TB)" })
     $btnDlOdOffice2021Std.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2021_Standard"] "Office 2021 LTSC Standard - Volume KMS (OneDrive 5TB)" })
     $btnDlOdOffice2021Ret.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2021_Retail"] "Office 2021 Pro Plus - Retail Key (OneDrive 5TB)" })
-    $btnCopyOdOffice2021.Add_Click({ Copy-DownloadUrl $oneDriveStore["Office2021_Volume"] "Office 2021 LTSC (OneDrive 5TB)" })
 
     # Office 2019 LTSC
     $btnDlOdOffice2019Vol.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2019_Volume"] "Office 2019 LTSC Pro Plus - Volume KMS (OneDrive 5TB)" })
     $btnDlOdOffice2019Std.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2019_Standard"] "Office 2019 LTSC Standard - Volume KMS (OneDrive 5TB)" })
     $btnDlOdOffice2019Ret.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2019_Retail"] "Office 2019 Pro Plus - Retail Key (OneDrive 5TB)" })
-    $btnCopyOdOffice2019.Add_Click({ Copy-DownloadUrl $oneDriveStore["Office2019_Volume"] "Office 2019 LTSC (OneDrive 5TB)" })
 
     # Project Professional ISOs
     $btnDlOdProject2024.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Project2024_Volume"] "Project Professional 2024 Volume KMS (OneDrive 5TB)" })
     $btnDlOdProject2021.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Project2021_Volume"] "Project Professional 2021 Volume KMS (OneDrive 5TB)" })
     $btnDlOdProject2019.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Project2019_Volume"] "Project Professional 2019 Volume KMS (OneDrive 5TB)" })
-    $btnCopyOdProject.Add_Click({ Copy-DownloadUrl $oneDriveStore["Project2024_Volume"] "Project Professional 2024 (OneDrive 5TB)" })
 
     # Project Standard ISOs
     $btnDlOdProject2024Std.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Project2024_Standard"] "Project Standard 2024 Volume KMS (OneDrive 5TB)" })
     $btnDlOdProject2021Std.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Project2021_Standard"] "Project Standard 2021 Volume KMS (OneDrive 5TB)" })
     $btnDlOdProject2019Std.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Project2019_Standard"] "Project Standard 2019 Volume KMS (OneDrive 5TB)" })
-    $btnCopyOdProjectStd.Add_Click({ Copy-DownloadUrl $oneDriveStore["Project2024_Standard"] "Project Standard 2024 (OneDrive 5TB)" })
 
     # Visio Professional ISOs
     $btnDlOdVisio2024.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Visio2024_Volume"] "Visio Professional 2024 Volume KMS (OneDrive 5TB)" })
     $btnDlOdVisio2021.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Visio2021_Volume"] "Visio Professional 2021 Volume KMS (OneDrive 5TB)" })
     $btnDlOdVisio2019.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Visio2019_Volume"] "Visio Professional 2019 Volume KMS (OneDrive 5TB)" })
-    $btnCopyOdVisio.Add_Click({ Copy-DownloadUrl $oneDriveStore["Visio2024_Volume"] "Visio Professional 2024 (OneDrive 5TB)" })
 
     # Visio Standard ISOs
     $btnDlOdVisio2024Std.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Visio2024_Standard"] "Visio Standard 2024 Volume KMS (OneDrive 5TB)" })
     $btnDlOdVisio2021Std.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Visio2021_Standard"] "Visio Standard 2021 Volume KMS (OneDrive 5TB)" })
     $btnDlOdVisio2019Std.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Visio2019_Standard"] "Visio Standard 2019 Volume KMS (OneDrive 5TB)" })
-    $btnCopyOdVisioStd.Add_Click({ Copy-DownloadUrl $oneDriveStore["Visio2024_Standard"] "Visio Standard 2024 (OneDrive 5TB)" })
 
+    $btnDlOdM365Home.Add_Click({ Invoke-DownloadUrl $oneDriveStore["M365_Home"] "Microsoft 365 Home & Family (Microsoft CDN)" })
     $btnDlOdM365Ent.Add_Click({ Invoke-DownloadUrl $oneDriveStore["M365_Enterprise"] "Microsoft 365 Apps Enterprise AIO (OneDrive 5TB)" })
     $btnDlOdM365Bus.Add_Click({ Invoke-DownloadUrl $oneDriveStore["M365_Business"] "Microsoft 365 Apps Business AIO (OneDrive 5TB)" })
-    $btnCopyOdM365.Add_Click({ Copy-DownloadUrl $oneDriveStore["M365_Enterprise"] "Microsoft 365 Apps (Enterprise / Business AIO)" })
 
     # Office 2016
     $btnDlOdOffice2016En.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2016_EN"] "Office 2016 Pro Plus English (OneDrive 5TB)" })
     $btnDlOdOffice2016Vi.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2016_VI"] "Office 2016 Pro Plus Tiếng Việt (OneDrive 5TB)" })
-    $btnCopyOdOffice2016.Add_Click({ Copy-DownloadUrl $oneDriveStore["Office2016_EN"] "Office 2016 Pro Plus (OneDrive 5TB)" })
 
     # Office 2013
     $btnDlOdOffice2013En.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2013_EN"] "Office 2013 Professional English (OneDrive 5TB)" })
     $btnDlOdOffice2013Vi.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Office2013_VI"] "Office 2013 Professional Tiếng Việt (OneDrive 5TB)" })
-    $btnCopyOdOffice2013.Add_Click({ Copy-DownloadUrl $oneDriveStore["Office2013_EN"] "Office 2013 Professional (OneDrive 5TB)" })
 
 
 
-    $btnDlOdWin11.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Win11"] "Windows 11 24H2 64-bit ISO (OneDrive 5TB)" })
-    $btnCopyOdWin11.Add_Click({ Copy-DownloadUrl $oneDriveStore["Win11"] "Windows 11 24H2 64-bit ISO" })
+    $btnDlOdWin11.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Win11"] "Windows 11 25H2 64-bit ISO (OneDrive VIP)" })
+    $btnDlMsWin11.Add_Click({ [System.Diagnostics.Process]::Start("https://www.microsoft.com/software-download/windows11") | Out-Null })
 
-    $btnDlOdWin10.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Win10"] "Windows 10 22H2 64-bit ISO (OneDrive 5TB)" })
-    $btnCopyOdWin10.Add_Click({ Copy-DownloadUrl $oneDriveStore["Win10"] "Windows 10 22H2 64-bit ISO" })
+    $btnDlOdWin10.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Win10"] "Windows 10 22H2 64-bit ISO (OneDrive VIP)" })
+    $btnDlMsWin10.Add_Click({ [System.Diagnostics.Process]::Start("https://www.microsoft.com/software-download/windows10") | Out-Null })
 
-    $btnDlOdWinLTSC.Add_Click({ Invoke-DownloadUrl $oneDriveStore["WinLTSC"] "Windows 10 Enterprise LTSC 2021 (OneDrive 5TB)" })
-    $btnCopyOdWinLTSC.Add_Click({ Copy-DownloadUrl $oneDriveStore["WinLTSC"] "Windows 10 Enterprise LTSC 2021" })
+    $btnDlOdWinLTSC.Add_Click({ Invoke-DownloadUrl $oneDriveStore["WinLTSC"] "Windows 10 Enterprise LTSC 2021 (OneDrive VIP)" })
+    $btnDlMsWinLTSC.Add_Click({ [System.Diagnostics.Process]::Start("https://www.microsoft.com/evalcenter/download-windows-10-enterprise") | Out-Null })
 
-    $btnDlOdWinServer.Add_Click({ Invoke-DownloadUrl $oneDriveStore["WinServer"] "Windows Server 2022 / 2025 (OneDrive 5TB)" })
-    $btnCopyOdWinServer.Add_Click({ Copy-DownloadUrl $oneDriveStore["WinServer"] "Windows Server 2022 / 2025" })
+    $btnDlOdWin11LTSC.Add_Click({ Invoke-DownloadUrl $oneDriveStore["Win11_LTSC"] "Windows 11 Enterprise LTSC 2024 (OneDrive VIP)" })
+    $btnDlMsWin11LTSC.Add_Click({ [System.Diagnostics.Process]::Start("https://www.microsoft.com/evalcenter/download-windows-11-enterprise") | Out-Null })
+
+    $btnDlOdWinServer2025.Add_Click({ Invoke-DownloadUrl $oneDriveStore["WinServer2025"] "Windows Server 2025 Standard / Datacenter (OneDrive VIP)" })
+    $btnDlMsWinServer2025.Add_Click({ [System.Diagnostics.Process]::Start("https://www.microsoft.com/evalcenter/download-windows-server-2025") | Out-Null })
+    $btnDlMsWinServer2025Eval.Add_Click({ Invoke-DownloadUrl $oneDriveStore["WinServer2025_Eval"] "Windows Server 2025 Evaluation ISO (Microsoft Static CDN)" })
+    $btnDlEvalCenter2025.Add_Click({ [System.Diagnostics.Process]::Start("https://www.microsoft.com/evalcenter/download-windows-server-2025") | Out-Null })
+
+    $btnDlOdWinServer2022.Add_Click({ Invoke-DownloadUrl $oneDriveStore["WinServer2022"] "Windows Server 2022 Standard / Datacenter (OneDrive VIP)" })
+    $btnDlMsWinServer2022.Add_Click({ [System.Diagnostics.Process]::Start("https://www.microsoft.com/evalcenter/download-windows-server-2022") | Out-Null })
+    $btnDlMsWinServer2022Eval.Add_Click({ Invoke-DownloadUrl $oneDriveStore["WinServer2022_Eval"] "Windows Server 2022 Evaluation ISO (Microsoft Static CDN)" })
+    $btnDlEvalCenter2022.Add_Click({ [System.Diagnostics.Process]::Start("https://www.microsoft.com/evalcenter/download-windows-server-2022") | Out-Null })
 
     # Card 2: Office 2024 LTSC
     $btnDl2024En.Add_Click({ Invoke-DownloadUrl $dlUrls["2024En"] "Office 2024 Pro Plus (English)" })
@@ -3008,9 +3372,127 @@ $xamlInput = @'
         $buttonClearSelection.IsHitTestVisible = -not $isBusy
         $buttonClearSelection.Opacity = if ($isBusy) { 0.6 } else { 1 }
 
+        # Resolve architecture
+        $archText = if ($radioButtonArch32.IsChecked) { "32-bit" } else { "64-bit" }
+
+        # Resolve license
+        $licText = if ($radioButtonRetail.IsChecked) { "Retail" } else { "Volume" }
+
+        # Resolve mode
+        $modeText = if ($radioButtonDownload.IsChecked) { "Download" } else { "Install" }
+
+        # Resolve language
+        $langTag = if ($comboLanguage.SelectedItem -and $comboLanguage.SelectedItem.Tag) { $comboLanguage.SelectedItem.Tag } else { "en-US" }
+        $langMap = @{
+            "en-US" = "English (US)"; "vi-VN" = "Tiếng Việt"; "ja-JP" = "Japanese"; "ko-KR" = "Korean"
+            "zh-TW" = "Chinese (TW)"; "fr-FR" = "French"; "es-ES" = "Spanish"; "de-DE" = "German"
+            "it-IT" = "Italian"; "pt-BR" = "Portuguese"; "ru-RU" = "Russian"; "ar-SA" = "Arabic"
+        }
+        $langLabel = if ($langMap.ContainsKey($langTag)) { $langMap[$langTag] } else { "English (US)" }
+
         if ($hasProductSelection) {
             $textbox.Text = ""
             $textbox.Visibility = "Collapsed"
+
+            $productLabel = if ($hasProductSelection.Tag) {
+                # Format friendly full name
+                $tagVal = [string]$hasProductSelection.Tag
+                $parentCard = $hasProductSelection.Parent
+                while ($parentCard -and -not ($parentCard.Tag -or $parentCard -is [System.Windows.Controls.Border])) {
+                    $parentCard = $parentCard.Parent
+                }
+                $tagVal
+            } elseif ($hasProductSelection.Content -is [string]) {
+                $hasProductSelection.Content
+            } else {
+                $hasProductSelection.Name
+            }
+
+            # Map to clear human-readable edition title
+            $mappedTitle = $productLabel
+            if ($radioButton365Home.IsChecked) { $mappedTitle = "Microsoft 365 Home" }
+            elseif ($radioButton365Business.IsChecked) { $mappedTitle = "Microsoft 365 Business" }
+            elseif ($radioButton365Enterprise.IsChecked) { $mappedTitle = "Microsoft 365 Enterprise" }
+            elseif ($radioButton2024Pro.IsChecked) { $mappedTitle = "Office 2024 Pro Plus" }
+            elseif ($radioButton2024Std.IsChecked) { $mappedTitle = "Office 2024 Standard" }
+            elseif ($radioButton2024ProjectPro.IsChecked) { $mappedTitle = "Project 2024 Pro" }
+            elseif ($radioButton2024ProjectStd.IsChecked) { $mappedTitle = "Project 2024 Std" }
+            elseif ($radioButton2024VisioPro.IsChecked) { $mappedTitle = "Visio 2024 Pro" }
+            elseif ($radioButton2024VisioStd.IsChecked) { $mappedTitle = "Visio 2024 Std" }
+            elseif ($radioButton2024Word.IsChecked) { $mappedTitle = "Word 2024 LTSC" }
+            elseif ($radioButton2024Excel.IsChecked) { $mappedTitle = "Excel 2024 LTSC" }
+            elseif ($radioButton2024PowerPoint.IsChecked) { $mappedTitle = "PowerPoint 2024 LTSC" }
+            elseif ($radioButton2024Outlook.IsChecked) { $mappedTitle = "Outlook 2024 LTSC" }
+            elseif ($radioButton2024Access.IsChecked) { $mappedTitle = "Access 2024 LTSC" }
+            elseif ($radioButton2024HomeBusiness.IsChecked) { $mappedTitle = "Office 2024 Home & Business" }
+            elseif ($radioButton2024HomeStudent.IsChecked) { $mappedTitle = "Office 2024 Home" }
+            elseif ($radioButton2021Pro.IsChecked) { $mappedTitle = "Office 2021 Pro Plus" }
+            elseif ($radioButton2021Std.IsChecked) { $mappedTitle = "Office 2021 Standard" }
+            elseif ($radioButton2021ProjectPro.IsChecked) { $mappedTitle = "Project 2021 Pro" }
+            elseif ($radioButton2021ProjectStd.IsChecked) { $mappedTitle = "Project 2021 Std" }
+            elseif ($radioButton2021VisioPro.IsChecked) { $mappedTitle = "Visio 2021 Pro" }
+            elseif ($radioButton2021VisioStd.IsChecked) { $mappedTitle = "Visio 2021 Std" }
+            elseif ($radioButton2021Word.IsChecked) { $mappedTitle = "Word 2021 LTSC" }
+            elseif ($radioButton2021Excel.IsChecked) { $mappedTitle = "Excel 2021 LTSC" }
+            elseif ($radioButton2021PowerPoint.IsChecked) { $mappedTitle = "PowerPoint 2021 LTSC" }
+            elseif ($radioButton2021Outlook.IsChecked) { $mappedTitle = "Outlook 2021 LTSC" }
+            elseif ($radioButton2021Publisher.IsChecked) { $mappedTitle = "Publisher 2021 LTSC" }
+            elseif ($radioButton2021Access.IsChecked) { $mappedTitle = "Access 2021 LTSC" }
+            elseif ($radioButton2021HomeBusiness.IsChecked) { $mappedTitle = "Office 2021 Home & Business" }
+            elseif ($radioButton2021HomeStudent.IsChecked) { $mappedTitle = "Office 2021 Home & Student" }
+            elseif ($radioButton2019Pro.IsChecked) { $mappedTitle = "Office 2019 Pro Plus" }
+            elseif ($radioButton2019Std.IsChecked) { $mappedTitle = "Office 2019 Standard" }
+            elseif ($radioButton2019ProjectPro.IsChecked) { $mappedTitle = "Project 2019 Pro" }
+            elseif ($radioButton2019ProjectStd.IsChecked) { $mappedTitle = "Project 2019 Std" }
+            elseif ($radioButton2019VisioPro.IsChecked) { $mappedTitle = "Visio 2019 Pro" }
+            elseif ($radioButton2019VisioStd.IsChecked) { $mappedTitle = "Visio 2019 Std" }
+            elseif ($radioButton2019Word.IsChecked) { $mappedTitle = "Word 2019" }
+            elseif ($radioButton2019Excel.IsChecked) { $mappedTitle = "Excel 2019" }
+            elseif ($radioButton2019PowerPoint.IsChecked) { $mappedTitle = "PowerPoint 2019" }
+            elseif ($radioButton2019Outlook.IsChecked) { $mappedTitle = "Outlook 2019" }
+            elseif ($radioButton2019Publisher.IsChecked) { $mappedTitle = "Publisher 2019" }
+            elseif ($radioButton2019Access.IsChecked) { $mappedTitle = "Access 2019" }
+            elseif ($radioButton2019HomeBusiness.IsChecked) { $mappedTitle = "Office 2019 Home & Business" }
+            elseif ($radioButton2019HomeStudent.IsChecked) { $mappedTitle = "Office 2019 Home & Student" }
+            elseif ($radioButton2016Pro.IsChecked) { $mappedTitle = "Office 2016 Pro Plus" }
+            elseif ($radioButton2016Std.IsChecked) { $mappedTitle = "Office 2016 Standard" }
+            elseif ($radioButton2016ProjectPro.IsChecked) { $mappedTitle = "Project 2016 Pro" }
+            elseif ($radioButton2016ProjectStd.IsChecked) { $mappedTitle = "Project 2016 Std" }
+            elseif ($radioButton2016VisioPro.IsChecked) { $mappedTitle = "Visio 2016 Pro" }
+            elseif ($radioButton2016VisioStd.IsChecked) { $mappedTitle = "Visio 2016 Std" }
+            elseif ($radioButton2016Word.IsChecked) { $mappedTitle = "Word 2016" }
+            elseif ($radioButton2016Excel.IsChecked) { $mappedTitle = "Excel 2016" }
+            elseif ($radioButton2016PowerPoint.IsChecked) { $mappedTitle = "PowerPoint 2016" }
+            elseif ($radioButton2016Outlook.IsChecked) { $mappedTitle = "Outlook 2016" }
+            elseif ($radioButton2016Publisher.IsChecked) { $mappedTitle = "Publisher 2016" }
+            elseif ($radioButton2016Access.IsChecked) { $mappedTitle = "Access 2016" }
+            elseif ($radioButton2016OneNote.IsChecked) { $mappedTitle = "OneNote 2016" }
+            elseif ($radioButton2013Pro.IsChecked) { $mappedTitle = "Office 2013 Pro Plus" }
+            elseif ($radioButton2013Std.IsChecked) { $mappedTitle = "Office 2013 Standard" }
+            elseif ($radioButton2013ProjectPro.IsChecked) { $mappedTitle = "Project 2013 Pro" }
+            elseif ($radioButton2013ProjectStd.IsChecked) { $mappedTitle = "Project 2013 Std" }
+            elseif ($radioButton2013VisioPro.IsChecked) { $mappedTitle = "Visio 2013 Pro" }
+            elseif ($radioButton2013VisioStd.IsChecked) { $mappedTitle = "Visio 2013 Std" }
+
+            if ($textActiveConfigSummary) {
+                $textActiveConfigSummary.Text = "$mappedTitle  •  $archText  •  $licText  •  $modeText  •  $langLabel"
+            }
+            if ($iconConfigStatus) {
+                $iconConfigStatus.Fill = [Windows.Media.SolidColorBrush][Windows.Media.ColorConverter]::ConvertFromString("#FF10B981")
+            }
+            if ($buttonClearSelection) {
+                $buttonClearSelection.IsEnabled = $true
+            }
+        } else {
+            if ($textActiveConfigSummary) {
+                $textActiveConfigSummary.Text = "No product selected — Choose an edition from the cards above ($archText  •  $licText  •  $modeText  •  $langLabel)"
+            }
+            if ($iconConfigStatus) {
+                $iconConfigStatus.Fill = [Windows.Media.SolidColorBrush][Windows.Media.ColorConverter]::ConvertFromString("#FF94A3B8")
+            }
+            if ($buttonClearSelection) {
+                $buttonClearSelection.IsEnabled = $false
+            }
         }
     }
 
@@ -3021,6 +3503,15 @@ $xamlInput = @'
         })
     }
 
+    # Also update config summary pill when header capsules change
+    $radioButtonArch64.Add_Checked({ UpdateSelectionMode })
+    $radioButtonArch32.Add_Checked({ UpdateSelectionMode })
+    $radioButtonVolume.Add_Checked({ UpdateSelectionMode })
+    $radioButtonRetail.Add_Checked({ UpdateSelectionMode })
+    $radioButtonInstall.Add_Checked({ UpdateSelectionMode })
+    $radioButtonDownload.Add_Checked({ UpdateSelectionMode })
+    $comboLanguage.Add_SelectionChanged({ UpdateSelectionMode })
+
     $buttonClearSelection.Add_Click({
         foreach ($button in ($officeProductButtons | Where-Object { $_ -ne $null })) {
             $button.IsChecked = $false
@@ -3028,6 +3519,9 @@ $xamlInput = @'
         UpdateSelectionMode
         Write-LogConsole "All product selections cleared." "ACTION"
     })
+
+    # Initial update for deployment config summary badge
+    UpdateSelectionMode
 
     # Background Async Operations
     $runspace = [runspacefactory]::CreateRunspace()
@@ -3062,6 +3556,8 @@ $xamlInput = @'
         $sync.buttonSubmit.Opacity = 1
         $sync.buttonClearSelection.IsHitTestVisible = $true
         $sync.buttonClearSelection.Opacity = 1
+        if ($sync.panelDeployProgress) { $sync.panelDeployProgress.Visibility = "Collapsed" }
+        if ($sync.badgeDeployConfig) { $sync.badgeDeployConfig.Visibility = "Visible" }
         $sync.isBusy = $false
 
         # Keep buttonSubmit hidden if user is on Tab 3 or Tab 4
@@ -3150,12 +3646,15 @@ $xamlInput = @'
         # Extract setup.exe (ClickToRun.exe) quietly from the ODT installer
         Start-Process -FilePath $odtFile -ArgumentList "/quiet /extract:`"$workingDir\Configuration`"" -Wait -NoNewWindow
         
-        # Rename setup.exe to ClickToRun.exe as expected by the script
+        # Ensure ClickToRun.exe is replaced cleanly without throwing IO error
         if (Test-Path "$workingDir\Configuration\setup.exe") {
-            Rename-Item -Path "$workingDir\Configuration\setup.exe" -NewName "ClickToRun.exe" -Force
+            if (Test-Path "$workingDir\Configuration\ClickToRun.exe") {
+                Remove-Item -Path "$workingDir\Configuration\ClickToRun.exe" -Force -ErrorAction SilentlyContinue
+            }
+            Move-Item -Path "$workingDir\Configuration\setup.exe" -Destination "$workingDir\Configuration\ClickToRun.exe" -Force -ErrorAction SilentlyContinue
         }
         if (Test-Path $odtFile) {
-            Remove-Item $odtFile -Force
+            Remove-Item $odtFile -Force -ErrorAction SilentlyContinue
         }
 
         $sync.configurationFile = $configurationFile
@@ -3173,6 +3672,8 @@ $xamlInput = @'
 
         $sync.Form.Dispatcher.Invoke([action] {
             $sync.buttonSubmit.Visibility = "Collapsed"
+            if ($sync.badgeDeployConfig) { $sync.badgeDeployConfig.Visibility = "Collapsed" }
+            if ($sync.panelDeployProgress) { $sync.panelDeployProgress.Visibility = "Visible" }
             $sync.progressbar.Visibility = "Visible"
             $sync.textbox.Visibility = "Visible"
             $sync.textbox.Text = "$($sync.UIstatus) $($sync.productName) $($sync.arch)-bit ($($sync.language))..."
@@ -3196,6 +3697,8 @@ $xamlInput = @'
         $sync.Form.Dispatcher.Invoke([action] {
             $sync.buttonSubmit.Visibility = 'Visible'
             $sync.buttonSubmit.Content = 'Start Deployment'
+            if ($sync.panelDeployProgress) { $sync.panelDeployProgress.Visibility = "Collapsed" }
+            if ($sync.badgeDeployConfig) { $sync.badgeDeployConfig.Visibility = "Visible" }
             $sync.textbox.Visibility = 'Collapsed'
             $sync.ProgressBar.Visibility = 'Collapsed'
             $sync.ProgressBar.Value = '0'
@@ -3474,77 +3977,6 @@ $xamlInput = @'
         }
     })
 
-    # KMS Online Activation
-    $buttonKmsActivate.Add_Click({
-        if ($sync.isBusy) { return }
-        Write-LogConsole "Initiating KMS Online Activation..." "KMS"
-        $found = & $FindOsppVbs
-
-        if (-not $found) {
-            Write-LogConsole "ospp.vbs not found. Is Microsoft Office installed on this machine?" "ERROR"
-            return
-        }
-
-        $sync.osppPath = $found
-        Start-BackgroundOperation -Operation {
-            $vbs = $sync.osppPath
-            $kmsServers = @("kms8.msguides.com", "kms.03k.org", "kms.digiboy.ir")
-            $kmsPort = "1688"
-            $activated = $false
-
-            foreach ($server in $kmsServers) {
-                $sync.Form.Dispatcher.Invoke([action]{
-                    $sync.textboxConsole.AppendText("[KMS] Setting KMS Host to $server on port $kmsPort...`r`n")
-                    $sync.textboxConsole.ScrollToEnd()
-                })
-
-                $null = cscript.exe //Nologo "$vbs" "/sethst:$server"
-                $null = cscript.exe //Nologo "$vbs" "/setprt:$kmsPort"
-
-                $sync.Form.Dispatcher.Invoke([action]{
-                    $sync.textboxConsole.AppendText("[KMS] Attempting activation via $server...`r`n")
-                    $sync.textboxConsole.ScrollToEnd()
-                })
-
-                $actOutput = cscript.exe //Nologo "$vbs" /act
-                $successLine = $null
-                foreach ($line in $actOutput) {
-                    if ($line.Trim()) {
-                        $sync.Form.Dispatcher.Invoke([action]{
-                            $sync.textboxConsole.AppendText("[KMS] $line`r`n")
-                            $sync.textboxConsole.ScrollToEnd()
-                        })
-                        if ($line -match '<Product activation successful>') {
-                            $successLine = $line
-                        }
-                    }
-                }
-
-                if ($successLine) {
-                    $activated = $true
-                    $sync.Form.Dispatcher.Invoke([action]{
-                        $sync.textboxConsole.AppendText("[SUCCESS] Microsoft Office successfully activated via KMS ($server)!`r`n")
-                        $sync.textboxConsole.ScrollToEnd()
-                    })
-                    break
-                } else {
-                    $sync.Form.Dispatcher.Invoke([action]{
-                        $sync.textboxConsole.AppendText("[WARN] Activation on $server did not report success. Trying next host...`r`n")
-                        $sync.textboxConsole.ScrollToEnd()
-                    })
-                }
-            }
-
-            if (-not $activated) {
-                $sync.Form.Dispatcher.Invoke([action]{
-                    $sync.textboxConsole.AppendText("[INFO] Finished KMS activation attempts. If not activated, ensure Volume license is installed via 'Convert to Volume'.`r`n")
-                    $sync.textboxConsole.ScrollToEnd()
-                })
-            }
-            $sync.Form.Dispatcher.Invoke($sync.RestoreUiAction)
-        }
-    })
-
     # Clean Office Cache & Fix Crash
     $buttonCleanCache.Add_Click({
         if ($sync.isBusy) { return }
@@ -3610,6 +4042,7 @@ $xamlInput = @'
         $c2rConfig = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Office\ClickToRun\Configuration" -ErrorAction SilentlyContinue
         $platform = if ($c2rConfig.Platform) { $c2rConfig.Platform } else { "x64" }
         $culture = if ($c2rConfig.ClientCulture) { $c2rConfig.ClientCulture } else { "en-us" }
+        $productReleaseIds = if ($c2rConfig.ProductReleaseIds) { $c2rConfig.ProductReleaseIds } else { "O365HomePremRetail" }
 
         $paths = @(
             $c2rConfig.ClientFolder,
@@ -3623,7 +4056,7 @@ $xamlInput = @'
                 if (Test-Path $candidate) { $exePath = $candidate; break }
             }
         }
-        return @{ Exe = $exePath; Platform = $platform; Culture = $culture }
+        return @{ Exe = $exePath; Platform = $platform; Culture = $culture; ProductReleaseIds = $productReleaseIds }
     }
 
     # Quick Repair
@@ -3697,12 +4130,15 @@ $xamlInput = @'
         # Extract setup.exe (ClickToRun.exe) quietly from the ODT installer
         Start-Process -FilePath $odtFile -ArgumentList "/quiet /extract:`"$($sync.workingDir)`"" -Wait -NoNewWindow
         
-        # Rename setup.exe to ClickToRun.exe as expected by the script
+        # Ensure ClickToRun.exe is replaced cleanly without throwing IO error
         if (Test-Path "$($sync.workingDir)\setup.exe") {
-            Rename-Item -Path "$($sync.workingDir)\setup.exe" -NewName "ClickToRun.exe" -Force
+            if (Test-Path "$($sync.workingDir)\ClickToRun.exe") {
+                Remove-Item -Path "$($sync.workingDir)\ClickToRun.exe" -Force -ErrorAction SilentlyContinue
+            }
+            Move-Item -Path "$($sync.workingDir)\setup.exe" -Destination "$($sync.workingDir)\ClickToRun.exe" -Force -ErrorAction SilentlyContinue
         }
         if (Test-Path $odtFile) {
-            Remove-Item $odtFile -Force
+            Remove-Item $odtFile -Force -ErrorAction SilentlyContinue
         }
 
         $timestampRun = (Get-Date).ToString("HH:mm:ss")
@@ -3746,7 +4182,29 @@ $xamlInput = @'
                     $sync.textboxConsole.AppendText("[$timestamp] [RUNNING] Launching Office ClickToRun removal process...`r`n")
                     $sync.textboxConsole.ScrollToEnd()
                 })
-                Start-Process -FilePath $c2r.Exe -ArgumentList "scenario=Repair platform=$($c2r.Platform) culture=$($c2r.Culture) RepairType=FullRepair ForceAppShutdown=True" -Wait
+
+                # Construct products to remove argument
+                $prodToRemove = "$($c2r.ProductReleaseIds).16_$($c2r.Culture)_x-none"
+                $c2rArgs = "scenario=install scenariosubtype=uninstall productstoremove=$prodToRemove culture=$($c2r.Culture) DisplayLevel=True ForceAppShutdown=True"
+                
+                # If DisplayLevel=True doesn't trigger or user wants silent, we also accept ARP uninstallation
+                $regUninstall = Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction SilentlyContinue |
+                    Where-Object { $_.UninstallString -match 'OfficeClickToRun\.exe.*scenario=install' } |
+                    Select-Object -First 1
+
+                if ($regUninstall.UninstallString) {
+                    $uStr = $regUninstall.UninstallString
+                    if ($uStr -match '"([^"]+)"\s*(.*)') {
+                        $exe = $Matches[1]
+                        $args = $Matches[2] + " DisplayLevel=True ForceAppShutdown=True"
+                        Start-Process -FilePath $exe -ArgumentList $args -Wait
+                    } else {
+                        Start-Process -FilePath $c2r.Exe -ArgumentList $c2rArgs -Wait
+                    }
+                } else {
+                    Start-Process -FilePath $c2r.Exe -ArgumentList $c2rArgs -Wait
+                }
+
                 $timestampEnd = (Get-Date).ToString("HH:mm:ss")
                 $sync.Form.Dispatcher.Invoke([action]{
                     $sync.textboxConsole.AppendText("[$timestampEnd] [SUCCESS] Fast ClickToRun removal process completed.`r`n")
@@ -3777,20 +4235,74 @@ $xamlInput = @'
         Start-BackgroundOperation -Operation {
             $saraDir = "$env:temp\SaRAScrub"
             New-Item -Path $saraDir -ItemType Directory -Force | Out-Null
-            (New-Object Net.WebClient).DownloadFile('https://aka.ms/SaRA_EnterpriseVersionFiles', "$saraDir\SaRA.zip")
-            Expand-Archive -Path "$saraDir\SaRA.zip" -DestinationPath "$saraDir\SaRA" -Force
+            if (-not (Test-Path "$saraDir\SaRA\GetHelpCmd.exe")) {
+                (New-Object Net.WebClient).DownloadFile('https://aka.ms/SaRA_EnterpriseVersionFiles', "$saraDir\SaRA.zip")
+                Expand-Archive -Path "$saraDir\SaRA.zip" -DestinationPath "$saraDir\SaRA" -Force
+            }
             
+            $saraExe = if (Test-Path "$saraDir\SaRA\GetHelpCmd.exe") { 
+                "$saraDir\SaRA\GetHelpCmd.exe" 
+            } elseif (Test-Path "$saraDir\SaRA\SaRACmd.exe") { 
+                "$saraDir\SaRA\SaRACmd.exe" 
+            } else { 
+                $null 
+            }
+
+            if (-not $saraExe) {
+                $timestamp = (Get-Date).ToString("HH:mm:ss")
+                $sync.Form.Dispatcher.Invoke([action]{
+                    $sync.textboxConsole.AppendText("[$timestamp] [ERROR] Không tìm thấy file thực thi SaRA/GetHelpCmd trong gói giải nén.`r`n")
+                    $sync.textboxConsole.ScrollToEnd()
+                })
+                $sync.isBusy = $false
+                $sync.Form.Dispatcher.Invoke($sync.RestoreUiAction)
+                return
+            }
+
             $timestamp = (Get-Date).ToString("HH:mm:ss")
             $sync.Form.Dispatcher.Invoke([action]{
-                $sync.textboxConsole.AppendText("[$timestamp] [RUNNING] Executing SaRA OfficeScrubScenario (All versions)...`r`n")
+                $sync.textboxConsole.AppendText("[$timestamp] [RUNNING] Khởi chạy SaRA OfficeScrubScenario (Dọn dẹp triệt để Office)...`r`n")
                 $sync.textboxConsole.ScrollToEnd()
             })
 
-            Start-Process -FilePath "$saraDir\SaRA\SaRACmd.exe" -ArgumentList "-S OfficeScrubScenario -AcceptEula -OfficeVersion All" -NoNewWindow -Wait
-            
+            # Stream real-time console output from GetHelpCmd/SaRA
+            $pinfo = New-Object System.Diagnostics.ProcessStartInfo
+            $pinfo.FileName = $saraExe
+            $pinfo.Arguments = "-S OfficeScrubScenario -AcceptEula"
+            $pinfo.RedirectStandardOutput = $true
+            $pinfo.RedirectStandardError = $true
+            $pinfo.UseShellExecute = $false
+            $pinfo.CreateNoWindow = $true
+
+            $process = New-Object System.Diagnostics.Process
+            $process.StartInfo = $pinfo
+            $process.Start() | Out-Null
+
+            while (-not $process.HasExited) {
+                $line = $process.StandardOutput.ReadLine()
+                if ($line -and $line.Trim()) {
+                    $sync.Form.Dispatcher.Invoke([action]{
+                        $sync.textboxConsole.AppendText("[SARA] $line`r`n")
+                        $sync.textboxConsole.ScrollToEnd()
+                    })
+                }
+            }
+            # Flush remaining output
+            $remaining = $process.StandardOutput.ReadToEnd()
+            if ($remaining) {
+                foreach ($remLine in $remaining.Split("`n")) {
+                    if ($remLine.Trim()) {
+                        $sync.Form.Dispatcher.Invoke([action]{
+                            $sync.textboxConsole.AppendText("[SARA] $($remLine.Trim())`r`n")
+                            $sync.textboxConsole.ScrollToEnd()
+                        })
+                    }
+                }
+            }
+
             $timestampEnd = (Get-Date).ToString("HH:mm:ss")
             $sync.Form.Dispatcher.Invoke([action]{
-                $sync.textboxConsole.AppendText("[$timestampEnd] [SUCCESS] SaRA Deep Scrub complete.`r`n")
+                $sync.textboxConsole.AppendText("[$timestampEnd] [SUCCESS] Hoàn tất quá trình dọn dẹp SaRA Deep Scrub.`r`n")
                 $sync.textboxConsole.ScrollToEnd()
             })
             $sync.isBusy = $false
