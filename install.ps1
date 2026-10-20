@@ -3604,8 +3604,14 @@ $xamlInput = @'
         Add-Content .\Configuration\$configurationFile -Value "</Configuration>"
 
         $batchFile = "Install-$($arch)bit.bat"
-        New-Item $batchFile -ItemType File -Force
-        Add-content $batchFile -Value "%~dp0Configuration\ClickToRun.exe /configure %~dp0Configuration\$configurationFile"
+        $batchContent = "@echo off`r`n" +
+            "cd /d `"%~dp0`"`r`n" +
+            "net session >nul 2>&1 || (`r`n" +
+            "    powershell -NoProfile -ExecutionPolicy Bypass -Command `"Start-Process -FilePath '%~f0' -Verb RunAs`"`r`n" +
+            "    exit /b`r`n" +
+            ")`r`n`r`n" +
+            "`"%~dp0ClickToRun.exe`" /configure `"%~dp0Configuration\$configurationFile`"`r`n"
+        Set-Content -Path (Join-Path $workingDir $batchFile) -Value $batchContent -Encoding ASCII
 
         # Detect if user selected Office 2013
         $isOffice2013 = ($radioButton2013Pro.IsChecked -or $radioButton2013Std.IsChecked -or $radioButton2013ProjectPro.IsChecked -or
@@ -3646,12 +3652,15 @@ $xamlInput = @'
         # Extract setup.exe (ClickToRun.exe) quietly from the ODT installer
         Start-Process -FilePath $odtFile -ArgumentList "/quiet /extract:`"$workingDir\Configuration`"" -Wait -NoNewWindow
         
-        # Ensure ClickToRun.exe is replaced cleanly without throwing IO error
+        # Ensure ClickToRun.exe is placed at root of working directory cleanly without throwing IO error
         if (Test-Path "$workingDir\Configuration\setup.exe") {
-            if (Test-Path "$workingDir\Configuration\ClickToRun.exe") {
-                Remove-Item -Path "$workingDir\Configuration\ClickToRun.exe" -Force -ErrorAction SilentlyContinue
+            if (Test-Path "$workingDir\ClickToRun.exe") {
+                Remove-Item -Path "$workingDir\ClickToRun.exe" -Force -ErrorAction SilentlyContinue
             }
-            Move-Item -Path "$workingDir\Configuration\setup.exe" -Destination "$workingDir\Configuration\ClickToRun.exe" -Force -ErrorAction SilentlyContinue
+            Move-Item -Path "$workingDir\Configuration\setup.exe" -Destination "$workingDir\ClickToRun.exe" -Force -ErrorAction SilentlyContinue
+        }
+        if (Test-Path "$workingDir\Configuration\ClickToRun.exe") {
+            Remove-Item -Path "$workingDir\Configuration\ClickToRun.exe" -Force -ErrorAction SilentlyContinue
         }
         if (Test-Path $odtFile) {
             Remove-Item $odtFile -Force -ErrorAction SilentlyContinue
@@ -3691,7 +3700,8 @@ $xamlInput = @'
         })
 
         Set-Location -Path $($sync.workingDir)
-        Start-Process -FilePath .\Configuration\ClickToRun.exe -ArgumentList "$($sync.mode) .\Configuration\$($sync.configurationFile)" -NoNewWindow -Wait
+        $exeToRun = if (Test-Path ".\ClickToRun.exe") { ".\ClickToRun.exe" } else { ".\Configuration\ClickToRun.exe" }
+        Start-Process -FilePath $exeToRun -ArgumentList "$($sync.mode) .\Configuration\$($sync.configurationFile)" -NoNewWindow -Wait
                 
         $timestampDone = (Get-Date).ToString("HH:mm:ss")
         $sync.Form.Dispatcher.Invoke([action] {
