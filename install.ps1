@@ -559,12 +559,21 @@ $xamlInput = @'
                         </StackPanel>
                     </RadioButton>
 
-                    <!-- Uninstall Tab -->
-                    <RadioButton x:Name="tabNavUninstall" GroupName="MainNav" Style="{StaticResource FluentNavRailBtn}" ToolTip="Uninstall &amp; Clean">
+                    <!-- Scrub Tab -->
+                    <RadioButton x:Name="tabNavUninstall" GroupName="MainNav" Style="{StaticResource FluentNavRailBtn}" ToolTip="Advanced Scrub &amp; Clean">
                         <StackPanel HorizontalAlignment="Center">
                             <Path Data="M 15,4 L 14,3 H 10 L 9,4 H 5 V 6 H 19 V 4 Z M 6,19 C 6,20.1 6.9,21 8,21 H 16 C 17.1,21 18,20.1 18,19 V 7 H 6 Z M 9,9 H 10.5 V 18 H 9 Z M 13.5,9 H 15 V 18 H 13.5 Z" 
                                   Width="17" Height="17" Stretch="Uniform" Fill="#FFF43F5E"/>
                             <TextBlock Text="Scrub" FontSize="9.5" Margin="0,3,0,0" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <!-- 1-Click Uninstaller Tab -->
+                    <RadioButton x:Name="tabNavOneClick" GroupName="MainNav" Style="{StaticResource FluentNavRailBtn}" ToolTip="1-Click Universal Office Uninstaller">
+                        <StackPanel HorizontalAlignment="Center">
+                            <Path Data="M 12,2 C 6.5,2 2,6.5 2,12 C 2,17.5 6.5,22 12,22 C 17.5,22 22,17.5 22,12 C 22,6.5 17.5,2 12,2 Z M 16.5,15.1 L 15.1,16.5 L 12,13.4 L 8.9,16.5 L 7.5,15.1 L 10.6,12 L 7.5,8.9 L 8.9,7.5 L 12,10.6 L 15.1,7.5 L 16.5,8.9 L 13.4,12 Z" 
+                                  Width="17" Height="17" Stretch="Uniform" Fill="#FFE11D48"/>
+                            <TextBlock Text="Uninstall" FontSize="9.5" Margin="0,3,0,0" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </RadioButton>
                 </StackPanel>
@@ -2622,6 +2631,120 @@ $xamlInput = @'
                 </Grid>
             </Grid>
 
+            <!-- TAB 6: 1-CLICK UNIVERSAL OFFICE UNINSTALLER -->
+            <Grid x:Name="gridTabOneClick" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Hero Card: 1-Click Action & Overview -->
+                <Border Grid.Row="0" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="0,0,0,12" Padding="20,16">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Icon Badge -->
+                        <Border Grid.Column="0" Width="48" Height="48" CornerRadius="12" Background="#1FE11D48" Margin="0,0,16,0" VerticalAlignment="Center">
+                            <Path Data="M 12,2 C 6.5,2 2,6.5 2,12 C 2,17.5 6.5,22 12,22 C 17.5,22 22,17.5 22,12 C 22,6.5 17.5,2 12,2 Z M 16.5,15.1 L 15.1,16.5 L 12,13.4 L 8.9,16.5 L 7.5,15.1 L 10.6,12 L 7.5,8.9 L 8.9,7.5 L 12,10.6 L 15.1,7.5 L 16.5,8.9 L 13.4,12 Z" 
+                                  Width="24" Height="24" Stretch="Uniform" Fill="#FFE11D48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- Title & Description -->
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="0,0,16,0">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <TextBlock Text="1-Click Universal Office Uninstaller" FontSize="15" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                                <Border Background="#1AE11D48" CornerRadius="5" Padding="7,2" Margin="10,0,0,0" VerticalAlignment="Center">
+                                    <TextBlock Text="ONE-TOUCH SCRUB" FontSize="9.5" FontWeight="Bold" Foreground="#FFE11D48"/>
+                                </Border>
+                            </StackPanel>
+                            <TextBlock Text="G&#x1EE1; c&#xE0;i &#x111;&#x1EB7;t s&#x1EA1;ch s&#x1EBD; to&#xE0;n b&#x1ED9; c&#xE1;c phi&#xEA;n b&#x1EA3;n Microsoft Office (365, 2024, 2021, 2019, 2016, 2013, 2010) kh&#x1ECF;i m&#xE1;y t&#xED;nh." FontSize="11" Foreground="{DynamicResource BrushTextSecondary}" Margin="0,3,0,0" TextWrapping="Wrap"/>
+                            <TextBlock Text="T&#x1EF1; &#x111;&#x1ED9;ng bu&#x1ED9;c &#x111;&#xF3;ng app &#x111;ang m&#x1EDF;, g&#x1EE1; Click-to-Run &amp; MSI, x&#xF3;a Store AppX v&#xE0; d&#x1ECD;n s&#x1EA1;ch key b&#x1EA3;n quy&#x1EC1;n t&#x1ED3;n d&#x1B0;." FontSize="10" Foreground="{DynamicResource BrushTextMuted}" Margin="0,2,0,0" TextWrapping="Wrap"/>
+                        </StackPanel>
+
+                        <!-- Actions -->
+                        <StackPanel Grid.Column="2" VerticalAlignment="Center" Orientation="Horizontal">
+                            <Button x:Name="buttonScanOffice" Content="Qu&#xE9;t Office" Style="{StaticResource SecondaryButton}" Margin="0,0,8,0" Height="38" Padding="14,0"/>
+                            <Button x:Name="buttonOneClickUninstall" Height="38" Width="195" Background="#FFE11D48" Foreground="White" FontWeight="Bold" FontSize="12" BorderThickness="0" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Name="OneClickBorder" Background="{TemplateBinding Background}" CornerRadius="7">
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                <Path Data="M 6,19 C 6,20.1 6.9,21 8,21 H 16 C 17.1,21 18,20.1 18,19 V 7 H 6 Z M 19,4 H 15.5 L 14.5,3 H 9.5 L 8.5,4 H 5 V 6 H 19 Z" 
+                                                      Width="13" Height="13" Stretch="Uniform" Fill="White" Margin="0,0,7,0" VerticalAlignment="Center"/>
+                                                <TextBlock Text="G&#x1EE1; S&#x1EA1;ch T&#x1EA5;t C&#x1EA3; Office" Foreground="White" FontWeight="Bold" FontSize="11.5"/>
+                                            </StackPanel>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="OneClickBorder" Property="Background" Value="#FFBE123C"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Details Row: Left = Detected Office, Right = Removal Scope -->
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.35*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Card Left: Detected Office Installations -->
+                    <Border Grid.Column="0" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="0,0,8,0" Padding="16,14">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Path Data="M 4,4 H 20 V 16 H 4 Z M 2,2 V 18 C 2,19.1 2.9,20 4,20 H 20 C 21.1,20 22,19.1 22,18 V 2 C 22,0.9 21.1,0 20,0 H 4 C 2.9,0 2,0.9 2,2 Z M 10,22 H 14 V 20 H 10 Z" 
+                                          Width="14" Height="14" Stretch="Uniform" Fill="#FF38BDF8" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="C&#xE1;c B&#x1EA3;n Office Ph&#xE1;t Hi&#x1EC7;n Tr&#xEA;n M&#xE1;y" FontSize="13" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                                </StackPanel>
+                                <TextBlock Text="T&#x1EF1; &#x111;&#x1ED9;ng ph&#xE2;n t&#xED;ch Registry, Click-to-Run v&#xE0; Store AppX packages." FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="22,2,0,8"/>
+                            </StackPanel>
+
+                            <Border Grid.Row="1" Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="12,10">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                    <TextBlock x:Name="textDetectedOffice" Text="&#x110;ang s&#x1EB5;n s&#xE0;ng qu&#xE9;t h&#x1EC7; th&#x1ED1;ng..." FontFamily="Segoe UI, Consolas" FontSize="11" Foreground="{DynamicResource BrushTextPrimary}" TextWrapping="Wrap"/>
+                                </ScrollViewer>
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <!-- Card Right: Removal Scope -->
+                    <Border Grid.Column="1" Background="{DynamicResource BrushSubCardBg}" BorderBrush="{DynamicResource BrushSubCardBorder}" BorderThickness="1" CornerRadius="10" Margin="8,0,0,0" Padding="16,14">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Path Data="M 12,1 L 3,5 V 11 C 3,16.55 6.84,21.74 12,23 C 17.16,21.74 21,16.55 21,11 V 5 L 12,1 Z" 
+                                      Width="14" Height="14" Stretch="Uniform" Fill="#FF10B981" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Ph&#x1EA1;m Vi G&#x1EE1; C&#xE0;i &#x110;&#x1EB7;t (Scope)" FontSize="13" FontWeight="Bold" Foreground="{DynamicResource BrushTextPrimary}"/>
+                            </StackPanel>
+                            <TextBlock Text="T&#x1EF1; &#x111;&#x1ED9;ng th&#x1EF1;c hi&#x1EC7;n to&#xE0;n b&#x1ED9; c&#xE1;c b&#x1B0;&#x1EDB;c d&#x1ECD;n d&#x1EB9;p ch&#x1EE7; ch&#x1ED1;t:" FontSize="10" Foreground="{DynamicResource BrushTextSecondary}" Margin="22,2,0,10"/>
+
+                            <Border Background="{DynamicResource BrushTileBg}" BorderBrush="{DynamicResource BrushTileBorder}" BorderThickness="1" CornerRadius="8" Padding="12,10">
+                                <StackPanel>
+                                    <CheckBox x:Name="checkKillProcesses" IsChecked="True" Content="&#x110;&#xF3;ng ti&#x1EBF;n tr&#xEC;nh Office &#x111;ang m&#x1EDF; (Word, Excel...)" Foreground="{DynamicResource BrushTextPrimary}" FontSize="11" Margin="0,0,0,8" Cursor="Hand"/>
+                                    <CheckBox x:Name="checkRemoveC2R" IsChecked="True" Content="G&#x1EE1; b&#x1EA3;n c&#xE0;i Click-to-Run &amp; ODT All Products" Foreground="{DynamicResource BrushTextPrimary}" FontSize="11" Margin="0,0,0,8" Cursor="Hand"/>
+                                    <CheckBox x:Name="checkRemoveAppxPkg" IsChecked="True" Content="D&#x1ECD;n s&#x1EA1;ch g&#xF3;i Microsoft Store Office (AppX)" Foreground="{DynamicResource BrushTextPrimary}" FontSize="11" Margin="0,0,0,8" Cursor="Hand"/>
+                                    <CheckBox x:Name="checkCleanLicenseKeys" IsChecked="True" Content="X&#xF3;a key b&#x1EA3;n quy&#x1EC1;n OSPP &amp; Token t&#x1ED3;n d&#x1B0;" Foreground="{DynamicResource BrushTextPrimary}" FontSize="11" Margin="0,0,0,8" Cursor="Hand"/>
+                                    <CheckBox x:Name="checkCleanTemp" IsChecked="True" Content="X&#xF3;a cache v&#x103;n b&#x1EA3;n &amp; t&#x1EC7;p c&#xE0;i &#x111;&#x1EB7;t t&#x1EA1;m th&#x1EDD;i" Foreground="{DynamicResource BrushTextPrimary}" FontSize="11" Cursor="Hand"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Grid>
+
             <!-- Row 2: Action Bar & Live Terminal Drawer (CTT Signature) -->
             <Grid Grid.Row="2" x:Name="panelBottomRow" Margin="0,12,0,0">
                 <Grid.RowDefinitions>
@@ -3006,6 +3129,7 @@ $xamlInput = @'
         $gridTabCloud.Visibility = "Collapsed"
         $gridTabTools.Visibility = "Collapsed"
         $gridTabUninstall.Visibility = "Collapsed"
+        $gridTabOneClick.Visibility = "Collapsed"
 
         # Update Header
         $textHeaderTitle.Text = "Microsoft Office Deployment"
@@ -3026,6 +3150,7 @@ $xamlInput = @'
         $gridTabCloud.Visibility = "Collapsed"
         $gridTabTools.Visibility = "Collapsed"
         $gridTabUninstall.Visibility = "Collapsed"
+        $gridTabOneClick.Visibility = "Collapsed"
 
         # Update Header
         $textHeaderTitle.Text = "Official Offline Download Hub"
@@ -3044,6 +3169,7 @@ $xamlInput = @'
         $gridTabCloud.Visibility = "Visible"
         $gridTabTools.Visibility = "Collapsed"
         $gridTabUninstall.Visibility = "Collapsed"
+        $gridTabOneClick.Visibility = "Collapsed"
 
         # Update Header
         $textHeaderTitle.Text = "Kho Bộ Cài Đặt Trực Tuyến - Cloud Storage"
@@ -3063,6 +3189,7 @@ $xamlInput = @'
         $gridTabCloud.Visibility = "Collapsed"
         $gridTabTools.Visibility = "Visible"
         $gridTabUninstall.Visibility = "Collapsed"
+        $gridTabOneClick.Visibility = "Collapsed"
 
         # Update Header
         $textHeaderTitle.Text = "Office Activation & Maintenance Toolbox"
@@ -3083,6 +3210,7 @@ $xamlInput = @'
         $gridTabCloud.Visibility = "Collapsed"
         $gridTabTools.Visibility = "Collapsed"
         $gridTabUninstall.Visibility = "Visible"
+        $gridTabOneClick.Visibility = "Collapsed"
 
         # Update Header
         $textHeaderTitle.Text = "Advanced Removal & Deep Scrub Suite"
@@ -3095,6 +3223,30 @@ $xamlInput = @'
         $buttonSubmitMain.Visibility = "Collapsed"
         $buttonClearSelection.Visibility = "Collapsed"
         $borderTerminalDrawer.Height = 275
+    })
+
+    $tabNavOneClick.Add_Checked({
+        $gridTabInstall.Visibility = "Collapsed"
+        $gridTabDownloads.Visibility = "Collapsed"
+        $gridTabCloud.Visibility = "Collapsed"
+        $gridTabTools.Visibility = "Collapsed"
+        $gridTabUninstall.Visibility = "Collapsed"
+        $gridTabOneClick.Visibility = "Visible"
+
+        # Update Header
+        $textHeaderTitle.Text = "1-Click Universal Office Uninstaller"
+        $textHeaderSubtitle.Text = "Gỡ cài đặt triệt để tất cả các phiên bản Microsoft Office khỏi máy tính chỉ với 1 cú nhấp chuột."
+        $panelHeaderCapsules.Visibility = "Collapsed"
+
+        # Action Bar & Terminal
+        $panelBottomRow.Visibility = "Visible"
+        $gridActionBar.Visibility = "Collapsed"
+        $buttonSubmitMain.Visibility = "Collapsed"
+        $buttonClearSelection.Visibility = "Collapsed"
+        $borderTerminalDrawer.Height = 275
+
+        # Auto scan detected office
+        if ($ScanOfficeToUi) { & $ScanOfficeToUi }
     })
 
     # Clear Console Log Button
@@ -4396,6 +4548,387 @@ $xamlInput = @'
                     $sync.textboxConsole.ScrollToEnd()
                 })
             }
+            $sync.Form.Dispatcher.Invoke($sync.RestoreUiAction)
+        }
+    })
+
+    # TAB 6 ACTIONS: 1-Click Universal Office Uninstaller
+    $ScanOfficeToUi = {
+        if (-not $textDetectedOffice) { return }
+        $items = [System.Collections.Generic.List[string]]::new()
+
+        # 1. ClickToRun Configuration check
+        $c2rConfig = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Office\ClickToRun\Configuration" -ErrorAction SilentlyContinue
+        if ($c2rConfig -and $c2rConfig.ProductReleaseIds) {
+            $ver = if ($c2rConfig.ClientVersionToReport) { " | Version: $($c2rConfig.ClientVersionToReport)" } else { "" }
+            $plat = if ($c2rConfig.Platform) { " ($($c2rConfig.Platform))" } else { "" }
+            $items.Add("• Click-to-Run: $($c2rConfig.ProductReleaseIds)$plat$ver")
+        }
+
+        # 2. Registry Installed Programs (both 64-bit and 32-bit views)
+        $regKeys = @(
+            'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*',
+            'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+            'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
+        )
+        $arpItems = Get-ItemProperty $regKeys -ErrorAction SilentlyContinue |
+            Where-Object { 
+                $_.DisplayName -and (
+                    $_.DisplayName -match 'Microsoft Office|Microsoft 365|Office 16 Click-to-Run' -or
+                    ($_.DisplayName -match 'Word|Excel|PowerPoint|Access|Outlook|Publisher|Visio|Project' -and $_.Publisher -match 'Microsoft')
+                )
+            }
+        foreach ($item in $arpItems) {
+            $name = $item.DisplayName
+            $v = if ($item.DisplayVersion) { " | Version: $($item.DisplayVersion)" } else { "" }
+            $entry = "• Installed Suite: $name$v"
+            if (-not $items.Contains($entry)) {
+                $items.Add($entry)
+            }
+        }
+
+        # 3. Pre-installed Store AppX Packages
+        $appxTargets = @("*Microsoft.Office.Desktop*", "*MicrosoftOfficeHub*", "*Microsoft.OfficePushNotificationUtility*")
+        foreach ($target in $appxTargets) {
+            $pkgs = Get-AppxPackage -Name $target -ErrorAction SilentlyContinue
+            foreach ($pkg in $pkgs) {
+                $entry = "• Store AppX: $($pkg.Name) (v$($pkg.Version))"
+                if (-not $items.Contains($entry)) {
+                    $items.Add($entry)
+                }
+            }
+        }
+
+        # 4. Running Office processes
+        $procNames = @('winword', 'excel', 'powerpnt', 'outlook', 'onenote', 'msaccess', 'mspub', 'visio', 'winproj')
+        $running = Get-Process -Name $procNames -ErrorAction SilentlyContinue | Select-Object -ExpandProperty ProcessName -Unique
+        if ($running) {
+            $items.Add("• Active Apps: $($running -join ', ') (sẽ tự động đóng khi gỡ)")
+        }
+
+        # Update UI text
+        if ($items.Count -gt 0) {
+            $textDetectedOffice.Text = "Hệ thống phát hiện $($items.Count) thành phần Office:`n`n" + ($items -join "`n")
+            $textDetectedOffice.Foreground = [System.Windows.Media.BrushConverter]::new().ConvertFromString("#FFE11D48")
+        } else {
+            $textDetectedOffice.Text = "✓ Không phát hiện phiên bản Office nào được cài đặt trên máy.`n`n(Hệ thống hoàn toàn sạch sẽ, hoặc đã gỡ bỏ thành công)."
+            $textDetectedOffice.Foreground = [System.Windows.Media.BrushConverter]::new().ConvertFromString("#FF10B981")
+        }
+    }
+
+    $sync.ScanOfficeAction = $ScanOfficeToUi
+    $sync.buttonOneClick = $buttonOneClickUninstall
+    $sync.buttonScan = $buttonScanOffice
+
+    # Manual Scan Button
+    $buttonScanOffice.Add_Click({
+        Write-LogConsole "Scanning system for installed Office packages & ClickToRun..." "SCAN"
+        & $ScanOfficeToUi
+        Write-LogConsole "Scan completed." "SUCCESS"
+    })
+
+    # 1-Click Universal Uninstall Button
+    $buttonOneClickUninstall.Add_Click({
+        if ($sync.isBusy) { return }
+
+        # 1. Capture UI options into $sync in UI thread
+        $sync.optKillProcesses = ($checkKillProcesses.IsChecked -eq $true)
+        $sync.optRemoveC2R     = ($checkRemoveC2R.IsChecked -eq $true)
+        $sync.optRemoveAppxPkg = ($checkRemoveAppxPkg.IsChecked -eq $true)
+        $sync.optCleanLicenses = ($checkCleanLicenseKeys.IsChecked -eq $true)
+        $sync.optCleanTemp     = ($checkCleanTemp.IsChecked -eq $true)
+        $sync.osppPath         = & $FindOsppVbs
+
+        # 2. Query all C2R uninstall strings from Registry in UI thread
+        $regKeys = @(
+            'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*',
+            'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
+        )
+        $c2rList = [System.Collections.Generic.List[hashtable]]::new()
+        Get-ItemProperty $regKeys -ErrorAction SilentlyContinue |
+            Where-Object { $_.UninstallString -match 'OfficeClickToRun\.exe.*scenario=install' } |
+            ForEach-Object {
+                $c2rList.Add(@{
+                    DisplayName     = if ($_.DisplayName) { $_.DisplayName } else { "Office Click-to-Run Suite" }
+                    UninstallString = $_.UninstallString
+                })
+            }
+        $sync.c2rUninstallList = $c2rList
+
+        # 3. Detect local ClickToRun.exe engine
+        $c2rConfig = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Office\ClickToRun\Configuration" -ErrorAction SilentlyContinue
+        $c2rExe = $null
+        if ($c2rConfig) {
+            $paths = @(
+                $c2rConfig.ClientFolder,
+                "C:\Program Files\Common Files\microsoft shared\ClickToRun",
+                "C:\Program Files (x86)\Common Files\microsoft shared\ClickToRun"
+            )
+            foreach ($p in $paths) {
+                if ($p -and (Test-Path "$p\OfficeClickToRun.exe")) {
+                    $c2rExe = "$p\OfficeClickToRun.exe"
+                    break
+                }
+            }
+        }
+        $sync.c2rExe = $c2rExe
+        $sync.c2rConfig = $c2rConfig
+
+        # 4. Check for local ODT setup.exe binaries
+        $odtCandidates = @(
+            "$PSScriptRoot\odt_extracted\setup.exe",
+            "$PSScriptRoot\CloudManager\modules\setup.exe",
+            "$env:TEMP\ClickToRun\setup.exe",
+            "$env:TEMP\ClickToRun\ClickToRun.exe"
+        )
+        $localOdt = $null
+        foreach ($cand in $odtCandidates) {
+            if ($cand -and (Test-Path $cand)) { $localOdt = $cand; break }
+        }
+        $sync.localOdt = $localOdt
+
+        # 5. Disable buttons & set progress bar
+        $buttonOneClickUninstall.IsEnabled = $false
+        $buttonScanOffice.IsEnabled = $false
+        $sync.progressbar.Visibility = "Visible"
+        $sync.textbox.Visibility = "Visible"
+        $sync.textbox.Text = "Uninstalling all Office suites..."
+        $sync.ProgressBar.BorderBrush = "#FFE11D48"
+        $sync.ProgressBar.IsIndeterminate = $true
+
+        Write-LogConsole "==========================================================" "UNINSTALL"
+        Write-LogConsole "STARTING 1-CLICK UNIVERSAL OFFICE UNINSTALLATION..." "UNINSTALL"
+        Write-LogConsole "==========================================================" "UNINSTALL"
+
+        Start-BackgroundOperation -Operation {
+            # Helper to log with timestamp and auto-scroll from background runspace
+            $Log = {
+                param([string]$msg, [string]$lvl = "INFO")
+                $time = (Get-Date).ToString("HH:mm:ss")
+                $sync.Form.Dispatcher.Invoke([action]{
+                    $sync.textboxConsole.AppendText("[$time] [$lvl] $msg`r`n")
+                    if ($sync.scrollConsole) { $sync.scrollConsole.ScrollToEnd() } else { $sync.textboxConsole.ScrollToEnd() }
+                })
+            }
+
+            # 1. Force close Office processes if checked
+            if ($sync.optKillProcesses) {
+                & $Log "Checking and terminating active Office processes..." "PROCESS"
+                $procsToKill = @('winword', 'excel', 'powerpnt', 'outlook', 'onenote', 'msaccess', 'mspub', 'visio', 'winproj', 'OfficeClickToRun', 'appvshnotify', 'integratedoffice', 'communicator', 'lync', 'msoia', 'officefeedback', 'msospm')
+                $killedCount = 0
+                foreach ($proc in $procsToKill) {
+                    $runningProcs = Get-Process -Name $proc -ErrorAction SilentlyContinue
+                    if ($runningProcs) {
+                        foreach ($p in $runningProcs) {
+                            try {
+                                Stop-Process -Id $p.Id -Force -ErrorAction SilentlyContinue
+                                & $Log "Terminated active process: $($p.ProcessName) (PID: $($p.Id))" "PROCESS"
+                                $killedCount++
+                            } catch {}
+                        }
+                    }
+                }
+                if ($killedCount -eq 0) {
+                    & $Log "No active Office processes detected." "PROCESS"
+                } else {
+                    & $Log "Closed $killedCount active Office process(es)." "PROCESS"
+                }
+                Start-Sleep -Milliseconds 800
+            }
+
+            # 2. Click-to-Run Universal Removal (Local + Standard ODT)
+            if ($sync.optRemoveC2R) {
+                & $Log "Starting Click-to-Run suites removal..." "C2R"
+
+                # 2a. Run uninstallation for each detected C2R suite from registry
+                $uninstalledAny = $false
+                if ($sync.c2rUninstallList -and $sync.c2rUninstallList.Count -gt 0) {
+                    foreach ($item in $sync.c2rUninstallList) {
+                        $suiteName = $item.DisplayName
+                        $uStr = $item.UninstallString
+                        & $Log "Uninstalling suite: $suiteName..." "C2R"
+                        if ($uStr -match '"([^"]+)"\s*(.*)') {
+                            $exe = $Matches[1]
+                            $rawArgs = $Matches[2]
+                            $args = ($rawArgs -replace 'DisplayLevel=(True|False)', '') + " DisplayLevel=False ForceAppShutdown=True"
+                            & $Log "Running uninstallation engine (vui lòng đợi trong giây lát)..." "RUNNING"
+                            $proc = Start-Process -FilePath $exe -ArgumentList $args -Wait -PassThru -NoNewWindow
+                            & $Log "Removal of '$suiteName' finished with exit code: $($proc.ExitCode)." "SUCCESS"
+                            $uninstalledAny = $true
+                        }
+                    }
+                }
+
+                # 2b. If c2rUninstallList was empty but c2rConfig had ProductReleaseIds, use local OfficeClickToRun.exe
+                if (-not $uninstalledAny -and $sync.c2rExe -and $sync.c2rConfig) {
+                    $cfg = $sync.c2rConfig
+                    $culture = if ($cfg.ClientCulture) { $cfg.ClientCulture } else { "en-us" }
+                    $rawIds = $cfg.ProductReleaseIds
+                    & $Log "Detected Click-to-Run release IDs: $rawIds ($culture)" "C2R"
+                    $ids = $rawIds -split ','
+                    foreach ($id in $ids) {
+                        $idTrimmed = $id.Trim()
+                        if ($idTrimmed) {
+                            $prodToRemove = "$idTrimmed.16_${culture}_x-none"
+                            $c2rArgs = "scenario=install scenariosubtype=uninstall productstoremove=$prodToRemove culture=$culture DisplayLevel=False ForceAppShutdown=True"
+                            & $Log "Removing Click-to-Run product: $idTrimmed..." "C2R"
+                            $proc = Start-Process -FilePath $sync.c2rExe -ArgumentList $c2rArgs -Wait -PassThru -NoNewWindow
+                            & $Log "Finished removing $idTrimmed with exit code: $($proc.ExitCode)." "SUCCESS"
+                            $uninstalledAny = $true
+                        }
+                    }
+                }
+
+                # 2c. Universal ODT <Remove All="TRUE" /> to scrub any residual suites
+                & $Log "Deploying Microsoft ODT universal clean (<Remove All='TRUE' />)..." "ODT"
+                $odtCleanDir = Join-Path $env:TEMP "Office1ClickClean"
+                try {
+                    if (Test-Path $odtCleanDir) { Remove-Item $odtCleanDir -Recurse -Force -ErrorAction SilentlyContinue }
+                    New-Item -Path $odtCleanDir -ItemType Directory -Force | Out-Null
+
+                    Set-Content -Path "$odtCleanDir\configuration.xml" -Value @"
+<Configuration>
+  <Remove All="TRUE" />
+  <Display Level="None" AcceptEULA="TRUE" />
+</Configuration>
+"@
+                    $setupExe = $sync.localOdt
+                    if (-not $setupExe -or -not (Test-Path $setupExe)) {
+                        $odtFile = "$odtCleanDir\odt.exe"
+                        & $Log "Fetching official Microsoft Office Deployment Tool..." "ODT"
+                        $odtUrl = "https://download.microsoft.com/download/6/c/1/6c1eeb25-cf8b-41d9-8d0d-cc1dbc032140/officedeploymenttool_20228-20124.exe"
+                        try {
+                            (New-Object Net.WebClient).DownloadFile($odtUrl, $odtFile)
+                            Start-Process -FilePath $odtFile -ArgumentList "/quiet /extract:`"$odtCleanDir`"" -Wait -NoNewWindow
+                            if (Test-Path "$odtCleanDir\setup.exe") {
+                                $setupExe = "$odtCleanDir\setup.exe"
+                            }
+                        } catch {
+                            & $Log "ODT download warning: $($_.Exception.Message)" "WARN"
+                        }
+                    } else {
+                        & $Log "Using local ODT binary: $setupExe" "ODT"
+                    }
+
+                    if ($setupExe -and (Test-Path $setupExe)) {
+                        & $Log "Executing ODT removal configuration..." "ODT"
+                        $proc = Start-Process -FilePath $setupExe -ArgumentList "/configure `"$odtCleanDir\configuration.xml`"" -WorkingDirectory $odtCleanDir -NoNewWindow -Wait -PassThru
+                        & $Log "ODT universal removal finished with exit code: $($proc.ExitCode)." "SUCCESS"
+                    }
+                } catch {
+                    & $Log "ODT step notice: $($_.Exception.Message)" "WARN"
+                } finally {
+                    Remove-Item $odtCleanDir -Recurse -Force -ErrorAction SilentlyContinue
+                }
+            }
+
+            # 3. Clean Legacy MSI Office installations if present
+            & $Log "Scanning for legacy MSI Office installations..." "MSI"
+            $regKeys = @(
+                'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*',
+                'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
+            )
+            $msiOffices = Get-ItemProperty $regKeys -ErrorAction SilentlyContinue |
+                Where-Object { 
+                    $_.DisplayName -match 'Microsoft Office (Professional|Standard|Home|Personal|Enterprise|Small Business|Visio|Project)' -and 
+                    $_.UninstallString -match 'MsiExec' 
+                }
+            if ($msiOffices) {
+                foreach ($msi in $msiOffices) {
+                    $dName = $msi.DisplayName
+                    & $Log "Removing legacy MSI package: $dName..." "MSI"
+                    if ($msi.PSChildName -match '^\{[0-9A-Fa-f\-]+\}$') {
+                        Start-Process -FilePath "msiexec.exe" -ArgumentList "/x $($msi.PSChildName) /qn /norestart" -Wait -NoNewWindow
+                        & $Log "Removed: $dName" "SUCCESS"
+                    }
+                }
+            } else {
+                & $Log "No legacy MSI Office installations detected." "MSI"
+            }
+
+            # 4. Remove Store AppX Packages if checked
+            if ($sync.optRemoveAppxPkg) {
+                & $Log "Scanning for pre-installed Microsoft Store Office packages (AppX)..." "STORE"
+                $appxTargets = @("*Microsoft.Office.Desktop*", "*MicrosoftOfficeHub*", "*Microsoft.OfficePushNotificationUtility*")
+                $foundAppx = $false
+                foreach ($target in $appxTargets) {
+                    $packages = Get-AppxPackage -Name $target -ErrorAction SilentlyContinue
+                    foreach ($pkg in $packages) {
+                        $foundAppx = $true
+                        $pName = $pkg.Name
+                        & $Log "Removing Store AppX package: $pName (v$($pkg.Version))..." "STORE"
+                        Remove-AppxPackage -Package $pkg.PackageFullName -ErrorAction SilentlyContinue
+                        & $Log "Store AppX package removed: $pName" "SUCCESS"
+                    }
+                }
+                if (-not $foundAppx) {
+                    & $Log "No Microsoft Store Office packages found." "STORE"
+                }
+            }
+
+            # 5. Clean lingering licenses if checked
+            if ($sync.optCleanLicenses) {
+                & $Log "Scanning for lingering Office product keys & licensing cache..." "LICENSE"
+                $vbs = $sync.osppPath
+                if ($vbs -and (Test-Path $vbs)) {
+                    $dstatus = cscript.exe //Nologo "$vbs" /dstatus
+                    $keys = @()
+                    foreach ($line in $dstatus) {
+                        if ($line -match 'Last 5 characters of installed product key:\s*([A-Z0-9]{5})') {
+                            $keys += $Matches[1]
+                        }
+                    }
+                    if ($keys.Count -gt 0) {
+                        foreach ($k in $keys) {
+                            & $Log "Uninstalling product key: $k..." "LICENSE"
+                            $null = cscript.exe //Nologo "$vbs" /unpkey:$k
+                        }
+                        & $Log "All ($($keys.Count)) Office product keys removed." "SUCCESS"
+                    } else {
+                        & $Log "No active product keys found to remove." "LICENSE"
+                    }
+                } else {
+                    & $Log "ospp.vbs not found or already cleaned." "LICENSE"
+                }
+            }
+
+            # 6. Clean Temp & Cache if checked
+            if ($sync.optCleanTemp) {
+                & $Log "Purging temporary Office document caches and residual folders..." "CACHE"
+                $cachePaths = @(
+                    "$env:LOCALAPPDATA\Microsoft\Office\16.0\OfficeFileCache",
+                    "$env:LOCALAPPDATA\Microsoft\Office\15.0\OfficeFileCache",
+                    "$env:LOCALAPPDATA\Microsoft\Office\OTele",
+                    "$env:TEMP\ClickToRun*",
+                    "$env:TEMP\Office*",
+                    "$env:TEMP\SaRAScrub"
+                )
+                $cleaned = 0
+                foreach ($cp in $cachePaths) {
+                    if (Test-Path $cp) {
+                        Remove-Item -Path $cp -Recurse -Force -ErrorAction SilentlyContinue
+                        $cleaned++
+                    }
+                }
+                & $Log "Office cache cleanup complete ($cleaned residual locations purged)." "SUCCESS"
+            }
+
+            # 7. Final wrap up & Refresh scan
+            & $Log "==========================================================" "SUCCESS"
+            & $Log "1-CLICK UNIVERSAL OFFICE UNINSTALLATION COMPLETED!" "SUCCESS"
+            & $Log "All Office products, packages, and components have been removed." "SUCCESS"
+            & $Log "==========================================================" "SUCCESS"
+
+            $sync.Form.Dispatcher.Invoke([action]{
+                if ($sync.buttonOneClick) { $sync.buttonOneClick.IsEnabled = $true }
+                if ($sync.buttonScan) { $sync.buttonScan.IsEnabled = $true }
+                $sync.textbox.Visibility = 'Collapsed'
+                $sync.ProgressBar.Visibility = 'Collapsed'
+                $sync.ProgressBar.Value = '0'
+                if ($sync.ScanOfficeAction) { & $sync.ScanOfficeAction }
+            })
+
+            $sync.isBusy = $false
             $sync.Form.Dispatcher.Invoke($sync.RestoreUiAction)
         }
     })
